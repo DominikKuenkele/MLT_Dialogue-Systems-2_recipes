@@ -59,17 +59,17 @@
 
   <individual name="omelette_recipe">omelette recipe</individual>
   <individual name="fries_recipe">fries recipe</individual>
-  <individual name="omelette">omelette</individual>
-  <individual name="egg">egg</individual>
   <individual name="potato">potato</individual>
+  <individual name="egg">egg</individual>
+  <individual name="butter">butter</individual>
+  <individual name="omelette">omelette</individual>
   <individual name="egg_mixture">egg mixture</individual>
   <individual name="salt">salt</individual>
-  <individual name="butter">butter</individual>
-  <individual name="bowl">bowl</individual>
   <individual name="mixing_bowl">mixing bowl</individual>
   <individual name="pan">pan</individual>
-  <individual name="plate">plate</individual>
+  <individual name="bowl">bowl</individual>
   <individual name="heat">heat</individual>
-  <individual name="oven">oven</individual>
+  <individual name="plate">plate</individual>
   <individual name="baking_sheet">baking sheet</individual>
+  <individual name="oven">oven</individual>
 </grammar>
