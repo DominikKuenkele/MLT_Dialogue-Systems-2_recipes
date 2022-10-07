@@ -1,10 +1,42 @@
 [
     {
-        "match": "some(semantic_expression_of_a_move)",
-        "utterance": "some utterance"
+        "match": "request(omelette_recipe_step_0)",
+        "utterance": "Crack three eggs on a bowl and whisk with a pinch of salt."
     },
     {
-        "match": "another(semantic_expression_of_a_move)",
-        "utterance": "another utterance"
+        "match": "request(omelette_recipe_step_1)",
+        "utterance": "Heat butter on a pan on high heat and add the egg mixture to the pan"
+    },
+    {
+        "match": "request(omelette_recipe_step_2)",
+        "utterance": "Stir the eggs for about 30 seconds"
+    },
+    {
+        "match": "request(omelette_recipe_step_3)",
+        "utterance": "When the eggs are set but look slightly wet, turn off the heat and fold the omelette"
+    },
+    {
+        "match": "request(omelette_recipe_step_4)",
+        "utterance": "After a few seconds, transfer the omelette onto a plate"
+    },
+    {
+        "match": "request(fries_recipe_step_0)",
+        "utterance": "Preheat the oven to 230 degrees."
+    },
+    {
+        "match": "request(fries_recipe_step_1)",
+        "utterance": "Scrub potatoes well and cut into 1 cm thick fries"
+    },
+    {
+        "match": "request(fries_recipe_step_2)",
+        "utterance": "In a large mixing bowl, toss potatoes with oil, sugar, salt and red pepper."
+    },
+    {
+        "match": "request(fries_recipe_step_3)",
+        "utterance": "Spread on baking sheet in one layer"
+    },
+    {
+        "match": "request(fries_recipe_step_4)",
+        "utterance": "Bake for 30 minutes in the preheated oven, until potatoes are tender and browned."
     }
 ]

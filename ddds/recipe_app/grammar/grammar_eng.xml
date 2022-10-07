@@ -21,4 +21,55 @@
     </one-of>
   </action>
 
+  <question speaker="user" type="wh_question" predicate="amount_ingredient">
+    <one-of>
+      <item>How much <slot predicate="which_ingredient"/> should I use</item>
+      <item>How many <slot predicate="which_ingredient"/></item>
+      <item>How much</item>
+      <item>A lot</item>
+      <item>What is the amount</item>
+    </one-of>
+  </question>
+
+  <answer speaker="system" predicate="amount_ingredient"><slot predicate="amount_ingredient"/> is fine</answer>
+
+  <action name="omelette_recipe_action">
+    <one-of>
+      <item>prepare a French omelette</item>
+      <item>I want to prepare a French omelette</item>
+      <item>I would like to do a French omelette</item>
+      <item>a French omelette</item>
+      <item>French omelette</item>
+      <item>Give me the instructions for a French omelette</item>
+      <item>an omelette</item>
+    </one-of>
+  </action>
+
+  <action name="fries_recipe_action">
+    <one-of>
+      <item>make fries</item>
+      <item>I want to make fries</item>
+      <item>french fries</item>
+      <item>chips</item>
+      <item>Can you show me, how to make fries</item>
+      <item>I would like to do fries</item>
+      <item>baked potatoes</item>
+    </one-of>
+  </action>
+
+  <individual name="omelette_recipe">omelette recipe</individual>
+  <individual name="fries_recipe">fries recipe</individual>
+  <individual name="omelette">omelette</individual>
+  <individual name="egg">egg</individual>
+  <individual name="potato">potato</individual>
+  <individual name="egg_mixture">egg mixture</individual>
+  <individual name="salt">salt</individual>
+  <individual name="butter">butter</individual>
+  <individual name="bowl">bowl</individual>
+  <individual name="mixing_bowl">mixing bowl</individual>
+  <individual name="pan">pan</individual>
+  <individual name="plate">plate</individual>
+  <individual name="heat">heat</individual>
+  <individual name="oven">oven</individual>
+  <individual name="baking_sheet">baking sheet</individual>
 </grammar>

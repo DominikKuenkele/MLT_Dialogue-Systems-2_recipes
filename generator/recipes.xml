@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<recipes>
+    <recipe name="omelette">
+        <utterances>
+            <utterance>prepare a French omelette</utterance>
+            <utterance>I want to prepare a French omelette</utterance>
+            <utterance>I would like to do a French omelette</utterance>
+            <utterance>a French omelette</utterance>
+            <utterance>French omelette</utterance>
+            <utterance>Give me the instructions for a French omelette</utterance>
+            <utterance>an omelette</utterance>
+        </utterances>
+        <steps>
+            <step>
+                <crack ingredient="egg" amount="3" object="bowl">Crack three eggs on a bowl</crack>
+                <whisk ingredient="salt" amount="a pinch">whisk with a pinch of salt.</whisk>
+            </step>
+            <step>
+                <heat ingredient="butter" object="pan" temperature="high heat">Heat butter on a pan on high heat</heat>
+                <add ingredient="egg mixture" object="pan">add the egg mixture to the pan</add>
+            </step>
+            <step>
+                <stir ingredient="egg" time="30 seconds">Stir the eggs for about 30 seconds</stir>
+            </step>
+            <step>
+                <turn_off object="heat" condition="when the eggs are set, but look slightly wet">When the eggs are set but look slightly wet, turn off the heat</turn_off>
+                <fold ingredient="omelette">fold the omelette</fold>
+            </step>
+            <step>
+                <transfer ingredient="omelette" object="plate" condition="after a few seconds">After a few seconds, transfer the omelette onto a plate</transfer>
+            </step>
+        </steps>
+    </recipe>
+
+    <recipe name="fries">
+        <utterances>
+            <utterance>make fries</utterance>
+            <utterance>I want to make fries</utterance>
+            <utterance>french fries</utterance>
+            <utterance>chips</utterance>
+            <utterance>Can you show me, how to make fries</utterance>
+            <utterance>I would like to do fries</utterance>
+            <utterance>baked potatoes</utterance>
+        </utterances>
+        <steps>
+            <step>
+                <preheat object="oven" temperature="230 degrees">Preheat the oven to 230 degrees.</preheat>
+            </step>
+            <step>
+                <scrub ingredient="potato">Scrub potatoes well</scrub>
+                <cut>cut into 1 cm thick fries</cut>
+            </step>
+            <step>
+                <toss ingredient="potato" object="mixing bowl">In a large mixing bowl, toss potatoes with oil, sugar, salt and red pepper.</toss>
+            </step>
+            <step>
+                <spread object="baking sheet">Spread on baking sheet in one layer</spread>
+            </step>
+            <step>
+                <bake object="oven" time="thirty minutes" condition="until potatoes are tender and browned">Bake for 30 minutes in the preheated oven, until potatoes are tender and browned.</bake>
+            </step>
+        </steps>
+    </recipe>
+</recipes>

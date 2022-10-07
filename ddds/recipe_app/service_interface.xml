@@ -1,3 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <service_interface>
+  <query name="amount_ingredient">
+    <parameters>
+      <parameter predicate="which_ingredient" format="grammar_entry" />
+      <parameter predicate="current_recipe" format="grammar_entry" />
+    </parameters>
+    <target>
+      <http endpoint="http://ddds-http-service/get_amount_of_ingredient" />
+    </target>
+  </query>
 </service_interface>

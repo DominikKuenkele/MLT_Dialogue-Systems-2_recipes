@@ -149,3 +149,19 @@ def action_success_response():
         mimetype='application/json'
     )
     return response
+
+def retrieveParameters():
+    facts = request.get_json()["context"]["facts"]
+    print(facts)
+    current_recipe = facts["current_recipe"]["value"]
+    ingredient = facts["which_ingredient"]["value"]
+
+    return current_recipe, ingredient, 
+
+@app.route("/get_amount_of_ingredient", methods=['POST'])
+def get_amount_of_ingredient():
+    current_recipe, ingredient = retrieveParameters()
+    
+    print(current_recipe)
+    print(ingredient)
+    return query_response(value='amount', grammar_entry=None)

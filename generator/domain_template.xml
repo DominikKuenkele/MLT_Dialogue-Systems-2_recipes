@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<domain name="RecipeAppDomain" is_super_domain="true">
+  <goal type="perform" action="top">
+    <plan>
+      <forget_all/>
+      <findout type="goal"/>
+    </plan>
+  </goal>
+
+&generated
+
+  <goal type="resolve" question_type="wh_question" predicate="amount_ingredient">
+    <plan>
+      <invoke_service_query type="wh_question" predicate="amount_ingredient"/>
+      <bind type="wh_question" predicate="which_ingredient"/>
+    </plan>
+  </goal>
+</domain>

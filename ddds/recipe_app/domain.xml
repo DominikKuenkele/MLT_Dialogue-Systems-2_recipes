@@ -6,4 +6,91 @@
       <findout type="goal"/>
     </plan>
   </goal>
+
+  <goal type="perform" action="omelette_recipe_action">
+    <plan>
+      <assume_shared>
+        <proposition predicate="current_recipe" value="omelette_recipe"/>
+      </assume_shared>
+      <assume_shared>
+        <proposition predicate="which_ingredient" value="salt"/>
+      </assume_shared>
+      <assume_shared>
+        <proposition predicate="which_object" value="bowl"/>
+      </assume_shared>
+      <get_done action="omelette_recipe_step_0"/>
+      <assume_shared>
+        <proposition predicate="which_ingredient" value="egg_mixture"/>
+      </assume_shared>
+      <assume_shared>
+        <proposition predicate="which_object" value="pan"/>
+      </assume_shared>
+      <get_done action="omelette_recipe_step_1"/>
+      <assume_shared>
+        <proposition predicate="which_ingredient" value="egg"/>
+      </assume_shared>
+
+      <get_done action="omelette_recipe_step_2"/>
+      <assume_shared>
+        <proposition predicate="which_ingredient" value="omelette"/>
+      </assume_shared>
+      <assume_shared>
+        <proposition predicate="which_object" value="heat"/>
+      </assume_shared>
+      <get_done action="omelette_recipe_step_3"/>
+      <assume_shared>
+        <proposition predicate="which_ingredient" value="omelette"/>
+      </assume_shared>
+      <assume_shared>
+        <proposition predicate="which_object" value="plate"/>
+      </assume_shared>
+      <get_done action="omelette_recipe_step_4"/>
+      <signal_action_completion/>
+    </plan>
+  </goal>
+  
+  <goal type="perform" action="fries_recipe_action">
+    <plan>
+      <assume_shared>
+        <proposition predicate="current_recipe" value="fries_recipe"/>
+      </assume_shared>
+
+      <assume_shared>
+        <proposition predicate="which_object" value="oven"/>
+      </assume_shared>
+      <get_done action="fries_recipe_step_0"/>
+      <assume_shared>
+        <proposition predicate="which_ingredient" value="potato"/>
+      </assume_shared>
+
+      <get_done action="fries_recipe_step_1"/>
+      <assume_shared>
+        <proposition predicate="which_ingredient" value="potato"/>
+      </assume_shared>
+      <assume_shared>
+        <proposition predicate="which_object" value="mixing_bowl"/>
+      </assume_shared>
+      <get_done action="fries_recipe_step_2"/>
+
+      <assume_shared>
+        <proposition predicate="which_object" value="baking_sheet"/>
+      </assume_shared>
+      <get_done action="fries_recipe_step_3"/>
+
+      <assume_shared>
+        <proposition predicate="which_object" value="oven"/>
+      </assume_shared>
+      <get_done action="fries_recipe_step_4"/>
+      <signal_action_completion/>
+    </plan>
+  </goal>
+  
+
+
+  <goal type="resolve" question_type="wh_question" predicate="amount_ingredient">
+    <plan>
+      <invoke_service_query type="wh_question" predicate="amount_ingredient"/>
+      <bind type="wh_question" predicate="which_ingredient"/>
+    </plan>
+  </goal>
 </domain>

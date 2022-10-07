@@ -1,3 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ontology name="RecipeAppOntology">
+  <sort name="recipe"/>
+  <sort name="ingredient" dynamic="true"/>
+  <sort name="object" dynamic="true"/>
+
+  <predicate name="current_recipe" sort="recipe"/>
+  <predicate name="which_ingredient" sort="ingredient"/>
+  <predicate name="which_object" sort="object"/>
+  <predicate name="amount_ingredient" sort="string"/>
+
+  <action name="omelette_recipe_action"/>
+  <individual name="omelette_recipe" sort="recipe"/>
+  <action name="fries_recipe_action"/>
+  <individual name="fries_recipe" sort="recipe"/>
+  <individual name="omelette" sort="ingredient"/>
+  <individual name="egg" sort="ingredient"/>
+  <individual name="potato" sort="ingredient"/>
+  <individual name="egg_mixture" sort="ingredient"/>
+  <individual name="salt" sort="ingredient"/>
+  <individual name="butter" sort="ingredient"/>
+  <individual name="bowl" sort="object"/>
+  <individual name="mixing_bowl" sort="object"/>
+  <individual name="pan" sort="object"/>
+  <individual name="plate" sort="object"/>
+  <individual name="heat" sort="object"/>
+  <individual name="oven" sort="object"/>
+  <individual name="baking_sheet" sort="object"/>
 </ontology>

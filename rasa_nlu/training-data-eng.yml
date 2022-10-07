@@ -1,0 +1,332 @@
+version: "2.0"
+
+nlu:
+- intent: action::fries_recipe_action
+  examples: |
+    - make fries
+    - I want to make fries
+    - french fries
+    - chips
+    - Can you show me, how to make fries
+    - I would like to do fries
+    - baked potatoes
+
+- intent: action::omelette_recipe_action
+  examples: |
+    - prepare a French omelette
+    - I want to prepare a French omelette
+    - I would like to do a French omelette
+    - a French omelette
+    - French omelette
+    - Give me the instructions for a French omelette
+    - an omelette
+
+- intent: question::amount_ingredient
+  examples: |
+    - How much [butter]{"entity": "sort.ingredient", "value": "individual.butter"} should I use
+    - How much [egg mixture]{"entity": "sort.ingredient", "value": "individual.egg_mixture"} should I use
+    - How much [egg]{"entity": "sort.ingredient", "value": "individual.egg"} should I use
+    - How much [omelette]{"entity": "sort.ingredient", "value": "individual.omelette"} should I use
+    - How much [potato]{"entity": "sort.ingredient", "value": "individual.potato"} should I use
+    - How much [salt]{"entity": "sort.ingredient", "value": "individual.salt"} should I use
+    - How many [butter]{"entity": "sort.ingredient", "value": "individual.butter"}
+    - How many [egg mixture]{"entity": "sort.ingredient", "value": "individual.egg_mixture"}
+    - How many [egg]{"entity": "sort.ingredient", "value": "individual.egg"}
+    - How many [omelette]{"entity": "sort.ingredient", "value": "individual.omelette"}
+    - How many [potato]{"entity": "sort.ingredient", "value": "individual.potato"}
+    - How many [salt]{"entity": "sort.ingredient", "value": "individual.salt"}
+    - How much
+    - A lot
+    - What is the amount
+
+- intent: answer
+  examples: |
+    - [single](sort.string)
+    - [double word](sort.string)
+    - [three in one](sort.string)
+    - [hey make it four](sort.string)
+    - [the more the merrier five](sort.string)
+    - [calm down and count to six](sort.string)
+    - [bring them through to the jolly seven](sort.string)
+    - [noone counts toes like an eight toed guy](sort.string)
+    - [it matters to make sense for nine of us](sort.string)
+    - [would you bring ten or none to a desert island](sort.string)
+    - [omelette recipe]{"entity": "sort.recipe", "value": "individual.omelette_recipe"}
+    - [fries recipe]{"entity": "sort.recipe", "value": "individual.fries_recipe"}
+    - [omelette]{"entity": "sort.ingredient", "value": "individual.omelette"}
+    - [egg]{"entity": "sort.ingredient", "value": "individual.egg"}
+    - [potato]{"entity": "sort.ingredient", "value": "individual.potato"}
+    - [egg mixture]{"entity": "sort.ingredient", "value": "individual.egg_mixture"}
+    - [salt]{"entity": "sort.ingredient", "value": "individual.salt"}
+    - [butter]{"entity": "sort.ingredient", "value": "individual.butter"}
+    - [bowl]{"entity": "sort.object", "value": "individual.bowl"}
+    - [mixing bowl]{"entity": "sort.object", "value": "individual.mixing_bowl"}
+    - [pan]{"entity": "sort.object", "value": "individual.pan"}
+    - [plate]{"entity": "sort.object", "value": "individual.plate"}
+    - [heat]{"entity": "sort.object", "value": "individual.heat"}
+    - [oven]{"entity": "sort.object", "value": "individual.oven"}
+    - [baking sheet]{"entity": "sort.object", "value": "individual.baking_sheet"}
+    - yes [single](sort.string)
+    - yes [omelette recipe]{"entity": "sort.recipe", "value": "individual.omelette_recipe"}
+    - yes [pan]{"entity": "sort.object", "value": "individual.pan"}
+    - no [double word](sort.string)
+    - no [fries recipe]{"entity": "sort.recipe", "value": "individual.fries_recipe"}
+    - no [plate]{"entity": "sort.object", "value": "individual.plate"}
+
+- intent: answer_negation
+  examples: |
+    - not [omelette recipe]{"entity": "sort.recipe", "value": "individual.omelette_recipe"}
+    - not [fries recipe]{"entity": "sort.recipe", "value": "individual.fries_recipe"}
+    - not [omelette]{"entity": "sort.ingredient", "value": "individual.omelette"}
+    - not [egg]{"entity": "sort.ingredient", "value": "individual.egg"}
+    - not [potato]{"entity": "sort.ingredient", "value": "individual.potato"}
+    - not [egg mixture]{"entity": "sort.ingredient", "value": "individual.egg_mixture"}
+    - not [salt]{"entity": "sort.ingredient", "value": "individual.salt"}
+    - not [butter]{"entity": "sort.ingredient", "value": "individual.butter"}
+    - not [bowl]{"entity": "sort.object", "value": "individual.bowl"}
+    - not [mixing bowl]{"entity": "sort.object", "value": "individual.mixing_bowl"}
+    - not [pan]{"entity": "sort.object", "value": "individual.pan"}
+    - not [plate]{"entity": "sort.object", "value": "individual.plate"}
+    - not [heat]{"entity": "sort.object", "value": "individual.heat"}
+    - not [oven]{"entity": "sort.object", "value": "individual.oven"}
+    - not [baking sheet]{"entity": "sort.object", "value": "individual.baking_sheet"}
+
+- intent: NEGATIVE
+  examples: |
+    - aboard
+    - about
+    - above
+    - across
+    - after
+    - against
+    - along
+    - among
+    - as
+    - at
+    - on
+    - atop
+    - before
+    - behind
+    - below
+    - beneath
+    - beside
+    - between
+    - beyond
+    - but
+    - by
+    - come
+    - down
+    - during
+    - except
+    - for
+    - from
+    - in
+    - inside
+    - into
+    - less
+    - like
+    - near
+    - of
+    - off
+    - on
+    - onto
+    - opposite
+    - out
+    - outside
+    - over
+    - past
+    - save
+    - short
+    - since
+    - than
+    - then
+    - through
+    - throughout
+    - to
+    - toward
+    - under
+    - underneath
+    - unlike
+    - until
+    - up
+    - upon
+    - with
+    - within
+    - without
+    - worth
+    - is
+    - it
+    - the
+    - a
+    - am
+    - are
+    - them
+    - this
+    - that
+    - I
+    - you
+    - he
+    - she
+    - they
+    - them
+    - his
+    - her
+    - my
+    - mine
+    - their
+    - your
+    - us
+    - our
+    - how
+    - how's
+    - how is
+    - how's the
+    - how is the
+    - when
+    - when's
+    - when is
+    - when is the
+    - when's the
+    - what
+    - what is
+    - what's
+    - what's the
+    - what is the
+    - why
+    - why is
+    - why's
+    - why is the
+    - why's the
+    - do
+    - make
+    - tell
+    - start
+    - stop
+    - enable
+    - disable
+    - raise
+    - lower
+    - decrease
+    - increase
+    - act
+    - determine
+    - say
+    - ask
+    - go
+    - shoot
+    - wait
+    - hang on
+    - ok
+    - show
+    - help
+
+- intent: answer:yes
+  examples: |
+    - yes
+    - yeah
+    - yep
+    - sure
+    - ok
+    - of course
+    - very well
+    - fine
+    - right
+    - excellent
+    - okay
+    - perfect
+    - I think so
+
+- intent: answer:no
+  examples: |
+    - no
+    - nope
+    - no thanks
+    - no thank you
+    - negative
+    - don't want to
+    - don't
+    - do not
+    - please don't
+
+- intent: request:top
+  examples: |
+    - forget it
+    - never mind
+    - get me out of here
+    - start over
+    - beginning
+    - never mind that
+    - restart
+
+- intent: request:up
+  examples: |
+    - go back
+    - back
+    - previous
+    - back to the previous
+    - go to the previous
+    - go back to the previous one
+
+- intent: request:how
+  examples: |
+    - how do I do that
+    - how
+    - can you tell me how to do that
+    - I don't know how should I do that
+    - how can I do that
+
+- intent: report:done
+  examples: |
+    - I'm done
+    - done
+    - ready
+    - it's ready
+    - I'm ready
+    - completed
+    - check
+    - I have finished
+    - finished
+    - done and done
+    - it's done now
+    - okay next
+    - next
+    - next instruction
+
+- intent: icm:per*neg
+  examples: |
+    - repeat
+    - repeat it
+    - repeat that
+    - pardon
+    - sorry
+    - can you repeat that
+    - excuse me
+    - what was that
+    - what did you say
+    - come again
+
+- intent: icm:acc*neg:issue
+  examples: |
+    - I don't know
+    - I don't know that
+    - it doesn't matter
+
+- intent: thanks
+  examples: |
+    - thank you
+    - thank you very much
+    - thanks
+    - big thanks
+    - thanks a lot
+
+- intent: greet
+  examples: |
+    - hello
+    - hi
+    - good day
+    - what's up
+    - good evening
+    - good morning
+    - hey
+
+
