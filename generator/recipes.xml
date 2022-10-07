@@ -10,26 +10,32 @@
             <utterance>Give me the instructions for a French omelette</utterance>
             <utterance>an omelette</utterance>
         </utterances>
+        <ingredients>
+            <ingredient name="egg" amount="three"/>
+            <ingredient name="salt" amount="a pinch"/>
+            <ingredient name="butter"/>
+        </ingredients>
         <steps>
             <step>
-                <crack ingredient="egg" amount="3" object="bowl">Crack three eggs on a bowl</crack>
-                <whisk ingredient="salt" amount="a pinch">whisk with a pinch of salt.</whisk>
+                <substep ingredient="egg" amount="three" object="bowl">Crack three eggs on a bowl</substep>
+                <substep ingredient="salt" amount="a pinch">whisk with a pinch of salt.</substep>
             </step>
             <step>
-                <heat ingredient="butter" object="pan" temperature="high heat">Heat butter on a pan on high heat</heat>
-                <add ingredient="egg mixture" object="pan">add the egg mixture to the pan</add>
+                <substep ingredient="butter" object="pan" temperature="high heat">Heat butter on a pan on high heat.</substep>
             </step>
             <step>
-                <stir ingredient="egg" time="30 seconds">Stir the eggs for about 30 seconds</stir>
+                <substep ingredient="egg mixture" object="pan">Add the egg mixture to the pan</substep>
+                <substep ingredient="egg" time="30 seconds">stir the eggs for about 30 seconds.</substep>
             </step>
             <step>
-                <turn_off object="heat" condition="when the eggs are set, but look slightly wet">When the eggs are set but look slightly wet, turn off the heat</turn_off>
-                <fold ingredient="omelette">fold the omelette</fold>
+                <substep object="heat" condition="when the eggs are set, but look slightly wet">When the eggs are set but look slightly wet, turn off the heat</substep>
+                <substep ingredient="omelette">fold the omelette.</substep>
             </step>
             <step>
-                <transfer ingredient="omelette" object="plate" condition="after a few seconds">After a few seconds, transfer the omelette onto a plate</transfer>
+                <substep ingredient="omelette" object="plate" condition="after a few seconds">After a few seconds, transfer the omelette onto a plate.</substep>
             </step>
         </steps>
+        <finisher>Amazing! You have finished preparing a French omelette. Bon appétit!</finisher>
     </recipe>
 
     <recipe name="fries">
@@ -42,23 +48,111 @@
             <utterance>I would like to do fries</utterance>
             <utterance>baked potatoes</utterance>
         </utterances>
+        <ingredients>
+            <ingredient name="potato" amount="three potatoes per person"/>
+            <ingredient name="oil"/>
+            <ingredient name="sugar"/>
+            <ingredient name="salt"/>
+            <ingredient name="red pepper"/>
+        </ingredients>
         <steps>
             <step>
-                <preheat object="oven" temperature="230 degrees">Preheat the oven to 230 degrees.</preheat>
+                <substep object="oven" temperature="230 degrees">Preheat the oven to 230 degrees.</substep>
             </step>
             <step>
-                <scrub ingredient="potato">Scrub potatoes well</scrub>
-                <cut>cut into 1 cm thick fries</cut>
+                <substep ingredient="potato">Scrub potatoes well</substep>
+                <substep>cut into 1 cm thick fries.</substep>
             </step>
             <step>
-                <toss ingredient="potato" object="mixing bowl">In a large mixing bowl, toss potatoes with oil, sugar, salt and red pepper.</toss>
+                <substep ingredient="potato" object="mixing bowl">In a large mixing bowl, toss potatoes with oil, sugar, salt and red pepper.</substep>
             </step>
             <step>
-                <spread object="baking sheet">Spread on baking sheet in one layer</spread>
+                <substep object="baking sheet">Spread on baking sheet in one layer.</substep>
             </step>
             <step>
-                <bake object="oven" time="thirty minutes" condition="until potatoes are tender and browned">Bake for 30 minutes in the preheated oven, until potatoes are tender and browned.</bake>
+                <substep object="oven" time="thirty minutes" condition="until potatoes are tender and browned">Bake for 30 minutes in the preheated oven, until potatoes are tender and browned.</substep>
             </step>
         </steps>
+        <finisher>Good job! You should serve and eat it as long as it is warm!</finisher>
+    </recipe>
+    <recipe name="baked mushroom risotto">
+        <utterances>
+            <utterance>make a risotto</utterance>
+            <utterance>I want to make a risotto</utterance>
+            <utterance>a risotto</utterance>
+            <utterance>Can you show me, how to make a risotto</utterance>
+        </utterances>
+        <ingredients>
+            <ingredient name="olive oil" amount="two tablespoons"/>
+            <ingredient name="onion" amount="one" form="finely chopped"/>
+            <ingredient name="garlic" amount="three gloves" form="finely sliced"/>
+            <ingredient name="mixed mushrooms" amount="400 grams" form="roughly chopped"/>
+            <ingredient name="rosemary" amount="1-2 tablespoons" form="finely chopped"/>
+            <ingredient name="risotto rice" amount="200 grams"/>
+            <ingredient name="white wine" amount="100 mililiters"/>
+            <ingredient name="vegetable stock" amount="750 mililiters"/>
+            <ingredient name="parmesan" amount="30 grams" form="grated"/>
+        </ingredients>
+        <steps>
+            <step>
+                <substep ingredient="onion">Chop the onions.</substep>
+            </step>
+            <step>
+                <substep ingredient="garlic">Then finely sliced garlic</substep>
+            </step>
+            <step>
+                <substep ingredient="mixed mushrooms">Then roughly chop the mushrooms</substep>
+            </step>
+            <step>
+                <substep ingredient="rosemary">Then you should chop the rosemary finely</substep>
+            </step>
+            <step>
+                <substep object="oven" temperature="180 degrees">then you can begin by preheating the oven to 180 degrees</substep>
+            </step>
+            <step>
+                <substep object="oven proof lidded dish">Then you take an oven proof lidded dish.</substep>
+            </step>
+            <step>
+                <substep ingredient="oil">Heat the oil</substep>
+                <substep ingredient="onion" time="three minutes" condition="until they start to soften">fry the onions for three minutes</substep>
+            </step>
+            <step>
+                <substep ingredient="garlic" condition="when the onions are soft">You add the garlic</substep>
+                <substep time="5 minutes">cook it for 5 minutes.</substep>
+            </step>
+            <step>
+                <substep ingredient="mixed mushrooms" time="three to four minutes" condition="until they are soft">Add the mushrooms for three to four minutes or until they are soft</substep>
+            </step>
+            <step>
+                <substep ingredient="rosemary">Then you can stir in the Rosemary</substep>
+            </step>
+            <step>
+                <substep ingredient="risotto rice">Add the Risotto rice</substep>
+                <substep condition="the grains appear glassy">cook until the grains appear glassy</substep>
+            </step>
+            <step>
+                <substep ingredient="wine">Stir in the wine</substep>
+                <substep ingredient="stock">stock</substep>
+            </step>
+            <step>
+                <substep object="lid">Now you just place the lid on the dish</substep>
+                <substep ingredient="risotto" time="15 minutes">bake it for 15 minutes</substep>
+            </step>
+            <step>
+                <substep condition="half way through">but stir it half way through.</substep>
+            </step>
+            <step>
+                <substep ingredient="parmesan">Now, stir in the parmesan</substep>
+                <substep time="three more minutes">bake it for three more minutes</substep>
+            </step>
+            <step>
+                <substep ingredient="parmesan" amount="some">Now sprinkle over some extra parmesan</substep>
+            </step>
+            <step>
+                <substep ingredient="olive oil">Now drizzle extra virgin olive oil on top</substep>
+                <substep ingredient="black pepper" amount="a little">finish with a little black pepper.</substep>
+            </step>
+        </steps>
+        <finisher>Now serve and enjoy your meal. Bon appetit!</finisher>
     </recipe>
 </recipes>

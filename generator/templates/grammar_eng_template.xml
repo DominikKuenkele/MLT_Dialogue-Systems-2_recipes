@@ -31,6 +31,8 @@
     </one-of>
   </question>
 
+  <question speaker="system" predicate="which_ingredient">Of what?</question>
+
   <answer speaker="system" predicate="amount_ingredient"><slot predicate="amount_ingredient"/> is fine</answer>
 
 &generated

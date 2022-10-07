@@ -1,2 +1,105 @@
---- main menu
+--- cooking french omelette
 S> What would you like to do?
+U> I want to prepare a French omelette
+S> Crack three eggs on a bowl and whisk with a pinch of salt.
+U> done
+S> Heat butter on a pan on high heat.
+U> done
+S> Add the egg mixture to the pan and stir the eggs for about 30 seconds.
+U> done
+S> When the eggs are set but look slightly wet, turn off the heat and fold the omelette.
+U> done
+S> After a few seconds, transfer the omelette onto a plate.
+U> done
+S> Amazing! You have finished preparing a French omelette. Bon appétit!
+
+--- cooking french omelette (explicit question)
+S> What would you like to do?
+U> I want to prepare a French omelette
+S> Crack three eggs on a bowl and whisk with a pinch of salt.
+U> done
+S> Heat butter on a pan on high heat.
+U> How much butter should I use?
+S> Around one tablespoon.
+U>
+S> Heat butter on a pan on high heat.
+U> done
+S> Add the egg mixture to the pan and stir the eggs for about 30 seconds.
+U> done
+S> When the eggs are set but look slightly wet, turn off the heat and fold the omelette.
+U> done
+S> After a few seconds, transfer the omelette onto a plate.
+U> done
+S> Amazing! You have finished preparing a French omelette. Bon appétit!
+
+--- cooking french omelette (requesting help)
+S> What would you like to do?
+U> I want to prepare a French omelette
+S> Crack three eggs on a bowl and whisk with a pinch of salt.
+U> done
+S> Heat butter on a pan on high heat.
+U> done
+S> Add the egg mixture to the pan and stir the eggs for about 30 seconds.
+U> how do I do that
+S> Hold a fork flat on the pan and stir the eggs thoroughly with one hand while shaking the pan back and forth with the other.
+U> ok done
+S> Keep incorporating the set edges into the runny center. This takes just 25 to 30 seconds.
+U>
+S> When the eggs are set but look slightly wet, turn off the heat and fold the omelette.
+U> done
+S> After a few seconds, transfer the omelette onto a plate.
+U> done
+S> Amazing! You have finished preparing a French omelette. Bon appétit!
+
+--- cooking fries
+S> What would you like to do?
+U> I want to make fries
+S> Preheat the oven to 230 degrees.
+U> done
+S> Scrub potatoes well and cut into 1 cm thick fries.
+U> done
+S> In a large mixing bowl, toss potatoes with oil, sugar, salt and red pepper.
+U> done
+S> Spread on baking sheet in one layer.
+U> done
+S> Bake for 30 minutes in the preheated oven, until potatoes are tender and browned.
+U> done
+S> Good job! You should serve and eat it as long as it is warm!
+
+--- cooking fries (explicit question)
+S> What would you like to do?
+U> I want to make fries
+S> Preheat the oven to 230 degrees.
+U> done
+S> Scrub potatoes well and cut into 1 cm thick fries.
+U> How many potatoes?
+S> Around two potatoes per person.
+U>
+S> Scrub potatoes well and cut into 1 cm thick fries.
+U> done
+S> In a large mixing bowl, toss potatoes with oil, sugar, salt and red pepper.
+U> done
+S> Spread on baking sheet in one layer.
+U> done
+S> Bake for 30 minutes in the preheated oven, until potatoes are tender and browned.
+U> done
+S> Good job! You should serve and eat it as long as it is warm!
+
+--- cooking fries (requesting help)
+S> What would you like to do?
+U> I want to make fries
+S> Preheat the oven to 230 degrees.
+U> How do I do that?
+S> Turn the knob of the oven, until you reach the temperature.
+U> done
+S> Now you have set the temperature.
+U> 
+S> Scrub potatoes well and cut into 1 cm thick fries.
+U> done
+S> In a large mixing bowl, toss potatoes with oil, sugar, salt and red pepper.
+U> done
+S> Spread on baking sheet in one layer.
+U> done
+S> Bake for 30 minutes in the preheated oven, until potatoes are tender and browned.
+U> done
+S> Good job! You should serve and eat it as long as it is warm!

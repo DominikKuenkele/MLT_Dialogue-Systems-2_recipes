@@ -20,7 +20,7 @@
       </assume_shared>
       <get_done action="omelette_recipe_step_0"/>
       <assume_shared>
-        <proposition predicate="which_ingredient" value="egg_mixture"/>
+        <proposition predicate="which_ingredient" value="butter"/>
       </assume_shared>
       <assume_shared>
         <proposition predicate="which_object" value="pan"/>
@@ -29,7 +29,9 @@
       <assume_shared>
         <proposition predicate="which_ingredient" value="egg"/>
       </assume_shared>
-
+      <assume_shared>
+        <proposition predicate="which_object" value="pan"/>
+      </assume_shared>
       <get_done action="omelette_recipe_step_2"/>
       <assume_shared>
         <proposition predicate="which_ingredient" value="omelette"/>
@@ -85,13 +87,107 @@
     </plan>
   </goal>
   
+  <goal type="perform" action="baked_mushroom_risotto_recipe_action">
+    <plan>
+      <assume_shared>
+        <proposition predicate="current_recipe" value="baked_mushroom_risotto_recipe"/>
+      </assume_shared>
+      <assume_shared>
+        <proposition predicate="which_ingredient" value="onion"/>
+      </assume_shared>
+
+      <get_done action="baked_mushroom_risotto_recipe_step_0"/>
+      <assume_shared>
+        <proposition predicate="which_ingredient" value="garlic"/>
+      </assume_shared>
+
+      <get_done action="baked_mushroom_risotto_recipe_step_1"/>
+      <assume_shared>
+        <proposition predicate="which_ingredient" value="mixed_mushrooms"/>
+      </assume_shared>
+
+      <get_done action="baked_mushroom_risotto_recipe_step_2"/>
+      <assume_shared>
+        <proposition predicate="which_ingredient" value="rosemary"/>
+      </assume_shared>
+
+      <get_done action="baked_mushroom_risotto_recipe_step_3"/>
+
+      <assume_shared>
+        <proposition predicate="which_object" value="oven"/>
+      </assume_shared>
+      <get_done action="baked_mushroom_risotto_recipe_step_4"/>
+
+      <assume_shared>
+        <proposition predicate="which_object" value="oven_proof_lidded_dish"/>
+      </assume_shared>
+      <get_done action="baked_mushroom_risotto_recipe_step_5"/>
+      <assume_shared>
+        <proposition predicate="which_ingredient" value="onion"/>
+      </assume_shared>
+
+      <get_done action="baked_mushroom_risotto_recipe_step_6"/>
+      <assume_shared>
+        <proposition predicate="which_ingredient" value="garlic"/>
+      </assume_shared>
+
+      <get_done action="baked_mushroom_risotto_recipe_step_7"/>
+      <assume_shared>
+        <proposition predicate="which_ingredient" value="mixed_mushrooms"/>
+      </assume_shared>
+
+      <get_done action="baked_mushroom_risotto_recipe_step_8"/>
+      <assume_shared>
+        <proposition predicate="which_ingredient" value="rosemary"/>
+      </assume_shared>
+
+      <get_done action="baked_mushroom_risotto_recipe_step_9"/>
+      <assume_shared>
+        <proposition predicate="which_ingredient" value="risotto_rice"/>
+      </assume_shared>
+
+      <get_done action="baked_mushroom_risotto_recipe_step_10"/>
+      <assume_shared>
+        <proposition predicate="which_ingredient" value="stock"/>
+      </assume_shared>
+
+      <get_done action="baked_mushroom_risotto_recipe_step_11"/>
+      <assume_shared>
+        <proposition predicate="which_ingredient" value="risotto"/>
+      </assume_shared>
+      <assume_shared>
+        <proposition predicate="which_object" value="lid"/>
+      </assume_shared>
+      <get_done action="baked_mushroom_risotto_recipe_step_12"/>
+
+
+      <get_done action="baked_mushroom_risotto_recipe_step_13"/>
+      <assume_shared>
+        <proposition predicate="which_ingredient" value="parmesan"/>
+      </assume_shared>
+
+      <get_done action="baked_mushroom_risotto_recipe_step_14"/>
+      <assume_shared>
+        <proposition predicate="which_ingredient" value="parmesan"/>
+      </assume_shared>
+
+      <get_done action="baked_mushroom_risotto_recipe_step_15"/>
+      <assume_shared>
+        <proposition predicate="which_ingredient" value="black_pepper"/>
+      </assume_shared>
+
+      <get_done action="baked_mushroom_risotto_recipe_step_16"/>
+      <signal_action_completion/>
+    </plan>
+  </goal>
+  
 
 
   <goal type="resolve" question_type="wh_question" predicate="amount_ingredient">
     <plan>
+      <findout type="wh_question" predicate="which_ingredient"/>
       <invoke_service_query type="wh_question" predicate="amount_ingredient"/>
       <bind type="wh_question" predicate="current_recipe"/>
-      <bind type="wh_question" predicate="which_ingredient"/>
     </plan>
   </goal>
 </domain>

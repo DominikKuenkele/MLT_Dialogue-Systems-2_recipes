@@ -12,9 +12,12 @@ class Template():
         return attribute.replace(" ", "_")
 
     def generate_file(self) -> None:
-        with open(self.template_file, 'r') as f:
-            template = f.read()
-        generated = template.replace(self.PLACEHOLDER, self._get_stub())
+        if self.template_file == '':
+            generated = self._get_stub()
+        else:
+            with open(self.template_file, 'r') as f:
+                template = f.read()
+            generated = template.replace(self.PLACEHOLDER, self._get_stub())
         with open(self.target_file, 'w') as f:
             f.write(generated)
             

@@ -1,0 +1,42 @@
+{
+    "omelette_recipe": {
+        "ingredients": {
+            "egg": "three",
+            "salt": "a pinch"
+        },
+        "steps": {
+            "omelette_recipe_step_0": {
+                "ingredients": {
+                    "egg": "three",
+                    "salt": "a pinch"
+                }
+            }
+        }
+    },
+    "fries_recipe": {
+        "ingredients": {
+            "potato": "three potatoes per person"
+        },
+        "steps": {}
+    },
+    "baked_mushroom_risotto_recipe": {
+        "ingredients": {
+            "olive_oil": "two tablespoons",
+            "onion": "one",
+            "garlic": "three gloves",
+            "mixed_mushrooms": "400 grams",
+            "rosemary": "1-2 tablespoons",
+            "risotto_rice": "200 grams",
+            "white_wine": "100 mililiters",
+            "vegetable_stock": "750 mililiters",
+            "parmesan": "30 grams"
+        },
+        "steps": {
+            "baked_mushroom_risotto_recipe_step_16": {
+                "ingredients": {
+                    "black_pepper": "a little"
+                }
+            }
+        }
+    }
+}

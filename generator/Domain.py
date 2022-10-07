@@ -25,10 +25,10 @@ class Domain(Template):
         stub = ''
         for recipe, get_dones in self.recipes.items():
             get_done_stub = '\n'.join(get_dones)
-            stub += f'''  <goal type="perform" action="{self._cleanse_attribute(recipe)}_recipe_action">
+            stub += f'''  <goal type="perform" action="{self._cleanse_attribute(recipe)}_action">
     <plan>
       <assume_shared>
-        <proposition predicate="current_recipe" value="{self._cleanse_attribute(recipe)}_recipe"/>
+        <proposition predicate="current_recipe" value="{self._cleanse_attribute(recipe)}"/>
       </assume_shared>
 {get_done_stub}
       <signal_action_completion/>

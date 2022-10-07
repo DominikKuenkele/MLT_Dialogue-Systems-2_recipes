@@ -11,9 +11,9 @@
 
   <goal type="resolve" question_type="wh_question" predicate="amount_ingredient">
     <plan>
+      <findout type="wh_question" predicate="which_ingredient"/>
       <invoke_service_query type="wh_question" predicate="amount_ingredient"/>
       <bind type="wh_question" predicate="current_recipe"/>
-      <bind type="wh_question" predicate="which_ingredient"/>
     </plan>
   </goal>
 </domain>

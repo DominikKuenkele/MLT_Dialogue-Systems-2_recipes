@@ -161,7 +161,13 @@ def retrieveParameters():
 @app.route("/get_amount_of_ingredient", methods=['POST'])
 def get_amount_of_ingredient():
     current_recipe, ingredient = retrieveParameters()
+    with open('recipe_lookup.json', 'r') as f:
+        recipe_lookup = json.load(f)
+
+    if current_recipe not in recipe_lookup:
+        raise Exception
     
+    amount = ''  
     print(current_recipe)
     print(ingredient)
     return query_response(value='amount', grammar_entry=None)

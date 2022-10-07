@@ -19,7 +19,7 @@ class Grammar(Template):
         stub = ''
         for recipe, utterances in self.recipes.items():
             utterance_stub = '\n'.join(utterances)
-            stub += f'''  <action name="{self._cleanse_attribute(recipe)}_recipe_action">
+            stub += f'''  <action name="{self._cleanse_attribute(recipe)}_action">
     <one-of>
 {utterance_stub}
     </one-of>
