@@ -13,12 +13,18 @@
         <proposition predicate="current_recipe" value="omelette_recipe"/>
       </assume_shared>
       <assume_shared>
+        <proposition predicate="current_step" value="omelette_recipe_step_0"/>
+      </assume_shared>
+      <assume_shared>
         <proposition predicate="which_ingredient" value="salt"/>
       </assume_shared>
       <assume_shared>
         <proposition predicate="which_object" value="bowl"/>
       </assume_shared>
       <get_done action="omelette_recipe_step_0"/>
+      <assume_shared>
+        <proposition predicate="current_step" value="omelette_recipe_step_1"/>
+      </assume_shared>
       <assume_shared>
         <proposition predicate="which_ingredient" value="butter"/>
       </assume_shared>
@@ -27,6 +33,9 @@
       </assume_shared>
       <get_done action="omelette_recipe_step_1"/>
       <assume_shared>
+        <proposition predicate="current_step" value="omelette_recipe_step_2"/>
+      </assume_shared>
+      <assume_shared>
         <proposition predicate="which_ingredient" value="egg"/>
       </assume_shared>
       <assume_shared>
@@ -34,12 +43,18 @@
       </assume_shared>
       <get_done action="omelette_recipe_step_2"/>
       <assume_shared>
+        <proposition predicate="current_step" value="omelette_recipe_step_3"/>
+      </assume_shared>
+      <assume_shared>
         <proposition predicate="which_ingredient" value="omelette"/>
       </assume_shared>
       <assume_shared>
         <proposition predicate="which_object" value="heat"/>
       </assume_shared>
       <get_done action="omelette_recipe_step_3"/>
+      <assume_shared>
+        <proposition predicate="current_step" value="omelette_recipe_step_4"/>
+      </assume_shared>
       <assume_shared>
         <proposition predicate="which_ingredient" value="omelette"/>
       </assume_shared>
@@ -56,16 +71,25 @@
       <assume_shared>
         <proposition predicate="current_recipe" value="fries_recipe"/>
       </assume_shared>
+      <assume_shared>
+        <proposition predicate="current_step" value="fries_recipe_step_0"/>
+      </assume_shared>
 
       <assume_shared>
         <proposition predicate="which_object" value="oven"/>
       </assume_shared>
       <get_done action="fries_recipe_step_0"/>
       <assume_shared>
+        <proposition predicate="current_step" value="fries_recipe_step_1"/>
+      </assume_shared>
+      <assume_shared>
         <proposition predicate="which_ingredient" value="potato"/>
       </assume_shared>
 
       <get_done action="fries_recipe_step_1"/>
+      <assume_shared>
+        <proposition predicate="current_step" value="fries_recipe_step_2"/>
+      </assume_shared>
       <assume_shared>
         <proposition predicate="which_ingredient" value="potato"/>
       </assume_shared>
@@ -73,11 +97,17 @@
         <proposition predicate="which_object" value="mixing_bowl"/>
       </assume_shared>
       <get_done action="fries_recipe_step_2"/>
+      <assume_shared>
+        <proposition predicate="current_step" value="fries_recipe_step_3"/>
+      </assume_shared>
 
       <assume_shared>
         <proposition predicate="which_object" value="baking_sheet"/>
       </assume_shared>
       <get_done action="fries_recipe_step_3"/>
+      <assume_shared>
+        <proposition predicate="current_step" value="fries_recipe_step_4"/>
+      </assume_shared>
 
       <assume_shared>
         <proposition predicate="which_object" value="oven"/>
@@ -93,65 +123,104 @@
         <proposition predicate="current_recipe" value="baked_mushroom_risotto_recipe"/>
       </assume_shared>
       <assume_shared>
+        <proposition predicate="current_step" value="baked_mushroom_risotto_recipe_step_0"/>
+      </assume_shared>
+      <assume_shared>
         <proposition predicate="which_ingredient" value="onion"/>
       </assume_shared>
 
       <get_done action="baked_mushroom_risotto_recipe_step_0"/>
+      <assume_shared>
+        <proposition predicate="current_step" value="baked_mushroom_risotto_recipe_step_1"/>
+      </assume_shared>
       <assume_shared>
         <proposition predicate="which_ingredient" value="garlic"/>
       </assume_shared>
 
       <get_done action="baked_mushroom_risotto_recipe_step_1"/>
       <assume_shared>
+        <proposition predicate="current_step" value="baked_mushroom_risotto_recipe_step_2"/>
+      </assume_shared>
+      <assume_shared>
         <proposition predicate="which_ingredient" value="mixed_mushrooms"/>
       </assume_shared>
 
       <get_done action="baked_mushroom_risotto_recipe_step_2"/>
       <assume_shared>
+        <proposition predicate="current_step" value="baked_mushroom_risotto_recipe_step_3"/>
+      </assume_shared>
+      <assume_shared>
         <proposition predicate="which_ingredient" value="rosemary"/>
       </assume_shared>
 
       <get_done action="baked_mushroom_risotto_recipe_step_3"/>
+      <assume_shared>
+        <proposition predicate="current_step" value="baked_mushroom_risotto_recipe_step_4"/>
+      </assume_shared>
 
       <assume_shared>
         <proposition predicate="which_object" value="oven"/>
       </assume_shared>
       <get_done action="baked_mushroom_risotto_recipe_step_4"/>
+      <assume_shared>
+        <proposition predicate="current_step" value="baked_mushroom_risotto_recipe_step_5"/>
+      </assume_shared>
 
       <assume_shared>
         <proposition predicate="which_object" value="oven_proof_lidded_dish"/>
       </assume_shared>
       <get_done action="baked_mushroom_risotto_recipe_step_5"/>
       <assume_shared>
+        <proposition predicate="current_step" value="baked_mushroom_risotto_recipe_step_6"/>
+      </assume_shared>
+      <assume_shared>
         <proposition predicate="which_ingredient" value="onion"/>
       </assume_shared>
 
       <get_done action="baked_mushroom_risotto_recipe_step_6"/>
+      <assume_shared>
+        <proposition predicate="current_step" value="baked_mushroom_risotto_recipe_step_7"/>
+      </assume_shared>
       <assume_shared>
         <proposition predicate="which_ingredient" value="garlic"/>
       </assume_shared>
 
       <get_done action="baked_mushroom_risotto_recipe_step_7"/>
       <assume_shared>
+        <proposition predicate="current_step" value="baked_mushroom_risotto_recipe_step_8"/>
+      </assume_shared>
+      <assume_shared>
         <proposition predicate="which_ingredient" value="mixed_mushrooms"/>
       </assume_shared>
 
       <get_done action="baked_mushroom_risotto_recipe_step_8"/>
+      <assume_shared>
+        <proposition predicate="current_step" value="baked_mushroom_risotto_recipe_step_9"/>
+      </assume_shared>
       <assume_shared>
         <proposition predicate="which_ingredient" value="rosemary"/>
       </assume_shared>
 
       <get_done action="baked_mushroom_risotto_recipe_step_9"/>
       <assume_shared>
+        <proposition predicate="current_step" value="baked_mushroom_risotto_recipe_step_10"/>
+      </assume_shared>
+      <assume_shared>
         <proposition predicate="which_ingredient" value="risotto_rice"/>
       </assume_shared>
 
       <get_done action="baked_mushroom_risotto_recipe_step_10"/>
       <assume_shared>
+        <proposition predicate="current_step" value="baked_mushroom_risotto_recipe_step_11"/>
+      </assume_shared>
+      <assume_shared>
         <proposition predicate="which_ingredient" value="stock"/>
       </assume_shared>
 
       <get_done action="baked_mushroom_risotto_recipe_step_11"/>
+      <assume_shared>
+        <proposition predicate="current_step" value="baked_mushroom_risotto_recipe_step_12"/>
+      </assume_shared>
       <assume_shared>
         <proposition predicate="which_ingredient" value="risotto"/>
       </assume_shared>
@@ -159,19 +228,31 @@
         <proposition predicate="which_object" value="lid"/>
       </assume_shared>
       <get_done action="baked_mushroom_risotto_recipe_step_12"/>
+      <assume_shared>
+        <proposition predicate="current_step" value="baked_mushroom_risotto_recipe_step_13"/>
+      </assume_shared>
 
 
       <get_done action="baked_mushroom_risotto_recipe_step_13"/>
+      <assume_shared>
+        <proposition predicate="current_step" value="baked_mushroom_risotto_recipe_step_14"/>
+      </assume_shared>
       <assume_shared>
         <proposition predicate="which_ingredient" value="parmesan"/>
       </assume_shared>
 
       <get_done action="baked_mushroom_risotto_recipe_step_14"/>
       <assume_shared>
+        <proposition predicate="current_step" value="baked_mushroom_risotto_recipe_step_15"/>
+      </assume_shared>
+      <assume_shared>
         <proposition predicate="which_ingredient" value="parmesan"/>
       </assume_shared>
 
       <get_done action="baked_mushroom_risotto_recipe_step_15"/>
+      <assume_shared>
+        <proposition predicate="current_step" value="baked_mushroom_risotto_recipe_step_16"/>
+      </assume_shared>
       <assume_shared>
         <proposition predicate="which_ingredient" value="black_pepper"/>
       </assume_shared>
@@ -187,6 +268,7 @@
     <plan>
       <findout type="wh_question" predicate="which_ingredient"/>
       <invoke_service_query type="wh_question" predicate="amount_ingredient"/>
+      <bind type="wh_question" predicate="current_step"/>
       <bind type="wh_question" predicate="current_recipe"/>
     </plan>
   </goal>

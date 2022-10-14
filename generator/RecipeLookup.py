@@ -20,11 +20,10 @@ class RecipeLookup(Template):
         else:
             step = self._cleanse_attribute(step)
             if step not in self.lookup[recipe_name]["steps"]:
-                self.lookup[recipe_name]["steps"] = {
-                    step: {
-                        "ingredients": {}
-                    }
+                self.lookup[recipe_name]["steps"][step]=  {
+                    "ingredients": {}
                 }
+                
             self.lookup[recipe_name]["steps"][step]["ingredients"][ingredient] = amount
 
     def _get_stub(self) -> str:

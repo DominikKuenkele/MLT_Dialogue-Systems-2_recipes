@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ontology name="RecipeAppOntology">
   <sort name="recipe"/>
+  <sort name="step"/>
   <sort name="ingredient" dynamic="true"/>
   <sort name="object" dynamic="true"/>
 
   <predicate name="current_recipe" sort="recipe"/>
+  <predicate name="current_step" sort="step"/>
   <predicate name="which_ingredient" sort="ingredient"/>
   <predicate name="which_object" sort="object"/>
   <predicate name="amount_ingredient" sort="string"/>

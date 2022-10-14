@@ -13,6 +13,7 @@
     <plan>
       <findout type="wh_question" predicate="which_ingredient"/>
       <invoke_service_query type="wh_question" predicate="amount_ingredient"/>
+      <bind type="wh_question" predicate="current_step"/>
       <bind type="wh_question" predicate="current_recipe"/>
     </plan>
   </goal>

@@ -10,6 +10,11 @@
                     "egg": "three",
                     "salt": "a pinch"
                 }
+            },
+            "omelette_recipe_step_2": {
+                "ingredients": {
+                    "egg": "four"
+                }
             }
         }
     },
@@ -32,6 +37,11 @@
             "parmesan": "30 grams"
         },
         "steps": {
+            "baked_mushroom_risotto_recipe_step_15": {
+                "ingredients": {
+                    "parmesan": "some"
+                }
+            },
             "baked_mushroom_risotto_recipe_step_16": {
                 "ingredients": {
                     "black_pepper": "a little"

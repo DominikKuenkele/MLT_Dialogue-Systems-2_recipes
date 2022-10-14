@@ -1,5 +1,9 @@
 [
     {
+        "match": "answer(amount_ingredient(&individual))",
+        "utterance": "&individual is fine.|About &individual."
+    },
+    {
         "match": "request(omelette_recipe_step_0)",
         "utterance": "Crack three eggs on a bowl and whisk with a pinch of salt."
     },

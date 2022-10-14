@@ -1,3 +1,4 @@
+from asyncio import current_task
 from Template import Template
 
 class Domain(Template):
@@ -9,6 +10,10 @@ class Domain(Template):
         self.recipes[recipe_name] = []
 
     def add_step(self, recipe_name, action_name, ingredient, object) -> None:
+        current_step = f'''      <assume_shared>
+        <proposition predicate="current_step" value="{self._cleanse_attribute(action_name)}"/>
+      </assume_shared>'''
+
         which_ingredient = f'''      <assume_shared>
         <proposition predicate="which_ingredient" value="{self._cleanse_attribute(ingredient)}"/>
       </assume_shared>''' if ingredient != '' else '\r'
@@ -17,7 +22,8 @@ class Domain(Template):
         <proposition predicate="which_object" value="{self._cleanse_attribute(object)}"/>
       </assume_shared>''' if object != '' else '\r'
 
-        self.recipes[recipe_name].append(f'''{which_ingredient}
+        self.recipes[recipe_name].append(f'''{current_step}
+{which_ingredient}
 {which_object}
       <get_done action="{self._cleanse_attribute(action_name)}"/>''')
 

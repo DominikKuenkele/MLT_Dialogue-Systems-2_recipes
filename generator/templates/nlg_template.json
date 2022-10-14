@@ -1,3 +1,7 @@
 [
+    {
+        "match": "answer(amount_ingredient(&individual))",
+        "utterance": "&individual is fine.|About &individual."
+    },
 &generated
 ]

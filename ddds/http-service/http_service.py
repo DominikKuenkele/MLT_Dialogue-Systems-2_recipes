@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import json
+from re import A
 
 from flask import Flask, request
 from jinja2 import Environment
@@ -154,20 +155,37 @@ def retrieveParameters():
     facts = request.get_json()["context"]["facts"]
     print(facts)
     current_recipe = facts["current_recipe"]["value"]
-    ingredient = facts["which_ingredient"]["value"]
+    current_step = facts["current_step"]["value"]
+    ingredient = facts["which_ingredient"]["grammar_entry"]
 
-    return current_recipe, ingredient, 
+    return current_recipe, current_step, ingredient, 
 
 @app.route("/get_amount_of_ingredient", methods=['POST'])
 def get_amount_of_ingredient():
-    current_recipe, ingredient = retrieveParameters()
+    current_recipe, current_step, ingredient = retrieveParameters()
+    amount = ''
+
     with open('recipe_lookup.json', 'r') as f:
         recipe_lookup = json.load(f)
 
     if current_recipe not in recipe_lookup:
         raise Exception
+
+    looked_up_steps = list(recipe_lookup[current_recipe]['steps'].keys())
+    if current_step not in looked_up_steps:
+        looked_up_steps.append(current_step)
+        sorted_steps = sorted(looked_up_steps, reverse=True)
+        current_step_index = sorted_steps.index(current_step) + 1
+    else:
+        sorted_steps = sorted(looked_up_steps, reverse=True)
+        current_step_index = sorted_steps.index(current_step)
+
+    for step in sorted_steps[current_step_index:]:
+        if ingredient in recipe_lookup[current_recipe]['steps'][step]['ingredients']:
+            amount = recipe_lookup[current_recipe]['steps'][step]['ingredients'][ingredient]
+            break
     
-    amount = ''  
-    print(current_recipe)
-    print(ingredient)
-    return query_response(value='amount', grammar_entry=None)
+    if amount == '':
+        amount = recipe_lookup[current_recipe]['ingredients'].get(ingredient, 'as much as you like')
+
+    return query_response(value=amount, grammar_entry=None)

@@ -54,6 +54,8 @@ def parse_xml(path):
                     objects.add(substep.attrib['object'])
                     last_object = substep.attrib['object']
                 
+            ontology.add_individual(step_name, 'step')
+            grammar.add_individual(step_name)
             domain.add_step(recipe_name, step_name, last_ingredient, last_object)
             nlg.add_request(step_name, ' and '.join(step_utterances))
             nlg.add_action_completion(f'{recipe_name}_action', 'done', recipe.find('./finisher').text)

@@ -25,7 +25,7 @@
             </step>
             <step>
                 <substep ingredient="egg mixture" object="pan">Add the egg mixture to the pan</substep>
-                <substep ingredient="egg" time="30 seconds">stir the eggs for about 30 seconds.</substep>
+                <substep ingredient="egg" amount="four" time="30 seconds">stir the eggs for about 30 seconds.</substep>
             </step>
             <step>
                 <substep object="heat" condition="when the eggs are set, but look slightly wet">When the eggs are set but look slightly wet, turn off the heat</substep>
