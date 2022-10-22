@@ -9,6 +9,11 @@
 
   <goal type="perform" action="omelette_recipe_action">
     <plan>
+      <inform>
+        <proposition predicate="read_ingredient_list" value="ingredient_list_egg"/>
+      </inform>
+      <end_turn expected_passivity="3.0"/>
+
       <assume_shared>
         <proposition predicate="current_recipe" value="omelette_recipe"/>
       </assume_shared>

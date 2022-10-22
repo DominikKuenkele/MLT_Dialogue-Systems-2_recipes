@@ -4,12 +4,16 @@
   <sort name="step"/>
   <sort name="ingredient" dynamic="true"/>
   <sort name="object" dynamic="true"/>
+  <sort name="ingredient_list" />
 
   <predicate name="current_recipe" sort="recipe"/>
   <predicate name="current_step" sort="step"/>
   <predicate name="which_ingredient" sort="ingredient"/>
   <predicate name="which_object" sort="object"/>
   <predicate name="amount_ingredient" sort="string"/>
+  <predicate name="read_ingredient_list" sort="ingredient_list"/>
+
+  <individual name="ingredient_list_egg" sort="ingredient_list"/>
 
   <action name="omelette_recipe_action"/>
   <individual name="omelette_recipe" sort="recipe"/>

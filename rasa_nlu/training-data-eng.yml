@@ -31,25 +31,25 @@ nlu:
 - intent: question::amount_ingredient
   examples: |
     - How much [black pepper]{"entity": "sort.ingredient", "value": "individual.black_pepper"} should I use
-    - How much [egg]{"entity": "sort.ingredient", "value": "individual.egg"} should I use
-    - How much [garlic]{"entity": "sort.ingredient", "value": "individual.garlic"} should I use
+    - How much [butter]{"entity": "sort.ingredient", "value": "individual.butter"} should I use
+    - How much [egg mixture]{"entity": "sort.ingredient", "value": "individual.egg_mixture"} should I use
     - How much [mixed mushrooms]{"entity": "sort.ingredient", "value": "individual.mixed_mushrooms"} should I use
-    - How much [oil]{"entity": "sort.ingredient", "value": "individual.oil"} should I use
     - How much [olive oil]{"entity": "sort.ingredient", "value": "individual.olive_oil"} should I use
-    - How much [omelette]{"entity": "sort.ingredient", "value": "individual.omelette"} should I use
-    - How much [potato]{"entity": "sort.ingredient", "value": "individual.potato"} should I use
-    - How much [stock]{"entity": "sort.ingredient", "value": "individual.stock"} should I use
+    - How much [onion]{"entity": "sort.ingredient", "value": "individual.onion"} should I use
+    - How much [parmesan]{"entity": "sort.ingredient", "value": "individual.parmesan"} should I use
+    - How much [risotto rice]{"entity": "sort.ingredient", "value": "individual.risotto_rice"} should I use
+    - How much [rosemary]{"entity": "sort.ingredient", "value": "individual.rosemary"} should I use
     - How much [wine]{"entity": "sort.ingredient", "value": "individual.wine"} should I use
-    - How many [butter]{"entity": "sort.ingredient", "value": "individual.butter"}
     - How many [egg mixture]{"entity": "sort.ingredient", "value": "individual.egg_mixture"}
     - How many [egg]{"entity": "sort.ingredient", "value": "individual.egg"}
-    - How many [garlic]{"entity": "sort.ingredient", "value": "individual.garlic"}
     - How many [mixed mushrooms]{"entity": "sort.ingredient", "value": "individual.mixed_mushrooms"}
     - How many [olive oil]{"entity": "sort.ingredient", "value": "individual.olive_oil"}
-    - How many [onion]{"entity": "sort.ingredient", "value": "individual.onion"}
+    - How many [parmesan]{"entity": "sort.ingredient", "value": "individual.parmesan"}
+    - How many [potato]{"entity": "sort.ingredient", "value": "individual.potato"}
+    - How many [risotto rice]{"entity": "sort.ingredient", "value": "individual.risotto_rice"}
+    - How many [risotto]{"entity": "sort.ingredient", "value": "individual.risotto"}
+    - How many [rosemary]{"entity": "sort.ingredient", "value": "individual.rosemary"}
     - How many [salt]{"entity": "sort.ingredient", "value": "individual.salt"}
-    - How many [stock]{"entity": "sort.ingredient", "value": "individual.stock"}
-    - How many [wine]{"entity": "sort.ingredient", "value": "individual.wine"}
     - How much
     - A lot
     - What is the amount
@@ -69,74 +69,134 @@ nlu:
     - [omelette recipe]{"entity": "sort.recipe", "value": "individual.omelette_recipe"}
     - [fries recipe]{"entity": "sort.recipe", "value": "individual.fries_recipe"}
     - [baked mushroom risotto recipe]{"entity": "sort.recipe", "value": "individual.baked_mushroom_risotto_recipe"}
-    - [rosemary]{"entity": "sort.ingredient", "value": "individual.rosemary"}
-    - [risotto rice]{"entity": "sort.ingredient", "value": "individual.risotto_rice"}
-    - [omelette]{"entity": "sort.ingredient", "value": "individual.omelette"}
-    - [risotto]{"entity": "sort.ingredient", "value": "individual.risotto"}
-    - [parmesan]{"entity": "sort.ingredient", "value": "individual.parmesan"}
-    - [black pepper]{"entity": "sort.ingredient", "value": "individual.black_pepper"}
-    - [stock]{"entity": "sort.ingredient", "value": "individual.stock"}
-    - [olive oil]{"entity": "sort.ingredient", "value": "individual.olive_oil"}
-    - [onion]{"entity": "sort.ingredient", "value": "individual.onion"}
-    - [garlic]{"entity": "sort.ingredient", "value": "individual.garlic"}
-    - [potato]{"entity": "sort.ingredient", "value": "individual.potato"}
-    - [oil]{"entity": "sort.ingredient", "value": "individual.oil"}
-    - [mixed mushrooms]{"entity": "sort.ingredient", "value": "individual.mixed_mushrooms"}
-    - [egg]{"entity": "sort.ingredient", "value": "individual.egg"}
-    - [butter]{"entity": "sort.ingredient", "value": "individual.butter"}
-    - [egg mixture]{"entity": "sort.ingredient", "value": "individual.egg_mixture"}
+    - [omelette recipe_step_0]{"entity": "sort.step", "value": "individual.omelette_recipe_step_0"}
+    - [omelette recipe_step_1]{"entity": "sort.step", "value": "individual.omelette_recipe_step_1"}
+    - [omelette recipe_step_2]{"entity": "sort.step", "value": "individual.omelette_recipe_step_2"}
+    - [omelette recipe_step_3]{"entity": "sort.step", "value": "individual.omelette_recipe_step_3"}
+    - [omelette recipe_step_4]{"entity": "sort.step", "value": "individual.omelette_recipe_step_4"}
+    - [fries recipe_step_0]{"entity": "sort.step", "value": "individual.fries_recipe_step_0"}
+    - [fries recipe_step_1]{"entity": "sort.step", "value": "individual.fries_recipe_step_1"}
+    - [fries recipe_step_2]{"entity": "sort.step", "value": "individual.fries_recipe_step_2"}
+    - [fries recipe_step_3]{"entity": "sort.step", "value": "individual.fries_recipe_step_3"}
+    - [fries recipe_step_4]{"entity": "sort.step", "value": "individual.fries_recipe_step_4"}
+    - [baked mushroom risotto recipe_step_0]{"entity": "sort.step", "value": "individual.baked_mushroom_risotto_recipe_step_0"}
+    - [baked mushroom risotto recipe_step_1]{"entity": "sort.step", "value": "individual.baked_mushroom_risotto_recipe_step_1"}
+    - [baked mushroom risotto recipe_step_2]{"entity": "sort.step", "value": "individual.baked_mushroom_risotto_recipe_step_2"}
+    - [baked mushroom risotto recipe_step_3]{"entity": "sort.step", "value": "individual.baked_mushroom_risotto_recipe_step_3"}
+    - [baked mushroom risotto recipe_step_4]{"entity": "sort.step", "value": "individual.baked_mushroom_risotto_recipe_step_4"}
+    - [baked mushroom risotto recipe_step_5]{"entity": "sort.step", "value": "individual.baked_mushroom_risotto_recipe_step_5"}
+    - [baked mushroom risotto recipe_step_6]{"entity": "sort.step", "value": "individual.baked_mushroom_risotto_recipe_step_6"}
+    - [baked mushroom risotto recipe_step_7]{"entity": "sort.step", "value": "individual.baked_mushroom_risotto_recipe_step_7"}
+    - [baked mushroom risotto recipe_step_8]{"entity": "sort.step", "value": "individual.baked_mushroom_risotto_recipe_step_8"}
+    - [baked mushroom risotto recipe_step_9]{"entity": "sort.step", "value": "individual.baked_mushroom_risotto_recipe_step_9"}
+    - [baked mushroom risotto recipe_step_10]{"entity": "sort.step", "value": "individual.baked_mushroom_risotto_recipe_step_10"}
+    - [baked mushroom risotto recipe_step_11]{"entity": "sort.step", "value": "individual.baked_mushroom_risotto_recipe_step_11"}
+    - [baked mushroom risotto recipe_step_12]{"entity": "sort.step", "value": "individual.baked_mushroom_risotto_recipe_step_12"}
+    - [baked mushroom risotto recipe_step_13]{"entity": "sort.step", "value": "individual.baked_mushroom_risotto_recipe_step_13"}
+    - [baked mushroom risotto recipe_step_14]{"entity": "sort.step", "value": "individual.baked_mushroom_risotto_recipe_step_14"}
+    - [baked mushroom risotto recipe_step_15]{"entity": "sort.step", "value": "individual.baked_mushroom_risotto_recipe_step_15"}
+    - [baked mushroom risotto recipe_step_16]{"entity": "sort.step", "value": "individual.baked_mushroom_risotto_recipe_step_16"}
     - [wine]{"entity": "sort.ingredient", "value": "individual.wine"}
     - [salt]{"entity": "sort.ingredient", "value": "individual.salt"}
+    - [egg]{"entity": "sort.ingredient", "value": "individual.egg"}
+    - [stock]{"entity": "sort.ingredient", "value": "individual.stock"}
+    - [black pepper]{"entity": "sort.ingredient", "value": "individual.black_pepper"}
+    - [mixed mushrooms]{"entity": "sort.ingredient", "value": "individual.mixed_mushrooms"}
+    - [butter]{"entity": "sort.ingredient", "value": "individual.butter"}
+    - [oil]{"entity": "sort.ingredient", "value": "individual.oil"}
+    - [olive oil]{"entity": "sort.ingredient", "value": "individual.olive_oil"}
+    - [omelette]{"entity": "sort.ingredient", "value": "individual.omelette"}
+    - [garlic]{"entity": "sort.ingredient", "value": "individual.garlic"}
+    - [risotto]{"entity": "sort.ingredient", "value": "individual.risotto"}
+    - [rosemary]{"entity": "sort.ingredient", "value": "individual.rosemary"}
+    - [onion]{"entity": "sort.ingredient", "value": "individual.onion"}
+    - [potato]{"entity": "sort.ingredient", "value": "individual.potato"}
+    - [parmesan]{"entity": "sort.ingredient", "value": "individual.parmesan"}
+    - [risotto rice]{"entity": "sort.ingredient", "value": "individual.risotto_rice"}
+    - [egg mixture]{"entity": "sort.ingredient", "value": "individual.egg_mixture"}
+    - [pan]{"entity": "sort.object", "value": "individual.pan"}
     - [heat]{"entity": "sort.object", "value": "individual.heat"}
     - [bowl]{"entity": "sort.object", "value": "individual.bowl"}
-    - [oven proof lidded dish]{"entity": "sort.object", "value": "individual.oven_proof_lidded_dish"}
-    - [pan]{"entity": "sort.object", "value": "individual.pan"}
-    - [plate]{"entity": "sort.object", "value": "individual.plate"}
-    - [lid]{"entity": "sort.object", "value": "individual.lid"}
-    - [mixing bowl]{"entity": "sort.object", "value": "individual.mixing_bowl"}
-    - [oven]{"entity": "sort.object", "value": "individual.oven"}
     - [baking sheet]{"entity": "sort.object", "value": "individual.baking_sheet"}
+    - [oven]{"entity": "sort.object", "value": "individual.oven"}
+    - [lid]{"entity": "sort.object", "value": "individual.lid"}
+    - [plate]{"entity": "sort.object", "value": "individual.plate"}
+    - [mixing bowl]{"entity": "sort.object", "value": "individual.mixing_bowl"}
+    - [oven proof lidded dish]{"entity": "sort.object", "value": "individual.oven_proof_lidded_dish"}
     - yes [single](sort.string)
     - yes [omelette recipe]{"entity": "sort.recipe", "value": "individual.omelette_recipe"}
-    - yes [olive oil]{"entity": "sort.ingredient", "value": "individual.olive_oil"}
-    - yes [salt]{"entity": "sort.ingredient", "value": "individual.salt"}
+    - yes [fries recipe_step_2]{"entity": "sort.step", "value": "individual.fries_recipe_step_2"}
+    - yes [baked mushroom risotto recipe_step_7]{"entity": "sort.step", "value": "individual.baked_mushroom_risotto_recipe_step_7"}
+    - yes [wine]{"entity": "sort.ingredient", "value": "individual.wine"}
+    - yes [garlic]{"entity": "sort.ingredient", "value": "individual.garlic"}
+    - yes [bowl]{"entity": "sort.object", "value": "individual.bowl"}
     - no [double word](sort.string)
     - no [fries recipe]{"entity": "sort.recipe", "value": "individual.fries_recipe"}
-    - no [onion]{"entity": "sort.ingredient", "value": "individual.onion"}
-    - no [heat]{"entity": "sort.object", "value": "individual.heat"}
+    - no [fries recipe_step_3]{"entity": "sort.step", "value": "individual.fries_recipe_step_3"}
+    - no [baked mushroom risotto recipe_step_8]{"entity": "sort.step", "value": "individual.baked_mushroom_risotto_recipe_step_8"}
+    - no [salt]{"entity": "sort.ingredient", "value": "individual.salt"}
+    - no [risotto]{"entity": "sort.ingredient", "value": "individual.risotto"}
+    - no [baking sheet]{"entity": "sort.object", "value": "individual.baking_sheet"}
 
 - intent: answer_negation
   examples: |
     - not [omelette recipe]{"entity": "sort.recipe", "value": "individual.omelette_recipe"}
     - not [fries recipe]{"entity": "sort.recipe", "value": "individual.fries_recipe"}
     - not [baked mushroom risotto recipe]{"entity": "sort.recipe", "value": "individual.baked_mushroom_risotto_recipe"}
-    - not [rosemary]{"entity": "sort.ingredient", "value": "individual.rosemary"}
-    - not [risotto rice]{"entity": "sort.ingredient", "value": "individual.risotto_rice"}
-    - not [omelette]{"entity": "sort.ingredient", "value": "individual.omelette"}
-    - not [risotto]{"entity": "sort.ingredient", "value": "individual.risotto"}
-    - not [parmesan]{"entity": "sort.ingredient", "value": "individual.parmesan"}
-    - not [black pepper]{"entity": "sort.ingredient", "value": "individual.black_pepper"}
-    - not [stock]{"entity": "sort.ingredient", "value": "individual.stock"}
-    - not [olive oil]{"entity": "sort.ingredient", "value": "individual.olive_oil"}
-    - not [onion]{"entity": "sort.ingredient", "value": "individual.onion"}
-    - not [garlic]{"entity": "sort.ingredient", "value": "individual.garlic"}
-    - not [potato]{"entity": "sort.ingredient", "value": "individual.potato"}
-    - not [oil]{"entity": "sort.ingredient", "value": "individual.oil"}
-    - not [mixed mushrooms]{"entity": "sort.ingredient", "value": "individual.mixed_mushrooms"}
-    - not [egg]{"entity": "sort.ingredient", "value": "individual.egg"}
-    - not [butter]{"entity": "sort.ingredient", "value": "individual.butter"}
-    - not [egg mixture]{"entity": "sort.ingredient", "value": "individual.egg_mixture"}
+    - not [omelette recipe_step_0]{"entity": "sort.step", "value": "individual.omelette_recipe_step_0"}
+    - not [omelette recipe_step_1]{"entity": "sort.step", "value": "individual.omelette_recipe_step_1"}
+    - not [omelette recipe_step_2]{"entity": "sort.step", "value": "individual.omelette_recipe_step_2"}
+    - not [omelette recipe_step_3]{"entity": "sort.step", "value": "individual.omelette_recipe_step_3"}
+    - not [omelette recipe_step_4]{"entity": "sort.step", "value": "individual.omelette_recipe_step_4"}
+    - not [fries recipe_step_0]{"entity": "sort.step", "value": "individual.fries_recipe_step_0"}
+    - not [fries recipe_step_1]{"entity": "sort.step", "value": "individual.fries_recipe_step_1"}
+    - not [fries recipe_step_2]{"entity": "sort.step", "value": "individual.fries_recipe_step_2"}
+    - not [fries recipe_step_3]{"entity": "sort.step", "value": "individual.fries_recipe_step_3"}
+    - not [fries recipe_step_4]{"entity": "sort.step", "value": "individual.fries_recipe_step_4"}
+    - not [baked mushroom risotto recipe_step_0]{"entity": "sort.step", "value": "individual.baked_mushroom_risotto_recipe_step_0"}
+    - not [baked mushroom risotto recipe_step_1]{"entity": "sort.step", "value": "individual.baked_mushroom_risotto_recipe_step_1"}
+    - not [baked mushroom risotto recipe_step_2]{"entity": "sort.step", "value": "individual.baked_mushroom_risotto_recipe_step_2"}
+    - not [baked mushroom risotto recipe_step_3]{"entity": "sort.step", "value": "individual.baked_mushroom_risotto_recipe_step_3"}
+    - not [baked mushroom risotto recipe_step_4]{"entity": "sort.step", "value": "individual.baked_mushroom_risotto_recipe_step_4"}
+    - not [baked mushroom risotto recipe_step_5]{"entity": "sort.step", "value": "individual.baked_mushroom_risotto_recipe_step_5"}
+    - not [baked mushroom risotto recipe_step_6]{"entity": "sort.step", "value": "individual.baked_mushroom_risotto_recipe_step_6"}
+    - not [baked mushroom risotto recipe_step_7]{"entity": "sort.step", "value": "individual.baked_mushroom_risotto_recipe_step_7"}
+    - not [baked mushroom risotto recipe_step_8]{"entity": "sort.step", "value": "individual.baked_mushroom_risotto_recipe_step_8"}
+    - not [baked mushroom risotto recipe_step_9]{"entity": "sort.step", "value": "individual.baked_mushroom_risotto_recipe_step_9"}
+    - not [baked mushroom risotto recipe_step_10]{"entity": "sort.step", "value": "individual.baked_mushroom_risotto_recipe_step_10"}
+    - not [baked mushroom risotto recipe_step_11]{"entity": "sort.step", "value": "individual.baked_mushroom_risotto_recipe_step_11"}
+    - not [baked mushroom risotto recipe_step_12]{"entity": "sort.step", "value": "individual.baked_mushroom_risotto_recipe_step_12"}
+    - not [baked mushroom risotto recipe_step_13]{"entity": "sort.step", "value": "individual.baked_mushroom_risotto_recipe_step_13"}
+    - not [baked mushroom risotto recipe_step_14]{"entity": "sort.step", "value": "individual.baked_mushroom_risotto_recipe_step_14"}
+    - not [baked mushroom risotto recipe_step_15]{"entity": "sort.step", "value": "individual.baked_mushroom_risotto_recipe_step_15"}
+    - not [baked mushroom risotto recipe_step_16]{"entity": "sort.step", "value": "individual.baked_mushroom_risotto_recipe_step_16"}
     - not [wine]{"entity": "sort.ingredient", "value": "individual.wine"}
     - not [salt]{"entity": "sort.ingredient", "value": "individual.salt"}
+    - not [egg]{"entity": "sort.ingredient", "value": "individual.egg"}
+    - not [stock]{"entity": "sort.ingredient", "value": "individual.stock"}
+    - not [black pepper]{"entity": "sort.ingredient", "value": "individual.black_pepper"}
+    - not [mixed mushrooms]{"entity": "sort.ingredient", "value": "individual.mixed_mushrooms"}
+    - not [butter]{"entity": "sort.ingredient", "value": "individual.butter"}
+    - not [oil]{"entity": "sort.ingredient", "value": "individual.oil"}
+    - not [olive oil]{"entity": "sort.ingredient", "value": "individual.olive_oil"}
+    - not [omelette]{"entity": "sort.ingredient", "value": "individual.omelette"}
+    - not [garlic]{"entity": "sort.ingredient", "value": "individual.garlic"}
+    - not [risotto]{"entity": "sort.ingredient", "value": "individual.risotto"}
+    - not [rosemary]{"entity": "sort.ingredient", "value": "individual.rosemary"}
+    - not [onion]{"entity": "sort.ingredient", "value": "individual.onion"}
+    - not [potato]{"entity": "sort.ingredient", "value": "individual.potato"}
+    - not [parmesan]{"entity": "sort.ingredient", "value": "individual.parmesan"}
+    - not [risotto rice]{"entity": "sort.ingredient", "value": "individual.risotto_rice"}
+    - not [egg mixture]{"entity": "sort.ingredient", "value": "individual.egg_mixture"}
+    - not [pan]{"entity": "sort.object", "value": "individual.pan"}
     - not [heat]{"entity": "sort.object", "value": "individual.heat"}
     - not [bowl]{"entity": "sort.object", "value": "individual.bowl"}
-    - not [oven proof lidded dish]{"entity": "sort.object", "value": "individual.oven_proof_lidded_dish"}
-    - not [pan]{"entity": "sort.object", "value": "individual.pan"}
-    - not [plate]{"entity": "sort.object", "value": "individual.plate"}
-    - not [lid]{"entity": "sort.object", "value": "individual.lid"}
-    - not [mixing bowl]{"entity": "sort.object", "value": "individual.mixing_bowl"}
-    - not [oven]{"entity": "sort.object", "value": "individual.oven"}
     - not [baking sheet]{"entity": "sort.object", "value": "individual.baking_sheet"}
+    - not [oven]{"entity": "sort.object", "value": "individual.oven"}
+    - not [lid]{"entity": "sort.object", "value": "individual.lid"}
+    - not [plate]{"entity": "sort.object", "value": "individual.plate"}
+    - not [mixing bowl]{"entity": "sort.object", "value": "individual.mixing_bowl"}
+    - not [oven proof lidded dish]{"entity": "sort.object", "value": "individual.oven_proof_lidded_dish"}
 
 - intent: NEGATIVE
   examples: |

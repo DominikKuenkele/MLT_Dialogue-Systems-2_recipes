@@ -6,6 +6,8 @@ from re import A
 from flask import Flask, request
 from jinja2 import Environment
 
+import inflect
+
 app = Flask(__name__)
 environment = Environment()
 
@@ -52,7 +54,8 @@ def query_response(value, grammar_entry):
       }
     }
     """)
-    payload = response_template.render(value=value, grammar_entry=grammar_entry)
+    payload = response_template.render(
+        value=value, grammar_entry=grammar_entry)
     response = app.response_class(
         response=payload,
         status=200,
@@ -151,6 +154,7 @@ def action_success_response():
     )
     return response
 
+
 def retrieveParameters():
     facts = request.get_json()["context"]["facts"]
     print(facts)
@@ -158,18 +162,26 @@ def retrieveParameters():
     current_step = facts["current_step"]["value"]
     ingredient = facts["which_ingredient"]["grammar_entry"]
 
-    return current_recipe, current_step, ingredient, 
+    return current_recipe, current_step, ingredient,
+
 
 @app.route("/get_amount_of_ingredient", methods=['POST'])
 def get_amount_of_ingredient():
+    inflect_engine = inflect.engine()
+
     current_recipe, current_step, ingredient = retrieveParameters()
-    amount = ''
+    ingredient_forms = [ingredient,
+                        inflect_engine.singular_noun(ingredient),
+                        inflect_engine.plural_noun(ingredient)]
 
     with open('recipe_lookup.json', 'r') as f:
         recipe_lookup = json.load(f)
 
     if current_recipe not in recipe_lookup:
         raise Exception
+
+    amount = recipe_lookup[current_recipe]['ingredients'].get(
+            ingredient, '')
 
     looked_up_steps = list(recipe_lookup[current_recipe]['steps'].keys())
     if current_step not in looked_up_steps:
@@ -181,11 +193,20 @@ def get_amount_of_ingredient():
         current_step_index = sorted_steps.index(current_step)
 
     for step in sorted_steps[current_step_index:]:
-        if ingredient in recipe_lookup[current_recipe]['steps'][step]['ingredients']:
-            amount = recipe_lookup[current_recipe]['steps'][step]['ingredients'][ingredient]
-            break
-    
-    if amount == '':
-        amount = recipe_lookup[current_recipe]['ingredients'].get(ingredient, 'as much as you like')
+        found = False
+        step_ingredients = recipe_lookup[current_recipe]['steps'][step]['ingredients']
+        for ingredient in ingredient_forms:
+            if ingredient in step_ingredients:
+                amount = recipe_lookup[current_recipe]['steps'][step]['ingredients'][ingredient]
+                found = True
+                break
 
-    return query_response(value=amount, grammar_entry=None)
+        if found:
+            break
+
+    if amount == '':
+        utterance = 'As much as you like.'
+    else:
+        utterance = f'Uhh, {amount} is fine.'
+
+    return query_response(value=utterance, grammar_entry=None)
