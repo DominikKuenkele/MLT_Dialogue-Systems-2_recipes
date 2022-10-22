@@ -2,7 +2,8 @@
     "omelette_recipe": {
         "ingredients": {
             "egg": "three",
-            "salt": "a pinch"
+            "salt": "a pinch",
+            "butter": "a tablespoon"
         },
         "steps": {
             "omelette_recipe_step_0": {
@@ -22,7 +23,13 @@
         "ingredients": {
             "potato": "three potatoes per person"
         },
-        "steps": {}
+        "steps": {
+            "fries_recipe_step_5": {
+                "ingredients": {
+                    "salt": "a tablespoon"
+                }
+            }
+        }
     },
     "baked_mushroom_risotto_recipe": {
         "ingredients": {

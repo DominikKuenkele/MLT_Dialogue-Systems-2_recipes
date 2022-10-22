@@ -12,8 +12,10 @@ class Grammar(Template):
     def add_utterance(self, recipe_name, utterance) -> None:
         self.recipes[recipe_name].append(f'      <item>{utterance}</item>')
 
-    def add_individual(self, name) -> None:
-        self.tags.append(f'  <individual name="{self._cleanse_attribute(name)}">{name}</individual>')
+    def add_individual(self, name, text='') -> None:
+        if text == '':
+            text = name
+        self.tags.append(f'  <individual name="{self._cleanse_attribute(name)}">{text}</individual>')
 
     def _get_stub(self) -> str:
         stub = ''

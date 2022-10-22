@@ -3,6 +3,9 @@
   <goal type="perform" action="top">
     <plan>
       <forget_all/>
+      <assume_shared>
+        <proposition predicate="ingredients_read" value="false"/>
+      </assume_shared>
       <findout type="goal"/>
     </plan>
   </goal>

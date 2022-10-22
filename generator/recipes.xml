@@ -11,9 +11,9 @@
             <utterance>an omelette</utterance>
         </utterances>
         <ingredients>
-            <ingredient name="egg" amount="three"/>
-            <ingredient name="salt" amount="a pinch"/>
-            <ingredient name="butter"/>
+            <ingredient name="egg" amount="three">We need three eggs</ingredient>
+            <ingredient name="salt" amount="a pinch">And a pinch of salt</ingredient>
+            <ingredient name="butter" amount="a tablespoon">We also need some butter</ingredient>
         </ingredients>
         <steps>
             <step>
@@ -49,11 +49,11 @@
             <utterance>baked potatoes</utterance>
         </utterances>
         <ingredients>
-            <ingredient name="potato" amount="three potatoes per person"/>
-            <ingredient name="oil"/>
-            <ingredient name="sugar"/>
-            <ingredient name="salt"/>
-            <ingredient name="red pepper"/>
+            <ingredient name="potato" amount="three potatoes per person">You need potatoes</ingredient>
+            <ingredient name="oil">Some oil</ingredient>
+            <ingredient name="sugar">We need a little sugar</ingredient>
+            <ingredient name="salt">As much salt as you like</ingredient>
+            <ingredient name="red pepper">And red pepper to finish the fries</ingredient>
         </ingredients>
         <steps>
             <step>
@@ -71,6 +71,9 @@
             </step>
             <step>
                 <substep object="oven" time="thirty minutes" condition="until potatoes are tender and browned">Bake for 30 minutes in the preheated oven, until potatoes are tender and browned.</substep>
+            </step>
+            <step>
+                <substep ingredient="salt" amount="a tablespoon">Add some salt to the potatoes</substep>
             </step>
         </steps>
         <finisher>Good job! You should serve and eat it as long as it is warm!</finisher>

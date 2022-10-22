@@ -205,8 +205,8 @@ def get_amount_of_ingredient():
             break
 
     if amount == '':
-        utterance = 'As much as you like.'
+        utterance = 'As much as you like'
     else:
-        utterance = f'Uhh, {amount} is fine.'
+        utterance = f'Uhh, {amount} is fine'
 
     return query_response(value=utterance, grammar_entry=None)

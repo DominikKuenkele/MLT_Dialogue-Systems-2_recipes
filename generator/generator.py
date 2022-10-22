@@ -32,8 +32,12 @@ def parse_xml(path):
             grammar.add_utterance(recipe_name, utterance.text)
 
         for ingredient in recipe.find('./ingredients'):
+            ingredient_name = ingredient.attrib['name']
             if 'amount' in ingredient.attrib:
-                recipe_lokup.add_ingredient(ingredient.attrib['name'], ingredient.attrib['amount'], recipe_name)
+                recipe_lokup.add_ingredient(ingredient_name, ingredient.attrib['amount'], recipe_name)
+            ontology.add_individual(f'{recipe_name}_{ingredient_name}', 'ingredient_list')
+            grammar.add_individual(f'{recipe_name}_{ingredient_name}', ingredient.text)
+            domain.add_ingredient(recipe_name, f'{recipe_name}_{ingredient_name}')
 
         for stepnumber, step in enumerate(recipe.find('./steps')):
             step_name = f'{recipe_name}_step_{stepnumber}'
@@ -58,7 +62,8 @@ def parse_xml(path):
             grammar.add_individual(step_name)
             domain.add_step(recipe_name, step_name, last_ingredient, last_object)
             nlg.add_request(step_name, ' and '.join(step_utterances))
-            nlg.add_action_completion(f'{recipe_name}_action', 'done', recipe.find('./finisher').text)
+        
+        nlg.add_action_completion(f'{recipe_name}_action', 'done', recipe.find('./finisher').text)
 
     for ingredient in ingredients:
         ontology.add_individual(ingredient, 'ingredient')

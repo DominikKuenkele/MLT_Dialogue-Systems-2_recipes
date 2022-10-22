@@ -4,32 +4,16 @@
         "utterance": "Crack three eggs on a bowl and whisk with a pinch of salt."
     },
     {
-        "match": "report(action_status(omelette_recipe_action, done))",
-        "utterance": "Amazing! You have finished preparing a French omelette. Bon appétit!"
-    },
-    {
         "match": "request(omelette_recipe_step_1)",
         "utterance": "Heat butter on a pan on high heat."
-    },
-    {
-        "match": "report(action_status(omelette_recipe_action, done))",
-        "utterance": "Amazing! You have finished preparing a French omelette. Bon appétit!"
     },
     {
         "match": "request(omelette_recipe_step_2)",
         "utterance": "Add the egg mixture to the pan and stir the eggs for about 30 seconds."
     },
     {
-        "match": "report(action_status(omelette_recipe_action, done))",
-        "utterance": "Amazing! You have finished preparing a French omelette. Bon appétit!"
-    },
-    {
         "match": "request(omelette_recipe_step_3)",
         "utterance": "When the eggs are set but look slightly wet, turn off the heat and fold the omelette."
-    },
-    {
-        "match": "report(action_status(omelette_recipe_action, done))",
-        "utterance": "Amazing! You have finished preparing a French omelette. Bon appétit!"
     },
     {
         "match": "request(omelette_recipe_step_4)",
@@ -44,36 +28,24 @@
         "utterance": "Preheat the oven to 230 degrees."
     },
     {
-        "match": "report(action_status(fries_recipe_action, done))",
-        "utterance": "Good job! You should serve and eat it as long as it is warm!"
-    },
-    {
         "match": "request(fries_recipe_step_1)",
         "utterance": "Scrub potatoes well and cut into 1 cm thick fries."
-    },
-    {
-        "match": "report(action_status(fries_recipe_action, done))",
-        "utterance": "Good job! You should serve and eat it as long as it is warm!"
     },
     {
         "match": "request(fries_recipe_step_2)",
         "utterance": "In a large mixing bowl, toss potatoes with oil, sugar, salt and red pepper."
     },
     {
-        "match": "report(action_status(fries_recipe_action, done))",
-        "utterance": "Good job! You should serve and eat it as long as it is warm!"
-    },
-    {
         "match": "request(fries_recipe_step_3)",
         "utterance": "Spread on baking sheet in one layer."
     },
     {
-        "match": "report(action_status(fries_recipe_action, done))",
-        "utterance": "Good job! You should serve and eat it as long as it is warm!"
-    },
-    {
         "match": "request(fries_recipe_step_4)",
         "utterance": "Bake for 30 minutes in the preheated oven, until potatoes are tender and browned."
+    },
+    {
+        "match": "request(fries_recipe_step_5)",
+        "utterance": "Add some salt to the potatoes"
     },
     {
         "match": "report(action_status(fries_recipe_action, done))",
@@ -84,128 +56,64 @@
         "utterance": "Chop the onions."
     },
     {
-        "match": "report(action_status(baked_mushroom_risotto_recipe_action, done))",
-        "utterance": "Now serve and enjoy your meal. Bon appetit!"
-    },
-    {
         "match": "request(baked_mushroom_risotto_recipe_step_1)",
         "utterance": "Then finely sliced garlic"
-    },
-    {
-        "match": "report(action_status(baked_mushroom_risotto_recipe_action, done))",
-        "utterance": "Now serve and enjoy your meal. Bon appetit!"
     },
     {
         "match": "request(baked_mushroom_risotto_recipe_step_2)",
         "utterance": "Then roughly chop the mushrooms"
     },
     {
-        "match": "report(action_status(baked_mushroom_risotto_recipe_action, done))",
-        "utterance": "Now serve and enjoy your meal. Bon appetit!"
-    },
-    {
         "match": "request(baked_mushroom_risotto_recipe_step_3)",
         "utterance": "Then you should chop the rosemary finely"
-    },
-    {
-        "match": "report(action_status(baked_mushroom_risotto_recipe_action, done))",
-        "utterance": "Now serve and enjoy your meal. Bon appetit!"
     },
     {
         "match": "request(baked_mushroom_risotto_recipe_step_4)",
         "utterance": "then you can begin by preheating the oven to 180 degrees"
     },
     {
-        "match": "report(action_status(baked_mushroom_risotto_recipe_action, done))",
-        "utterance": "Now serve and enjoy your meal. Bon appetit!"
-    },
-    {
         "match": "request(baked_mushroom_risotto_recipe_step_5)",
         "utterance": "Then you take an oven proof lidded dish."
-    },
-    {
-        "match": "report(action_status(baked_mushroom_risotto_recipe_action, done))",
-        "utterance": "Now serve and enjoy your meal. Bon appetit!"
     },
     {
         "match": "request(baked_mushroom_risotto_recipe_step_6)",
         "utterance": "Heat the oil and fry the onions for three minutes"
     },
     {
-        "match": "report(action_status(baked_mushroom_risotto_recipe_action, done))",
-        "utterance": "Now serve and enjoy your meal. Bon appetit!"
-    },
-    {
         "match": "request(baked_mushroom_risotto_recipe_step_7)",
         "utterance": "You add the garlic and cook it for 5 minutes."
-    },
-    {
-        "match": "report(action_status(baked_mushroom_risotto_recipe_action, done))",
-        "utterance": "Now serve and enjoy your meal. Bon appetit!"
     },
     {
         "match": "request(baked_mushroom_risotto_recipe_step_8)",
         "utterance": "Add the mushrooms for three to four minutes or until they are soft"
     },
     {
-        "match": "report(action_status(baked_mushroom_risotto_recipe_action, done))",
-        "utterance": "Now serve and enjoy your meal. Bon appetit!"
-    },
-    {
         "match": "request(baked_mushroom_risotto_recipe_step_9)",
         "utterance": "Then you can stir in the Rosemary"
-    },
-    {
-        "match": "report(action_status(baked_mushroom_risotto_recipe_action, done))",
-        "utterance": "Now serve and enjoy your meal. Bon appetit!"
     },
     {
         "match": "request(baked_mushroom_risotto_recipe_step_10)",
         "utterance": "Add the Risotto rice and cook until the grains appear glassy"
     },
     {
-        "match": "report(action_status(baked_mushroom_risotto_recipe_action, done))",
-        "utterance": "Now serve and enjoy your meal. Bon appetit!"
-    },
-    {
         "match": "request(baked_mushroom_risotto_recipe_step_11)",
         "utterance": "Stir in the wine and stock"
-    },
-    {
-        "match": "report(action_status(baked_mushroom_risotto_recipe_action, done))",
-        "utterance": "Now serve and enjoy your meal. Bon appetit!"
     },
     {
         "match": "request(baked_mushroom_risotto_recipe_step_12)",
         "utterance": "Now you just place the lid on the dish and bake it for 15 minutes"
     },
     {
-        "match": "report(action_status(baked_mushroom_risotto_recipe_action, done))",
-        "utterance": "Now serve and enjoy your meal. Bon appetit!"
-    },
-    {
         "match": "request(baked_mushroom_risotto_recipe_step_13)",
         "utterance": "but stir it half way through."
-    },
-    {
-        "match": "report(action_status(baked_mushroom_risotto_recipe_action, done))",
-        "utterance": "Now serve and enjoy your meal. Bon appetit!"
     },
     {
         "match": "request(baked_mushroom_risotto_recipe_step_14)",
         "utterance": "Now, stir in the parmesan and bake it for three more minutes"
     },
     {
-        "match": "report(action_status(baked_mushroom_risotto_recipe_action, done))",
-        "utterance": "Now serve and enjoy your meal. Bon appetit!"
-    },
-    {
         "match": "request(baked_mushroom_risotto_recipe_step_15)",
         "utterance": "Now sprinkle over some extra parmesan"
-    },
-    {
-        "match": "report(action_status(baked_mushroom_risotto_recipe_action, done))",
-        "utterance": "Now serve and enjoy your meal. Bon appetit!"
     },
     {
         "match": "request(baked_mushroom_risotto_recipe_step_16)",
