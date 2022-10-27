@@ -86,15 +86,15 @@
             <utterance>Can you show me, how to make a risotto</utterance>
         </utterances>
         <ingredients>
-            <ingredient name="olive oil" amount="two tablespoons"/>
-            <ingredient name="onion" amount="one" form="finely chopped"/>
-            <ingredient name="garlic" amount="three gloves" form="finely sliced"/>
-            <ingredient name="mixed mushrooms" amount="400 grams" form="roughly chopped"/>
-            <ingredient name="rosemary" amount="1-2 tablespoons" form="finely chopped"/>
-            <ingredient name="risotto rice" amount="200 grams"/>
-            <ingredient name="white wine" amount="100 mililiters"/>
-            <ingredient name="vegetable stock" amount="750 mililiters"/>
-            <ingredient name="parmesan" amount="30 grams" form="grated"/>
+            <ingredient name="olive oil" amount="two tablespoons">We need olive oil, two tablespoons</ingredient>
+            <ingredient name="onion" amount="one" form="finely chopped">One onion, finely chopped</ingredient>
+            <ingredient name="garlic" amount="three gloves" form="finely sliced">Three garlic cloves, finely sliced</ingredient>
+            <ingredient name="mixed mushrooms" amount="400 grams" form="roughly chopped">Then 400 grams of mixed mushrooms</ingredient>
+            <ingredient name="rosemary" amount="1-2 tablespoons" form="finely chopped">1-2 tablespoons of Rosemary, according to the taste. Also finely chopped</ingredient>
+            <ingredient name="risotto rice" amount="200 grams">And 200 grams of Risotto rice</ingredient>
+            <ingredient name="white wine" amount="100 mililiters">Then 100ml of white wine</ingredient>
+            <ingredient name="vegetable stock" amount="750 mililiters">We also need äh 750 milliliters of vegetable stock</ingredient>
+            <ingredient name="parmesan" amount="30 grams" form="grated">And 30 grams of grated parmesan</ingredient>
         </ingredients>
         <steps>
             <step>

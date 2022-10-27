@@ -10,4 +10,42 @@
       <http endpoint="http://ddds-http-service/get_amount_of_ingredient" />
     </target>
   </query>
+  <query name="form_ingredient">
+    <parameters>
+      <parameter predicate="which_ingredient" format="grammar_entry" />
+      <parameter predicate="current_recipe" format="grammar_entry" />
+      <parameter predicate="current_step" format="grammar_entry" />
+    </parameters>
+    <target>
+      <http endpoint="http://ddds-http-service/get_form_of_ingredient" />
+    </target>
+  </query>
+  <query name="temperature_object">
+    <parameters>
+      <parameter predicate="which_object" format="grammar_entry" />
+      <parameter predicate="current_recipe" format="grammar_entry" />
+      <parameter predicate="current_step" format="grammar_entry" />
+    </parameters>
+    <target>
+      <http endpoint="http://ddds-http-service/get_temperature_of_object" />
+    </target>
+  </query>
+  <query name="time_for_step">
+    <parameters>
+      <parameter predicate="current_recipe" format="grammar_entry" />
+      <parameter predicate="current_step" format="grammar_entry" />
+    </parameters>
+    <target>
+      <http endpoint="http://ddds-http-service/get_time_for_step" />
+    </target>
+  </query>
+  <query name="condition_for_step">
+    <parameters>
+      <parameter predicate="current_recipe" format="grammar_entry" />
+      <parameter predicate="current_step" format="grammar_entry" />
+    </parameters>
+    <target>
+      <http endpoint="http://ddds-http-service/get_condition_for_step" />
+    </target>
+  </query>
 </service_interface>

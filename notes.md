@@ -1,2 +1,4 @@
-can't use inform for ingredients, since user should 
 - default boolean value
+- same utterances for different intents
+- nlg not working
+- random utterances not working

@@ -210,3 +210,405 @@ U> yes
 S> Some oil.
 U> yes
 S> We need a little sugar.
+
+--- risotto (different utterances for ingredients list)
+S> What would you like to do?
+U> I want to make a risotto
+S> We need olive oil, two tablespoons.
+U> yes
+S> One onion, finely chopped.
+U>
+S> Three garlic cloves, finely sliced.
+U>
+S> Then 400 grams of mixed mushrooms.
+U> ok
+S> 1-2 tablespoons of Rosemary, according to the taste. Also finely chopped.
+U> hmm
+S> And 200 grams of Risotto rice.
+U> hmm
+S> Then 100ml of white wine.
+U> ok
+S> We also need äh 750 milliliters of vegetable stock.
+U> yes
+S> And 30 grams of grated parmesan.
+
+--- risotto (mixed question about ingredients (form, amount), ingredients from previous steps)
+S> What would you like to do?
+U> I want to make a risotto
+S> We need olive oil, two tablespoons.
+U> yes
+S> One onion, finely chopped.
+U> yes
+S> Three garlic cloves, finely sliced.
+U> yes
+S> Then 400 grams of mixed mushrooms.
+U> yes
+S> 1-2 tablespoons of Rosemary, according to the taste. Also finely chopped.
+U> yes
+S> And 200 grams of Risotto rice.
+U> yes
+S> Then 100ml of white wine.
+U> yes
+S> We also need äh 750 milliliters of vegetable stock.
+U> yes
+S> And 30 grams of grated parmesan.
+U> yes
+S> Chop the onions.
+U> ok
+S> Then finely sliced garlic
+U> How big should the onions be?
+S> It should be eh finely chopped.
+U>
+S> Then finely sliced garlic
+U> done
+S> Then roughly chop the mushrooms
+U> How big?
+S> It should be eh roughly chopped.
+U>
+S> Then roughly chop the mushrooms
+U> done
+S> Then you should chop the rosemary finely
+U> how big?
+S> It should be eh finely chopped.
+U>
+S> Then you should chop the rosemary finely
+U> How much?
+S> Uhh, 1-2 tablespoons is fine.
+U>
+S> Then you should chop the rosemary finely
+U> done
+S> then you can begin by preheating the oven to 180 degrees
+
+--- risotto (temperature in step with object and set temperature)
+S> What would you like to do?
+U> i want to make a risotto
+S> We need olive oil, two tablespoons.
+U> yes
+S> One onion, finely chopped.
+U> yes
+S> Three garlic cloves, finely sliced.
+U> yes
+S> Then 400 grams of mixed mushrooms.
+U> yes
+S> 1-2 tablespoons of Rosemary, according to the taste. Also finely chopped.
+U> yes
+S> And 200 grams of Risotto rice.
+U> yes
+S> Then 100ml of white wine.
+U> yes
+S> We also need äh 750 milliliters of vegetable stock.
+U> ok
+S> And 30 grams of grated parmesan.
+U> yes
+S> Chop the onions.
+U> ok
+S> Then finely sliced garlic
+U> done
+S> Then roughly chop the mushrooms
+U> done
+S> Then you should chop the rosemary finely
+U> done
+S> then you can begin by preheating the oven to 180 degrees
+U> how high?
+S> Around er 180 degrees.
+U>
+S> then you can begin by preheating the oven to 180 degrees
+
+--- risotto (temperature in step with object and no set temperature)
+S> What would you like to do?
+U> i want to make a risotto
+S> We need olive oil, two tablespoons.
+U> yes
+S> One onion, finely chopped.
+U> yes
+S> Three garlic cloves, finely sliced.
+U> yes
+S> Then 400 grams of mixed mushrooms.
+U> yes
+S> 1-2 tablespoons of Rosemary, according to the taste. Also finely chopped.
+U> yes
+S> And 200 grams of Risotto rice.
+U> yes
+S> Then 100ml of white wine.
+U> yes
+S> We also need äh 750 milliliters of vegetable stock.
+U> ok
+S> And 30 grams of grated parmesan.
+U> yes
+S> Chop the onions.
+U> ok
+S> Then finely sliced garlic
+U> done
+S> Then roughly chop the mushrooms
+U> done
+S> Then you should chop the rosemary finely
+U> done
+S> then you can begin by preheating the oven to 180 degrees
+U> done
+S> Then you take an oven proof lidded dish.
+U> how high?
+S> You shouln't warm it up at all.
+U>
+S> Then you take an oven proof lidded dish.
+
+--- risotto (temperature in previous step with object and set temperature)
+S> What would you like to do?
+U> i want to make a risotto
+S> We need olive oil, two tablespoons.
+U> yes
+S> One onion, finely chopped.
+U> yes
+S> Three garlic cloves, finely sliced.
+U> yes
+S> Then 400 grams of mixed mushrooms.
+U> yes
+S> 1-2 tablespoons of Rosemary, according to the taste. Also finely chopped.
+U> yes
+S> And 200 grams of Risotto rice.
+U> yes
+S> Then 100ml of white wine.
+U> yes
+S> We also need äh 750 milliliters of vegetable stock.
+U> ok
+S> And 30 grams of grated parmesan.
+U> yes
+S> Chop the onions.
+U> ok
+S> Then finely sliced garlic
+U> done
+S> Then roughly chop the mushrooms
+U> done
+S> Then you should chop the rosemary finely
+U> done
+S> then you can begin by preheating the oven to 180 degrees
+U> done
+S> Then you take an oven proof lidded dish.
+U> how high should i heat the oven?
+S> Around er 180 degrees.
+U>
+S> Then you take an oven proof lidded dish.
+U>
+
+--- risotto (time in step)
+S> What would you like to do?
+U> i want to make a risotto
+S> We need olive oil, two tablespoons.
+U> ok
+S> One onion, finely chopped.
+U> ok
+S> Three garlic cloves, finely sliced.
+U> ok
+S> Then 400 grams of mixed mushrooms.
+U> ok
+S> 1-2 tablespoons of Rosemary, according to the taste. Also finely chopped.
+U> ok
+S> And 200 grams of Risotto rice.
+U> ok
+S> Then 100ml of white wine.
+U> ok
+S> We also need äh 750 milliliters of vegetable stock.
+U> ok
+S> And 30 grams of grated parmesan.
+U> ok
+S> Chop the onions.
+U> done
+S> Then finely sliced garlic
+U> done
+S> Then roughly chop the mushrooms
+U> done
+S> Then you should chop the rosemary finely
+U> done
+S> then you can begin by preheating the oven to 180 degrees
+U> done
+S> Then you take an oven proof lidded dish.
+U> done
+S> Heat the oil and fry the onions for three minutes
+U> For how many minutes?
+S> Maybe three minutes.
+U>
+S> Heat the oil and fry the onions for three minutes
+U> done
+
+--- risotto (time in previous step)
+S> What would you like to do?
+U> i want to make a risotto
+S> We need olive oil, two tablespoons.
+U> ok
+S> One onion, finely chopped.
+U> ok
+S> Three garlic cloves, finely sliced.
+U> ok
+S> Then 400 grams of mixed mushrooms.
+U> ok
+S> 1-2 tablespoons of Rosemary, according to the taste. Also finely chopped.
+U> ok
+S> And 200 grams of Risotto rice.
+U> ok
+S> Then 100ml of white wine.
+U> ok
+S> We also need äh 750 milliliters of vegetable stock.
+U> ok
+S> And 30 grams of grated parmesan.
+U> ok
+S> Chop the onions.
+U> done
+S> Then finely sliced garlic
+U> done
+S> Then roughly chop the mushrooms
+U> done
+S> Then you should chop the rosemary finely
+U> done
+S> then you can begin by preheating the oven to 180 degrees
+U> done
+S> Then you take an oven proof lidded dish.
+U> done
+S> Heat the oil and fry the onions for three minutes
+U> done
+S> You add the garlic and cook it for 5 minutes.
+U> done
+S> Add the mushrooms for three to four minutes or until they are soft
+U> done
+S> Then you can stir in the Rosemary
+U> for how many minutes?
+S> Maybe three to four minutes.
+U>
+S> Then you can stir in the Rosemary
+
+--- risotto (time before step)
+S> What would you like to do?
+U> i want to make a risotto
+S> We need olive oil, two tablespoons.
+U> ok
+S> One onion, finely chopped.
+U> ok
+S> Three garlic cloves, finely sliced.
+U> ok
+S> Then 400 grams of mixed mushrooms.
+U> ok
+S> 1-2 tablespoons of Rosemary, according to the taste. Also finely chopped.
+U> ok
+S> And 200 grams of Risotto rice.
+U> ok
+S> Then 100ml of white wine.
+U> ok
+S> We also need äh 750 milliliters of vegetable stock.
+U> ok
+S> And 30 grams of grated parmesan.
+U> ok
+S> Chop the onions.
+U> for how many minutes?
+S> Until it seems ready to you.
+U> 
+S> Chop the onions.
+
+--- risotto (condition in step)
+S> What would you like to do?
+U> i want to make a risotto
+S> We need olive oil, two tablespoons.
+U> ok
+S> One onion, finely chopped.
+U> ok
+S> Three garlic cloves, finely sliced.
+U> ok
+S> Then 400 grams of mixed mushrooms.
+U> ok
+S> 1-2 tablespoons of Rosemary, according to the taste. Also finely chopped.
+U> ok
+S> And 200 grams of Risotto rice.
+U> ok
+S> Then 100ml of white wine.
+U> ok
+S> We also need äh 750 milliliters of vegetable stock.
+U> ok
+S> And 30 grams of grated parmesan.
+U> ok
+S> Chop the onions.
+U> done
+S> Then finely sliced garlic
+U> done
+S> Then roughly chop the mushrooms
+U> done
+S> Then you should chop the rosemary finely
+U> done
+S> then you can begin by preheating the oven to 180 degrees
+U> done
+S> Then you take an oven proof lidded dish.
+U> done
+S> Heat the oil and fry the onions for three minutes
+U> Until?
+S> hmm until they start to soften.
+U>
+S> Heat the oil and fry the onions for three minutes
+U> done
+
+--- risotto (condition in previous step)
+S> What would you like to do?
+U> i want to make a risotto
+S> We need olive oil, two tablespoons.
+U> ok
+S> One onion, finely chopped.
+U> ok
+S> Three garlic cloves, finely sliced.
+U> ok
+S> Then 400 grams of mixed mushrooms.
+U> ok
+S> 1-2 tablespoons of Rosemary, according to the taste. Also finely chopped.
+U> ok
+S> And 200 grams of Risotto rice.
+U> ok
+S> Then 100ml of white wine.
+U> ok
+S> We also need äh 750 milliliters of vegetable stock.
+U> ok
+S> And 30 grams of grated parmesan.
+U> ok
+S> Chop the onions.
+U> done
+S> Then finely sliced garlic
+U> done
+S> Then roughly chop the mushrooms
+U> done
+S> Then you should chop the rosemary finely
+U> done
+S> then you can begin by preheating the oven to 180 degrees
+U> done
+S> Then you take an oven proof lidded dish.
+U> done
+S> Heat the oil and fry the onions for three minutes
+U> done
+S> You add the garlic and cook it for 5 minutes.
+U> done
+S> Add the mushrooms for three to four minutes or until they are soft
+U> done
+S> Then you can stir in the Rosemary
+U> Until?
+S> hmm until they are soft.
+U>
+S> Then you can stir in the Rosemary
+
+--- risotto (condition before step)
+S> What would you like to do?
+U> i want to make a risotto
+S> We need olive oil, two tablespoons.
+U> ok
+S> One onion, finely chopped.
+U> ok
+S> Three garlic cloves, finely sliced.
+U> ok
+S> Then 400 grams of mixed mushrooms.
+U> ok
+S> 1-2 tablespoons of Rosemary, according to the taste. Also finely chopped.
+U> ok
+S> And 200 grams of Risotto rice.
+U> ok
+S> Then 100ml of white wine.
+U> ok
+S> We also need äh 750 milliliters of vegetable stock.
+U> ok
+S> And 30 grams of grated parmesan.
+U> ok
+S> Chop the onions.
+U> Until?
+S> Until it seems ready to you.
+U> 
+S> Chop the onions.

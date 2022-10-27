@@ -6,6 +6,7 @@ from Ontology import Ontology
 from Grammar import Grammar
 from RecipeLookup import RecipeLookup
 
+
 def parse_xml(path):
     root = ElementTree.parse(path).getroot()
 
@@ -15,7 +16,7 @@ def parse_xml(path):
     nlg = NLG('templates/nlg_template.json', '../couch_dbs/nlg.json')
     recipe_lokup = RecipeLookup('', '../ddds/http-service/recipe_lookup.json')
 
-    ingredients= set()
+    ingredients = set()
     objects = set()
 
     for recipe in root.findall('./recipe'):
@@ -33,8 +34,10 @@ def parse_xml(path):
 
         for ingredient in recipe.find('./ingredients'):
             ingredient_name = ingredient.attrib['name']
-            if 'amount' in ingredient.attrib:
-                recipe_lokup.add_ingredient(ingredient_name, ingredient.attrib['amount'], recipe_name)
+            recipe_lokup.add_ingredient(recipe_name,
+                                        ingredient_name,
+                                        ingredient.attrib.get('amount', None),
+                                        ingredient.attrib.get('form', None))
             ontology.add_individual(f'{recipe_name}_{ingredient_name}', 'ingredient_list')
             grammar.add_individual(f'{recipe_name}_{ingredient_name}', ingredient.text)
             domain.add_ingredient(recipe_name, f'{recipe_name}_{ingredient_name}')
@@ -47,28 +50,47 @@ def parse_xml(path):
 
             for substep in step:
                 step_utterances.append(substep.text)
+
+                ingredient_attributes = {}
                 if 'ingredient' in substep.attrib:
                     ingredients.add(substep.attrib['ingredient'])
                     last_ingredient = substep.attrib['ingredient']
-                    if 'amount' in substep.attrib:
-                        recipe_lokup.add_ingredient(substep.attrib['ingredient'], substep.attrib['amount'], recipe_name, step_name)
 
+                    ingredient_attributes = {
+                        'name': substep.attrib['ingredient'], 
+                        'amount': substep.attrib.get('amount', None),
+                        'form': substep.attrib.get('form', None)
+                    }
 
+                object_attributes = {}
                 if 'object' in substep.attrib:
                     objects.add(substep.attrib['object'])
                     last_object = substep.attrib['object']
+                    object_attributes = {
+                        'name': substep.attrib['object'], 
+                        'temperature': substep.attrib.get('temperature', None),
+                    }
                 
+                recipe_lokup .add_substep(recipe_name,
+                                          step_name,
+                                          ingredient_attributes,
+                                          object_attributes,
+                                          substep.attrib.get('time', None),
+                                          substep.attrib.get('condition', None))
+                                          
             ontology.add_individual(step_name, 'step')
             grammar.add_individual(step_name)
-            domain.add_step(recipe_name, step_name, last_ingredient, last_object)
+            domain.add_step(recipe_name, step_name,
+                            last_ingredient, last_object)
             nlg.add_request(step_name, ' and '.join(step_utterances))
-        
-        nlg.add_action_completion(f'{recipe_name}_action', 'done', recipe.find('./finisher').text)
+
+        nlg.add_action_completion(
+            f'{recipe_name}_action', 'done', recipe.find('./finisher').text)
 
     for ingredient in ingredients:
         ontology.add_individual(ingredient, 'ingredient')
         grammar.add_individual(ingredient)
-    
+
     for object in objects:
         ontology.add_individual(object, 'object')
         grammar.add_individual(object)
@@ -78,7 +100,7 @@ def parse_xml(path):
     grammar.generate_file()
     nlg.generate_file()
     recipe_lokup.generate_file()
-    
+
 
 if __name__ == '__main__':
     parse_xml(sys.argv[1])

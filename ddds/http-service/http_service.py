@@ -8,6 +8,9 @@ from jinja2 import Environment
 
 import inflect
 
+from RecipeReader import Recipe, RecipeReader
+from Parameters import Parameters
+
 app = Flask(__name__)
 environment = Environment()
 
@@ -154,59 +157,111 @@ def action_success_response():
     )
     return response
 
-
-def retrieveParameters():
-    facts = request.get_json()["context"]["facts"]
-    print(facts)
-    current_recipe = facts["current_recipe"]["value"]
-    current_step = facts["current_step"]["value"]
-    ingredient = facts["which_ingredient"]["grammar_entry"]
-
-    return current_recipe, current_step, ingredient,
-
-
-@app.route("/get_amount_of_ingredient", methods=['POST'])
-def get_amount_of_ingredient():
+def get_inflections(noun):
     inflect_engine = inflect.engine()
 
-    current_recipe, current_step, ingredient = retrieveParameters()
-    ingredient_forms = [ingredient,
-                        inflect_engine.singular_noun(ingredient),
-                        inflect_engine.plural_noun(ingredient)]
+    inflections = [inflection for inflection in [noun,
+                                                 inflect_engine.singular_noun(noun),
+                                                 inflect_engine.plural_noun(noun)]
+                   if type(inflection) != bool]
+    return inflections
 
-    with open('recipe_lookup.json', 'r') as f:
-        recipe_lookup = json.load(f)
 
-    if current_recipe not in recipe_lookup:
-        raise Exception
+@ app.route("/get_amount_of_ingredient", methods=['POST'])
+def get_amount_of_ingredient():
+    parameters = Parameters(request)
 
-    amount = recipe_lookup[current_recipe]['ingredients'].get(
-            ingredient, '')
+    recipe = RecipeReader('recipe_lookup.json')[parameters.current_recipe]
 
-    looked_up_steps = list(recipe_lookup[current_recipe]['steps'].keys())
-    if current_step not in looked_up_steps:
-        looked_up_steps.append(current_step)
-        sorted_steps = sorted(looked_up_steps, reverse=True)
-        current_step_index = sorted_steps.index(current_step) + 1
-    else:
-        sorted_steps = sorted(looked_up_steps, reverse=True)
-        current_step_index = sorted_steps.index(current_step)
-
-    for step in sorted_steps[current_step_index:]:
-        found = False
-        step_ingredients = recipe_lookup[current_recipe]['steps'][step]['ingredients']
-        for ingredient in ingredient_forms:
-            if ingredient in step_ingredients:
-                amount = recipe_lookup[current_recipe]['steps'][step]['ingredients'][ingredient]
-                found = True
-                break
-
-        if found:
+    for ingredient_inflection in get_inflections(parameters.ingredient):
+        amount = recipe.get_entity_attribute_until_step(ingredient_inflection,
+                                                        parameters.current_step,
+                                                        Recipe.IngredientAttribute.amount,
+                                                        Recipe.EntityType.ingredient)
+        if amount != '':
             break
 
     if amount == '':
         utterance = 'As much as you like'
     else:
         utterance = f'Uhh, {amount} is fine'
+
+    return query_response(value=utterance, grammar_entry=None)
+
+
+@ app.route("/get_form_of_ingredient", methods=['POST'])
+def get_form_of_ingredient():
+    parameters = Parameters(request)
+
+    recipe = RecipeReader('recipe_lookup.json')[parameters.current_recipe]
+
+    for ingredient_inflection in get_inflections(parameters.ingredient):
+        form = recipe.get_entity_attribute_until_step(ingredient_inflection,
+                                                      parameters.current_step,
+                                                      Recipe.IngredientAttribute.form,
+                                                      Recipe.EntityType.ingredient)
+        if form != '':
+            break
+
+    if form == '':
+        utterance = 'Be creative'
+    else:
+        utterance = f'It should be eh {form}'
+
+    return query_response(value=utterance, grammar_entry=None)
+
+
+@ app.route("/get_temperature_of_object", methods=['POST'])
+def get_temperature_of_object():
+    parameters = Parameters(request)
+
+    recipe = RecipeReader('recipe_lookup.json')[parameters.current_recipe]
+
+    for object_inflection in get_inflections(parameters.object):
+        temperature = recipe.get_entity_attribute_until_step(object_inflection,
+                                                             parameters.current_step,
+                                                             Recipe.ObjectAttribute.temperature,
+                                                             Recipe.EntityType.object)
+        if temperature != '':
+            break
+
+    if temperature == '':
+        utterance = "You shouln't warm it up at all"
+    else:
+        utterance = f'Around er {temperature}'
+
+    return query_response(value=utterance, grammar_entry=None)
+
+
+@ app.route("/get_condition_for_step", methods=['POST'])
+def get_condition_for_step():
+    parameters = Parameters(request)
+
+    recipe = RecipeReader('recipe_lookup.json')[parameters.current_recipe]
+
+    condition = recipe.get_general_attribute_until_step(parameters.current_step,
+                                                        Recipe.GeneralAttribute.condition)
+
+    if condition == '':
+        utterance = "Until it seems ready to you"
+    else:
+        utterance = f'hmm {condition}'
+
+    return query_response(value=utterance, grammar_entry=None)
+
+
+@ app.route("/get_time_for_step", methods=['POST'])
+def get_time_for_step():
+    parameters = Parameters(request)
+
+    recipe = RecipeReader('recipe_lookup.json')[parameters.current_recipe]
+
+    time = recipe.get_general_attribute_until_step(parameters.current_step,
+                                                   Recipe.GeneralAttribute.time)
+
+    if time == '':
+        utterance = "Until it seems ready to you"
+    else:
+        utterance = f'Maybe {time}'
 
     return query_response(value=utterance, grammar_entry=None)

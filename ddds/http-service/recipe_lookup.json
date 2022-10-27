@@ -1,59 +1,561 @@
 {
     "omelette_recipe": {
         "ingredients": {
-            "egg": "three",
-            "salt": "a pinch",
-            "butter": "a tablespoon"
+            "egg": {
+                "amount": "three",
+                "form": null
+            },
+            "salt": {
+                "amount": "a pinch",
+                "form": null
+            },
+            "butter": {
+                "amount": "a tablespoon",
+                "form": null
+            }
         },
         "steps": {
-            "omelette_recipe_step_0": {
-                "ingredients": {
-                    "egg": "three",
-                    "salt": "a pinch"
+            "omelette_recipe_step_0": [
+                {
+                    "time": null,
+                    "condition": null,
+                    "ingredients": {
+                        "egg": {
+                            "amount": "three",
+                            "form": null
+                        }
+                    },
+                    "objects": {
+                        "bowl": {
+                            "temperature": null
+                        }
+                    }
+                },
+                {
+                    "time": null,
+                    "condition": null,
+                    "ingredients": {
+                        "salt": {
+                            "amount": "a pinch",
+                            "form": null
+                        }
+                    },
+                    "objects": {}
                 }
-            },
-            "omelette_recipe_step_2": {
-                "ingredients": {
-                    "egg": "four"
+            ],
+            "omelette_recipe_step_1": [
+                {
+                    "time": null,
+                    "condition": null,
+                    "ingredients": {
+                        "butter": {
+                            "amount": null,
+                            "form": null
+                        }
+                    },
+                    "objects": {
+                        "pan": {
+                            "temperature": "high heat"
+                        }
+                    }
                 }
-            }
+            ],
+            "omelette_recipe_step_2": [
+                {
+                    "time": null,
+                    "condition": null,
+                    "ingredients": {
+                        "egg_mixture": {
+                            "amount": null,
+                            "form": null
+                        }
+                    },
+                    "objects": {
+                        "pan": {
+                            "temperature": null
+                        }
+                    }
+                },
+                {
+                    "time": "30 seconds",
+                    "condition": null,
+                    "ingredients": {
+                        "egg": {
+                            "amount": "four",
+                            "form": null
+                        }
+                    },
+                    "objects": {}
+                }
+            ],
+            "omelette_recipe_step_3": [
+                {
+                    "time": null,
+                    "condition": "when the eggs are set, but look slightly wet",
+                    "ingredients": {},
+                    "objects": {
+                        "heat": {
+                            "temperature": null
+                        }
+                    }
+                },
+                {
+                    "time": null,
+                    "condition": null,
+                    "ingredients": {
+                        "omelette": {
+                            "amount": null,
+                            "form": null
+                        }
+                    },
+                    "objects": {}
+                }
+            ],
+            "omelette_recipe_step_4": [
+                {
+                    "time": null,
+                    "condition": "after a few seconds",
+                    "ingredients": {
+                        "omelette": {
+                            "amount": null,
+                            "form": null
+                        }
+                    },
+                    "objects": {
+                        "plate": {
+                            "temperature": null
+                        }
+                    }
+                }
+            ]
         }
     },
     "fries_recipe": {
         "ingredients": {
-            "potato": "three potatoes per person"
+            "potato": {
+                "amount": "three potatoes per person",
+                "form": null
+            },
+            "oil": {
+                "amount": null,
+                "form": null
+            },
+            "sugar": {
+                "amount": null,
+                "form": null
+            },
+            "salt": {
+                "amount": null,
+                "form": null
+            },
+            "red_pepper": {
+                "amount": null,
+                "form": null
+            }
         },
         "steps": {
-            "fries_recipe_step_5": {
-                "ingredients": {
-                    "salt": "a tablespoon"
+            "fries_recipe_step_0": [
+                {
+                    "time": null,
+                    "condition": null,
+                    "ingredients": {},
+                    "objects": {
+                        "oven": {
+                            "temperature": "230 degrees"
+                        }
+                    }
                 }
-            }
+            ],
+            "fries_recipe_step_1": [
+                {
+                    "time": null,
+                    "condition": null,
+                    "ingredients": {
+                        "potato": {
+                            "amount": null,
+                            "form": null
+                        }
+                    },
+                    "objects": {}
+                },
+                {
+                    "time": null,
+                    "condition": null,
+                    "ingredients": {},
+                    "objects": {}
+                }
+            ],
+            "fries_recipe_step_2": [
+                {
+                    "time": null,
+                    "condition": null,
+                    "ingredients": {
+                        "potato": {
+                            "amount": null,
+                            "form": null
+                        }
+                    },
+                    "objects": {
+                        "mixing_bowl": {
+                            "temperature": null
+                        }
+                    }
+                }
+            ],
+            "fries_recipe_step_3": [
+                {
+                    "time": null,
+                    "condition": null,
+                    "ingredients": {},
+                    "objects": {
+                        "baking_sheet": {
+                            "temperature": null
+                        }
+                    }
+                }
+            ],
+            "fries_recipe_step_4": [
+                {
+                    "time": "thirty minutes",
+                    "condition": "until potatoes are tender and browned",
+                    "ingredients": {},
+                    "objects": {
+                        "oven": {
+                            "temperature": null
+                        }
+                    }
+                }
+            ],
+            "fries_recipe_step_5": [
+                {
+                    "time": null,
+                    "condition": null,
+                    "ingredients": {
+                        "salt": {
+                            "amount": "a tablespoon",
+                            "form": null
+                        }
+                    },
+                    "objects": {}
+                }
+            ]
         }
     },
     "baked_mushroom_risotto_recipe": {
         "ingredients": {
-            "olive_oil": "two tablespoons",
-            "onion": "one",
-            "garlic": "three gloves",
-            "mixed_mushrooms": "400 grams",
-            "rosemary": "1-2 tablespoons",
-            "risotto_rice": "200 grams",
-            "white_wine": "100 mililiters",
-            "vegetable_stock": "750 mililiters",
-            "parmesan": "30 grams"
+            "olive_oil": {
+                "amount": "two tablespoons",
+                "form": null
+            },
+            "onion": {
+                "amount": "one",
+                "form": "finely chopped"
+            },
+            "garlic": {
+                "amount": "three gloves",
+                "form": "finely sliced"
+            },
+            "mixed_mushrooms": {
+                "amount": "400 grams",
+                "form": "roughly chopped"
+            },
+            "rosemary": {
+                "amount": "1-2 tablespoons",
+                "form": "finely chopped"
+            },
+            "risotto_rice": {
+                "amount": "200 grams",
+                "form": null
+            },
+            "white_wine": {
+                "amount": "100 mililiters",
+                "form": null
+            },
+            "vegetable_stock": {
+                "amount": "750 mililiters",
+                "form": null
+            },
+            "parmesan": {
+                "amount": "30 grams",
+                "form": "grated"
+            }
         },
         "steps": {
-            "baked_mushroom_risotto_recipe_step_15": {
-                "ingredients": {
-                    "parmesan": "some"
+            "baked_mushroom_risotto_recipe_step_0": [
+                {
+                    "time": null,
+                    "condition": null,
+                    "ingredients": {
+                        "onion": {
+                            "amount": null,
+                            "form": null
+                        }
+                    },
+                    "objects": {}
                 }
-            },
-            "baked_mushroom_risotto_recipe_step_16": {
-                "ingredients": {
-                    "black_pepper": "a little"
+            ],
+            "baked_mushroom_risotto_recipe_step_1": [
+                {
+                    "time": null,
+                    "condition": null,
+                    "ingredients": {
+                        "garlic": {
+                            "amount": null,
+                            "form": null
+                        }
+                    },
+                    "objects": {}
                 }
-            }
+            ],
+            "baked_mushroom_risotto_recipe_step_2": [
+                {
+                    "time": null,
+                    "condition": null,
+                    "ingredients": {
+                        "mixed_mushrooms": {
+                            "amount": null,
+                            "form": null
+                        }
+                    },
+                    "objects": {}
+                }
+            ],
+            "baked_mushroom_risotto_recipe_step_3": [
+                {
+                    "time": null,
+                    "condition": null,
+                    "ingredients": {
+                        "rosemary": {
+                            "amount": null,
+                            "form": null
+                        }
+                    },
+                    "objects": {}
+                }
+            ],
+            "baked_mushroom_risotto_recipe_step_4": [
+                {
+                    "time": null,
+                    "condition": null,
+                    "ingredients": {},
+                    "objects": {
+                        "oven": {
+                            "temperature": "180 degrees"
+                        }
+                    }
+                }
+            ],
+            "baked_mushroom_risotto_recipe_step_5": [
+                {
+                    "time": null,
+                    "condition": null,
+                    "ingredients": {},
+                    "objects": {
+                        "oven_proof_lidded_dish": {
+                            "temperature": null
+                        }
+                    }
+                }
+            ],
+            "baked_mushroom_risotto_recipe_step_6": [
+                {
+                    "time": null,
+                    "condition": null,
+                    "ingredients": {
+                        "oil": {
+                            "amount": null,
+                            "form": null
+                        }
+                    },
+                    "objects": {}
+                },
+                {
+                    "time": "three minutes",
+                    "condition": "until they start to soften",
+                    "ingredients": {
+                        "onion": {
+                            "amount": null,
+                            "form": null
+                        }
+                    },
+                    "objects": {}
+                }
+            ],
+            "baked_mushroom_risotto_recipe_step_7": [
+                {
+                    "time": null,
+                    "condition": "when the onions are soft",
+                    "ingredients": {
+                        "garlic": {
+                            "amount": null,
+                            "form": null
+                        }
+                    },
+                    "objects": {}
+                },
+                {
+                    "time": "5 minutes",
+                    "condition": null,
+                    "ingredients": {},
+                    "objects": {}
+                }
+            ],
+            "baked_mushroom_risotto_recipe_step_8": [
+                {
+                    "time": "three to four minutes",
+                    "condition": "until they are soft",
+                    "ingredients": {
+                        "mixed_mushrooms": {
+                            "amount": null,
+                            "form": null
+                        }
+                    },
+                    "objects": {}
+                }
+            ],
+            "baked_mushroom_risotto_recipe_step_9": [
+                {
+                    "time": null,
+                    "condition": null,
+                    "ingredients": {
+                        "rosemary": {
+                            "amount": null,
+                            "form": null
+                        }
+                    },
+                    "objects": {}
+                }
+            ],
+            "baked_mushroom_risotto_recipe_step_10": [
+                {
+                    "time": null,
+                    "condition": null,
+                    "ingredients": {
+                        "risotto_rice": {
+                            "amount": null,
+                            "form": null
+                        }
+                    },
+                    "objects": {}
+                },
+                {
+                    "time": null,
+                    "condition": "the grains appear glassy",
+                    "ingredients": {},
+                    "objects": {}
+                }
+            ],
+            "baked_mushroom_risotto_recipe_step_11": [
+                {
+                    "time": null,
+                    "condition": null,
+                    "ingredients": {
+                        "wine": {
+                            "amount": null,
+                            "form": null
+                        }
+                    },
+                    "objects": {}
+                },
+                {
+                    "time": null,
+                    "condition": null,
+                    "ingredients": {
+                        "stock": {
+                            "amount": null,
+                            "form": null
+                        }
+                    },
+                    "objects": {}
+                }
+            ],
+            "baked_mushroom_risotto_recipe_step_12": [
+                {
+                    "time": null,
+                    "condition": null,
+                    "ingredients": {},
+                    "objects": {
+                        "lid": {
+                            "temperature": null
+                        }
+                    }
+                },
+                {
+                    "time": "15 minutes",
+                    "condition": null,
+                    "ingredients": {
+                        "risotto": {
+                            "amount": null,
+                            "form": null
+                        }
+                    },
+                    "objects": {}
+                }
+            ],
+            "baked_mushroom_risotto_recipe_step_13": [
+                {
+                    "time": null,
+                    "condition": "half way through",
+                    "ingredients": {},
+                    "objects": {}
+                }
+            ],
+            "baked_mushroom_risotto_recipe_step_14": [
+                {
+                    "time": null,
+                    "condition": null,
+                    "ingredients": {
+                        "parmesan": {
+                            "amount": null,
+                            "form": null
+                        }
+                    },
+                    "objects": {}
+                },
+                {
+                    "time": "three more minutes",
+                    "condition": null,
+                    "ingredients": {},
+                    "objects": {}
+                }
+            ],
+            "baked_mushroom_risotto_recipe_step_15": [
+                {
+                    "time": null,
+                    "condition": null,
+                    "ingredients": {
+                        "parmesan": {
+                            "amount": "some",
+                            "form": null
+                        }
+                    },
+                    "objects": {}
+                }
+            ],
+            "baked_mushroom_risotto_recipe_step_16": [
+                {
+                    "time": null,
+                    "condition": null,
+                    "ingredients": {
+                        "olive_oil": {
+                            "amount": null,
+                            "form": null
+                        }
+                    },
+                    "objects": {}
+                },
+                {
+                    "time": null,
+                    "condition": null,
+                    "ingredients": {
+                        "black_pepper": {
+                            "amount": "a little",
+                            "form": null
+                        }
+                    },
+                    "objects": {}
+                }
+            ]
         }
     }
 }

@@ -31,9 +31,52 @@
     </one-of>
   </question>
 
+  <question speaker="user" type="wh_question" predicate="form_ingredient">
+    <one-of>
+      <item>How should I cut the <slot predicate="which_ingredient"/></item>
+      <item>How big should the <slot predicate="which_ingredient"/> be</item>
+      <item>How big</item>
+      <item>What size</item>
+    </one-of>
+  </question>
+
+  <question speaker="user" type="wh_question" predicate="temperature_object">
+    <one-of>
+      <item>How hot should the <slot predicate="which_object"/> be</item>
+      <item>On which temperature should I heat the <slot predicate="which_object"/></item>
+      <item>How high</item>
+      <item>How hot</item>
+      <item>What temperature</item>
+    </one-of>
+  </question>
+
+  <question speaker="user" type="wh_question" predicate="time_for_step">
+    <one-of>
+      <item>How long</item>
+      <item>How much time</item>
+      <item>For how long</item>
+      <item>How many minutes</item>
+    </one-of>
+  </question>
+
+  <question speaker="user" type="wh_question" predicate="condition_for_step">
+    <one-of>
+      <item>Until when</item>
+      <item>How long</item>
+      <item>For how long</item>
+      <item>Until</item>
+    </one-of>
+  </question>
+
+  <question speaker="user" type="wh_question" predicate="which_ingredient">
+    <one-of>
+      <item>The <slot predicate="which_ingredient"/></item>
+      <item><slot predicate="which_ingredient"/></item>
+    </one-of>
+  </question>
+
   <question speaker="system" predicate="which_ingredient">Of what?</question>
-
-  <answer speaker="system" predicate="amount_ingredient"><slot predicate="amount_ingredient"/> is fine</answer>
-
+  <question speaker="system" predicate="which_object">Of which?</question>
+  
 &generated
 </grammar>
