@@ -4,7 +4,7 @@
     <parameters>
       <parameter predicate="which_ingredient" format="grammar_entry" />
       <parameter predicate="current_recipe" format="grammar_entry" />
-      <parameter predicate="current_step" format="grammar_entry" optional="true"/>
+      <parameter predicate="current_step" format="grammar_entry" optional="true" />
     </parameters>
     <target>
       <http endpoint="http://ddds-http-service/get_amount_of_ingredient" />
@@ -14,7 +14,7 @@
     <parameters>
       <parameter predicate="which_ingredient" format="grammar_entry" />
       <parameter predicate="current_recipe" format="grammar_entry" />
-      <parameter predicate="current_step" format="grammar_entry" />
+      <parameter predicate="current_step" format="grammar_entry" optional="true" />
     </parameters>
     <target>
       <http endpoint="http://ddds-http-service/get_form_of_ingredient" />
