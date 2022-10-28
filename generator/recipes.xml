@@ -134,7 +134,7 @@
                 <substep condition="the grains appear glassy">cook until the grains appear glassy</substep>
             </step>
             <step>
-                <substep ingredient="wine">Stir in the wine</substep>
+                <substep ingredient="white wine">Stir in the wine</substep>
                 <substep ingredient="stock">stock</substep>
             </step>
             <step>

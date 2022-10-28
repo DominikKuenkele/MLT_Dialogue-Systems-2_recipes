@@ -5,6 +5,9 @@ class Ontology(Template):
         super().__init__(template_file, target_file)
         self.tags = []
     
+    def add_predicate(self, name, sort) -> None:
+        self.tags.append(f'  <predicate name="{self._cleanse_attribute(name)}" sort="{self._cleanse_attribute(sort)}"/>')
+
     def add_individual(self, name, sort) -> None:
         self.tags.append(f'  <individual name="{self._cleanse_attribute(name)}" sort="{self._cleanse_attribute(sort)}"/>')
 

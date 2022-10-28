@@ -38,9 +38,10 @@ def parse_xml(path):
                                         ingredient_name,
                                         ingredient.attrib.get('amount', None),
                                         ingredient.attrib.get('form', None))
+            ontology.add_predicate(f'{recipe_name}_{ingredient_name}_read', 'boolean')
             ontology.add_individual(f'{recipe_name}_{ingredient_name}', 'ingredient_list')
             grammar.add_individual(f'{recipe_name}_{ingredient_name}', ingredient.text)
-            domain.add_ingredient(recipe_name, f'{recipe_name}_{ingredient_name}')
+            domain.add_ingredient(recipe_name, ingredient_name)
 
         for stepnumber, step in enumerate(recipe.find('./steps')):
             step_name = f'{recipe_name}_step_{stepnumber}'

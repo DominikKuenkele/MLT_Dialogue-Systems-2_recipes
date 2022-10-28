@@ -1,15 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <domain name="RecipeAppDomain" is_super_domain="true">
-  <goal type="perform" action="top">
-    <plan>
-      <forget_all/>
-      <assume_shared>
-        <proposition predicate="ingredients_read" value="false"/>
-      </assume_shared>
-      <findout type="goal"/>
-    </plan>
-  </goal>
-
 &generated
 
   <goal type="resolve" question_type="wh_question" predicate="amount_ingredient">

@@ -170,14 +170,21 @@ def get_inflections(noun):
 @ app.route("/get_amount_of_ingredient", methods=['POST'])
 def get_amount_of_ingredient():
     parameters = Parameters(request)
+    print(parameters.ingredient)
+    print(parameters.perceived_ingredient)
 
     recipe = RecipeReader('recipe_lookup.json')[parameters.current_recipe]
 
     for ingredient_inflection in get_inflections(parameters.ingredient):
-        amount = recipe.get_entity_attribute_until_step(ingredient_inflection,
-                                                        parameters.current_step,
-                                                        Recipe.IngredientAttribute.amount,
-                                                        Recipe.EntityType.ingredient)
+        if hasattr(parameters, 'current_step'):
+            amount = recipe.get_entity_attribute_until_step(ingredient_inflection,
+                                                            parameters.current_step,
+                                                            Recipe.IngredientAttribute.amount,
+                                                            Recipe.EntityType.ingredient)
+        else:
+            amount = recipe.get_ingredient_attribute(ingredient_inflection,
+                                                     Recipe.IngredientAttribute.amount)
+
         if amount != '':
             break
 

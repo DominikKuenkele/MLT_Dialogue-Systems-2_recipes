@@ -63,9 +63,14 @@ class Recipe():
         
         if type == self.EntityType.ingredient:
             if value == None or value == '':
-                if entity in self.ingredients:
-                    value = self.ingredients[entity][attribute.value]
+                value = self.get_ingredient_attribute(entity, attribute)
 
+        return value if value != None else ''
+
+    def get_ingredient_attribute(self, ingredient, attribute: IngredientAttribute):
+        if ingredient in self.ingredients:
+            value = self.ingredients[ingredient][attribute.value]
+        
         return value if value != None else ''
 
     def _get_entity_attribute_in_step(self, entity, step, attribute: EntityAttribute, type: EntityType) -> str:
