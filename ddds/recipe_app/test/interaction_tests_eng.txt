@@ -612,3 +612,103 @@ U> Until?
 S> Until it seems ready to you.
 U> 
 S> Chop the onions.
+
+--- risotto (perception proplem)
+S> What would you like to do?
+U> i want to make a risotto
+S> We need olive oil, two tablespoons.
+U> ok
+S> One onion, finely chopped.
+U> ok
+S> Three garlic cloves, finely sliced.
+U> ok
+S> Then 400 grams of mixed mushrooms.
+U> ok
+S> 1-2 tablespoons of Rosemary, according to the taste. Also finely chopped.
+U> ok
+S> And 200 grams of Risotto rice.
+U> ok
+S> Then 100ml of white wine.
+U> ok
+S> We also need äh 750 milliliters of vegetable stock.
+U> ok
+S> And 30 grams of grated parmesan.
+U> ok
+S> Chop the onions.
+U> did you say onions?
+S> Yeah.
+
+--- risotto (perception different question)
+S> What would you like to do?
+U> i want to make a risotto
+S> We need olive oil, two tablespoons.
+U> ok
+S> One onion, finely chopped.
+U> ok
+S> Three garlic cloves, finely sliced.
+U> ok
+S> Then 400 grams of mixed mushrooms.
+U> ok
+S> 1-2 tablespoons of Rosemary, according to the taste. Also finely chopped.
+U> ok
+S> And 200 grams of Risotto rice.
+U> ok
+S> Then 100ml of white wine.
+U> ok
+S> We also need äh 750 milliliters of vegetable stock.
+U> ok
+S> And 30 grams of grated parmesan.
+U> ok
+S> Chop the onions.
+U> the onions?
+S> Yeah.
+
+--- risotto (perception problem, inflection)
+S> What would you like to do?
+U> i want to make a risotto
+S> We need olive oil, two tablespoons.
+U> ok
+S> One onion, finely chopped.
+U> ok
+S> Three garlic cloves, finely sliced.
+U> ok
+S> Then 400 grams of mixed mushrooms.
+U> ok
+S> 1-2 tablespoons of Rosemary, according to the taste. Also finely chopped.
+U> ok
+S> And 200 grams of Risotto rice.
+U> ok
+S> Then 100ml of white wine.
+U> ok
+S> We also need äh 750 milliliters of vegetable stock.
+U> ok
+S> And 30 grams of grated parmesan.
+U> ok
+S> Chop the onions.
+U> did you say onion?
+S> Yeah.
+
+--- risotto (perception problem, wrong)
+S> What would you like to do?
+U> i want to make a risotto
+S> We need olive oil, two tablespoons.
+U> ok
+S> One onion, finely chopped.
+U> ok
+S> Three garlic cloves, finely sliced.
+U> ok
+S> Then 400 grams of mixed mushrooms.
+U> ok
+S> 1-2 tablespoons of Rosemary, according to the taste. Also finely chopped.
+U> ok
+S> And 200 grams of Risotto rice.
+U> ok
+S> Then 100ml of white wine.
+U> ok
+S> We also need äh 750 milliliters of vegetable stock.
+U> ok
+S> And 30 grams of grated parmesan.
+U> ok
+S> Chop the onions.
+U> did you say rosemary?
+S> No, the onion.

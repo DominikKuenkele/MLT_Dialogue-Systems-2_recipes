@@ -10,8 +10,10 @@
   <predicate name="current_step" sort="step"/>
 
   <predicate name="which_ingredient" sort="ingredient"/>
+  <predicate name="perceived_ingredient" sort="ingredient"/>
   <predicate name="which_object" sort="object"/>
 
+  <predicate name="reask_ingredient" sort="string"/>
   <predicate name="amount_ingredient" sort="string"/>
   <predicate name="form_ingredient" sort="string"/>
   <predicate name="temperature_object" sort="string"/>

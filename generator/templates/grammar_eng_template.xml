@@ -68,13 +68,16 @@
     </one-of>
   </question>
 
-  <question speaker="user" type="wh_question" predicate="which_ingredient">
+  <question speaker="user" type="wh_question" predicate="reask_ingredient">
     <one-of>
-      <item>The <slot predicate="which_ingredient"/></item>
-      <item><slot predicate="which_ingredient"/></item>
+      <item>Did you say <slot predicate="perceived_ingredient"/></item>
+      <item>Did you mean <slot predicate="perceived_ingredient"/></item>
+      <item>You meant <slot predicate="perceived_ingredient"/></item>
+      <item>The <slot predicate="perceived_ingredient"/></item>
     </one-of>
   </question>
 
+  <question speaker="system" predicate="perceived_ingredient">What?</question>
   <question speaker="system" predicate="which_ingredient">Of what?</question>
   <question speaker="system" predicate="which_object">Of which?</question>
   

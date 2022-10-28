@@ -68,13 +68,16 @@
     </one-of>
   </question>
 
-  <question speaker="user" type="wh_question" predicate="which_ingredient">
+  <question speaker="user" type="wh_question" predicate="reask_ingredient">
     <one-of>
-      <item>The <slot predicate="which_ingredient"/></item>
-      <item><slot predicate="which_ingredient"/></item>
+      <item>Did you say <slot predicate="perceived_ingredient"/></item>
+      <item>Did you mean <slot predicate="perceived_ingredient"/></item>
+      <item>You meant <slot predicate="perceived_ingredient"/></item>
+      <item>The <slot predicate="perceived_ingredient"/></item>
     </one-of>
   </question>
 
+  <question speaker="system" predicate="perceived_ingredient">What?</question>
   <question speaker="system" predicate="which_ingredient">Of what?</question>
   <question speaker="system" predicate="which_object">Of which?</question>
   
@@ -159,31 +162,31 @@
   <individual name="baked_mushroom_risotto_recipe_step_14">baked_mushroom_risotto_recipe_step_14</individual>
   <individual name="baked_mushroom_risotto_recipe_step_15">baked_mushroom_risotto_recipe_step_15</individual>
   <individual name="baked_mushroom_risotto_recipe_step_16">baked_mushroom_risotto_recipe_step_16</individual>
+  <individual name="omelette">omelette</individual>
+  <individual name="risotto">risotto</individual>
+  <individual name="wine">wine</individual>
+  <individual name="oil">oil</individual>
+  <individual name="egg_mixture">egg_mixture</individual>
+  <individual name="garlic">garlic</individual>
+  <individual name="parmesan">parmesan</individual>
   <individual name="stock">stock</individual>
   <individual name="butter">butter</individual>
   <individual name="risotto_rice">risotto_rice</individual>
-  <individual name="wine">wine</individual>
-  <individual name="egg_mixture">egg_mixture</individual>
-  <individual name="onion">onion</individual>
-  <individual name="garlic">garlic</individual>
-  <individual name="omelette">omelette</individual>
-  <individual name="oil">oil</individual>
-  <individual name="risotto">risotto</individual>
-  <individual name="mixed_mushrooms">mixed_mushrooms</individual>
-  <individual name="salt">salt</individual>
-  <individual name="potato">potato</individual>
-  <individual name="egg">egg</individual>
-  <individual name="rosemary">rosemary</individual>
   <individual name="black_pepper">black_pepper</individual>
-  <individual name="parmesan">parmesan</individual>
+  <individual name="salt">salt</individual>
+  <individual name="egg">egg</individual>
+  <individual name="potato">potato</individual>
+  <individual name="rosemary">rosemary</individual>
+  <individual name="mixed_mushrooms">mixed_mushrooms</individual>
   <individual name="olive_oil">olive_oil</individual>
-  <individual name="oven">oven</individual>
-  <individual name="mixing_bowl">mixing_bowl</individual>
-  <individual name="lid">lid</individual>
-  <individual name="bowl">bowl</individual>
+  <individual name="onion">onion</individual>
   <individual name="heat">heat</individual>
-  <individual name="plate">plate</individual>
-  <individual name="pan">pan</individual>
-  <individual name="baking_sheet">baking_sheet</individual>
+  <individual name="bowl">bowl</individual>
   <individual name="oven_proof_lidded_dish">oven_proof_lidded_dish</individual>
+  <individual name="oven">oven</individual>
+  <individual name="pan">pan</individual>
+  <individual name="mixing_bowl">mixing_bowl</individual>
+  <individual name="baking_sheet">baking_sheet</individual>
+  <individual name="lid">lid</individual>
+  <individual name="plate">plate</individual>
 </grammar>

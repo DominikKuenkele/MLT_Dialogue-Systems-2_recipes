@@ -475,4 +475,11 @@
       <bind type="wh_question" predicate="current_recipe"/>
     </plan>
   </goal>
+
+  <goal type="resolve" question_type="wh_question" predicate="reask_ingredient">
+    <plan>
+      <invoke_service_query type="wh_question" predicate="reask_ingredient"/>
+      <bind type="wh_question" predicate="perceived_ingredient"/>
+    </plan>
+  </goal>
 </domain>

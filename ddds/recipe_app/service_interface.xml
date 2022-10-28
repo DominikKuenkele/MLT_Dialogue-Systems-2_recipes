@@ -48,4 +48,12 @@
       <http endpoint="http://ddds-http-service/get_condition_for_step" />
     </target>
   </query>
+  <query name="reask_ingredient">
+    <parameters>
+      <parameter predicate="perceived_ingredient" format="grammar_entry" />
+    </parameters>
+    <target>
+      <http endpoint="http://ddds-http-service/reask_ingredient" />
+    </target>
+  </query>
 </service_interface>

@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
 
 import json
-from re import A
 
 from flask import Flask, request
 from jinja2 import Environment
 
 import inflect
 
+from itertools import product
 from RecipeReader import Recipe, RecipeReader
 from Parameters import Parameters
 
@@ -263,5 +263,22 @@ def get_time_for_step():
         utterance = "Until it seems ready to you"
     else:
         utterance = f'Maybe {time}'
+
+    return query_response(value=utterance, grammar_entry=None)
+
+
+@ app.route("/reask_ingredient", methods=['POST'])
+def reask_ingredient():
+    parameters = Parameters(request)
+
+    perceived_ingredients = get_inflections(parameters.perceived_ingredient)
+    ingredients = get_inflections(parameters.ingredient)
+
+    match = any(perceived_ingredient == ingredient for perceived_ingredient, ingredient in list(product(perceived_ingredients, ingredients)))
+    
+    if match:
+        utterance = "Yeah"
+    else:
+        utterance = f'No, the {parameters.ingredient}'
 
     return query_response(value=utterance, grammar_entry=None)
