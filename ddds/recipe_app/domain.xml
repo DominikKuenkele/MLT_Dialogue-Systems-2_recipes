@@ -71,6 +71,7 @@
             <proposition predicate="read_ingredient_list" value="omelette_recipe_egg"/>
           </inform>
           <end_turn expected_passivity="3.0"/>
+          <forget predicate="proposed_ingredient"/>
           <assume_shared>
             <proposition predicate="omelette_recipe_egg_read" value="true"/>
           </assume_shared>
@@ -87,6 +88,7 @@
             <proposition predicate="read_ingredient_list" value="omelette_recipe_salt"/>
           </inform>
           <end_turn expected_passivity="3.0"/>
+          <forget predicate="proposed_ingredient"/>
           <assume_shared>
             <proposition predicate="omelette_recipe_salt_read" value="true"/>
           </assume_shared>
@@ -103,6 +105,7 @@
             <proposition predicate="read_ingredient_list" value="omelette_recipe_butter"/>
           </inform>
           <end_turn expected_passivity="3.0"/>
+          <forget predicate="proposed_ingredient"/>
           <assume_shared>
             <proposition predicate="omelette_recipe_butter_read" value="true"/>
           </assume_shared>
@@ -195,6 +198,7 @@
             <proposition predicate="read_ingredient_list" value="fries_recipe_potato"/>
           </inform>
           <end_turn expected_passivity="3.0"/>
+          <forget predicate="proposed_ingredient"/>
           <assume_shared>
             <proposition predicate="fries_recipe_potato_read" value="true"/>
           </assume_shared>
@@ -211,6 +215,7 @@
             <proposition predicate="read_ingredient_list" value="fries_recipe_oil"/>
           </inform>
           <end_turn expected_passivity="3.0"/>
+          <forget predicate="proposed_ingredient"/>
           <assume_shared>
             <proposition predicate="fries_recipe_oil_read" value="true"/>
           </assume_shared>
@@ -227,6 +232,7 @@
             <proposition predicate="read_ingredient_list" value="fries_recipe_sugar"/>
           </inform>
           <end_turn expected_passivity="3.0"/>
+          <forget predicate="proposed_ingredient"/>
           <assume_shared>
             <proposition predicate="fries_recipe_sugar_read" value="true"/>
           </assume_shared>
@@ -243,6 +249,7 @@
             <proposition predicate="read_ingredient_list" value="fries_recipe_salt"/>
           </inform>
           <end_turn expected_passivity="3.0"/>
+          <forget predicate="proposed_ingredient"/>
           <assume_shared>
             <proposition predicate="fries_recipe_salt_read" value="true"/>
           </assume_shared>
@@ -259,6 +266,7 @@
             <proposition predicate="read_ingredient_list" value="fries_recipe_red_pepper"/>
           </inform>
           <end_turn expected_passivity="3.0"/>
+          <forget predicate="proposed_ingredient"/>
           <assume_shared>
             <proposition predicate="fries_recipe_red_pepper_read" value="true"/>
           </assume_shared>
@@ -358,6 +366,7 @@
             <proposition predicate="read_ingredient_list" value="baked_mushroom_risotto_recipe_olive_oil"/>
           </inform>
           <end_turn expected_passivity="3.0"/>
+          <forget predicate="proposed_ingredient"/>
           <assume_shared>
             <proposition predicate="baked_mushroom_risotto_recipe_olive_oil_read" value="true"/>
           </assume_shared>
@@ -374,6 +383,7 @@
             <proposition predicate="read_ingredient_list" value="baked_mushroom_risotto_recipe_onion"/>
           </inform>
           <end_turn expected_passivity="3.0"/>
+          <forget predicate="proposed_ingredient"/>
           <assume_shared>
             <proposition predicate="baked_mushroom_risotto_recipe_onion_read" value="true"/>
           </assume_shared>
@@ -390,6 +400,7 @@
             <proposition predicate="read_ingredient_list" value="baked_mushroom_risotto_recipe_garlic"/>
           </inform>
           <end_turn expected_passivity="3.0"/>
+          <forget predicate="proposed_ingredient"/>
           <assume_shared>
             <proposition predicate="baked_mushroom_risotto_recipe_garlic_read" value="true"/>
           </assume_shared>
@@ -406,6 +417,7 @@
             <proposition predicate="read_ingredient_list" value="baked_mushroom_risotto_recipe_mixed_mushrooms"/>
           </inform>
           <end_turn expected_passivity="3.0"/>
+          <forget predicate="proposed_ingredient"/>
           <assume_shared>
             <proposition predicate="baked_mushroom_risotto_recipe_mixed_mushrooms_read" value="true"/>
           </assume_shared>
@@ -422,6 +434,7 @@
             <proposition predicate="read_ingredient_list" value="baked_mushroom_risotto_recipe_rosemary"/>
           </inform>
           <end_turn expected_passivity="3.0"/>
+          <forget predicate="proposed_ingredient"/>
           <assume_shared>
             <proposition predicate="baked_mushroom_risotto_recipe_rosemary_read" value="true"/>
           </assume_shared>
@@ -438,6 +451,7 @@
             <proposition predicate="read_ingredient_list" value="baked_mushroom_risotto_recipe_risotto_rice"/>
           </inform>
           <end_turn expected_passivity="3.0"/>
+          <forget predicate="proposed_ingredient"/>
           <assume_shared>
             <proposition predicate="baked_mushroom_risotto_recipe_risotto_rice_read" value="true"/>
           </assume_shared>
@@ -454,6 +468,7 @@
             <proposition predicate="read_ingredient_list" value="baked_mushroom_risotto_recipe_white_wine"/>
           </inform>
           <end_turn expected_passivity="3.0"/>
+          <forget predicate="proposed_ingredient"/>
           <assume_shared>
             <proposition predicate="baked_mushroom_risotto_recipe_white_wine_read" value="true"/>
           </assume_shared>
@@ -470,6 +485,7 @@
             <proposition predicate="read_ingredient_list" value="baked_mushroom_risotto_recipe_vegetable_stock"/>
           </inform>
           <end_turn expected_passivity="3.0"/>
+          <forget predicate="proposed_ingredient"/>
           <assume_shared>
             <proposition predicate="baked_mushroom_risotto_recipe_vegetable_stock_read" value="true"/>
           </assume_shared>
@@ -486,6 +502,7 @@
             <proposition predicate="read_ingredient_list" value="baked_mushroom_risotto_recipe_parmesan"/>
           </inform>
           <end_turn expected_passivity="3.0"/>
+          <forget predicate="proposed_ingredient"/>
           <assume_shared>
             <proposition predicate="baked_mushroom_risotto_recipe_parmesan_read" value="true"/>
           </assume_shared>

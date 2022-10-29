@@ -1,3 +1,6 @@
+from pprint import pprint
+
+
 class Parameters():
     def __init__(self, request) -> None:
         facts = request.get_json()["context"]["facts"]
@@ -11,3 +14,5 @@ class Parameters():
             self.object = facts["which_object"]["grammar_entry"]
         if 'perceived_ingredient' in facts:
             self.perceived_ingredient = facts["perceived_ingredient"]["grammar_entry"]
+        if 'proposed_ingredient' in facts:
+            self.proposed_ingredient = facts["proposed_ingredient"]["grammar_entry"]

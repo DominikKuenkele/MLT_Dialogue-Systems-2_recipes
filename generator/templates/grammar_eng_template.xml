@@ -82,9 +82,9 @@
       <item>What can I use instead</item>
       <item>What could I use instead</item>
       <item>What should I use instead</item>
-      <item>What can I use instead <slot predicate="which_ingredient"/></item>
-      <item>What could I use instead <slot predicate="which_ingredient"/></item>
-      <item>What should I use instead <slot predicate="which_ingredient"/></item>
+      <item>What can I use instead of <slot predicate="which_ingredient"/></item>
+      <item>What could I use instead of <slot predicate="which_ingredient"/></item>
+      <item>What should I use instead of <slot predicate="which_ingredient"/></item>
       <item>Ok, <slot predicate="proposed_ingredient"/>, do they work</item>
       <item>Do <slot predicate="proposed_ingredient"/> work</item>
       <item>Can I use <slot predicate="proposed_ingredient"/> instead</item>

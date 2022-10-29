@@ -30,6 +30,7 @@ class Domain(Template):
             <proposition predicate="read_ingredient_list" value="{full_ingredient_name}"/>
           </inform>
           <end_turn expected_passivity="3.0"/>
+          <forget predicate="proposed_ingredient"/>
           <assume_shared>
             <proposition predicate="{read_predicate_name}" value="true"/>
           </assume_shared>

@@ -280,8 +280,8 @@ def get_time_for_step():
 def reask_ingredient():
     parameters = Parameters(request)
 
-    perceived_ingredients = get_inflections(parameters.perceived_ingredient)
-    ingredients = get_inflections(parameters.ingredient)
+    perceived_ingredients = get_inflections(parameters.perceived_ingredient.replace('_', ' '))
+    ingredients = get_inflections(parameters.ingredient.replace('_', ' '))
 
     match = any(perceived_ingredient == ingredient for perceived_ingredient, ingredient in list(product(perceived_ingredients, ingredients)))
     
@@ -295,8 +295,31 @@ def reask_ingredient():
 @ app.route("/replace_ingredient", methods=['POST'])
 def replace_ingredient():
     parameters = Parameters(request)
-    if hasattr(parameters, 'proposed_ingredient'):
-        print('prop:', parameters.proposed_ingredient)
 
-    print('ingr:', parameters.ingredient)
-    return query_response(value='utterance', grammar_entry=None)
+    with open('substitutes.json', 'r') as f:
+        substitutes = json.load(f)
+    
+    looked_up_ingredient = ''
+    for inflected_ingredient in get_inflections(parameters.ingredient):
+        if inflected_ingredient in substitutes:
+            looked_up_ingredient = inflected_ingredient
+            break
+
+    if looked_up_ingredient != '':
+        if hasattr(parameters, 'proposed_ingredient'):
+            utterance = "I don't think so"
+            unpacked_ingredients = []
+            for substitute in substitutes[looked_up_ingredient]:
+                unpacked_ingredients.extend(substitute.split(' '))
+            for inflected_proposed in get_inflections(parameters.proposed_ingredient):
+                if inflected_proposed in unpacked_ingredients:
+                    utterance = 'Sure'
+                    break
+        else:
+            selected_substitutes = substitutes[looked_up_ingredient]
+            selected_substitutes[-1] = 'or ' + selected_substitutes[-1]
+            utterance = f'You could use {", ".join(substitutes[looked_up_ingredient])} instead'
+    else:
+        utterance = 'I am not sure about that'
+    
+    return query_response(value=utterance, grammar_entry=None)

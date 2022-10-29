@@ -732,3 +732,57 @@ U> the garlic?
 S> No, the onion.
 U>
 S> Three garlic cloves, finely sliced.
+
+--- risotto (replacement with correct proposal)
+S> What would you like to do?
+U> i want to make a risotto
+S> We need olive oil, two tablespoons.
+U> yes
+S> One onion, finely chopped.
+U> can i use scallions instead?
+S> Sure.
+U>
+S> Three garlic cloves, finely sliced.
+
+--- risotto (replacement with incorrect proposal)
+S> What would you like to do?
+U> i want to make a risotto
+S> We need olive oil, two tablespoons.
+U> yes
+S> One onion, finely chopped.
+U> can i use a squash instead?
+S> I don't think so.
+U>
+S> Three garlic cloves, finely sliced.
+
+--- risotto (replacement, which is in database)
+S> What would you like to do?
+U> i want to make a risotto
+S> We need olive oil, two tablespoons.
+U> yes
+S> One onion, finely chopped.
+U> yes
+S> Three garlic cloves, finely sliced.
+U> i am allergic to that
+S> You could use minced shallots, garlic powder, granulated garlic, or garlic salt instead.
+U>
+S> Then 400 grams of mixed mushrooms.
+
+--- risotto (replacement, which is not in database)
+S> What would you like to do?
+U> i want to make a risotto
+S> We need olive oil, two tablespoons.
+U> yes
+S> One onion, finely chopped.
+U> yes
+S> Three garlic cloves, finely sliced.
+U> yes
+S> Then 400 grams of mixed mushrooms.
+U> yes
+S> 1-2 tablespoons of Rosemary, according to the taste. Also finely chopped.
+U> yes
+S> And 200 grams of Risotto rice.
+U> What could I use instead?
+S> I am not sure about that.
+U> 
+S> Then 100ml of white wine.
