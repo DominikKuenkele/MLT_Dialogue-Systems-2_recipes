@@ -5,10 +5,7 @@ from NLG import NLG
 from Ontology import Ontology
 from Grammar import Grammar
 from RecipeLookup import RecipeLookup
-
-
-def read_substeps():
-    pass
+from ExpectedInput import ExpectedInput
 
 
 def parse_xml(path):
@@ -21,6 +18,7 @@ def parse_xml(path):
     grammar = Grammar('templates/grammar_eng_template.xml',
                       '../ddds/recipe_app/grammar/grammar_eng.xml')
     nlg = NLG('templates/nlg_template.json', '../couch_dbs/nlg.json')
+    expected_input = ExpectedInput('templates/expected_input_template.json', '../couch_dbs/expected_input.json')
     recipe_lokup = RecipeLookup('', '../ddds/http-service/recipe_lookup.json')
 
     ingredients = set()
@@ -35,6 +33,10 @@ def parse_xml(path):
         grammar.add_individual(recipe_name)
         ontology.add_action(f'{recipe_name}_action')
         ontology.add_individual(f'{recipe_name}', 'recipe')
+
+        if 'image_url' in recipe.attrib:
+            domain.add_featured_recipe(recipe_name)
+            expected_input.add_top_item(recipe_name, recipe.attrib['image_url'])
 
         for utterance in recipe.find('./utterances'):
             grammar.add_utterance(recipe_name, utterance.text)
@@ -124,6 +126,7 @@ def parse_xml(path):
     ontology.generate_file()
     grammar.generate_file()
     nlg.generate_file()
+    expected_input.generate_file()
     recipe_lokup.generate_file()
 
 

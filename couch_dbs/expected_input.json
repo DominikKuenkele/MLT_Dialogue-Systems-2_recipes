@@ -1,90 +1,54 @@
 [
     {
-        "current_plan_item": "findout(?X.example_predicate(X), set([example_predicate(individual_1), example_predicate(individual_2), example_predicate(individual_3)]))",
-        "semantic_expression": "answer(example_predicate(individual_1))",
+        "current_plan_item": "findout(?set([goal(perform(omelette_recipe_action)), goal(perform(fries_recipe_action)), goal(perform(baked_mushroom_risotto_recipe_action))]))",
+        "semantic_expression": "request(omelette_recipe_action)",
         "alternative": {
             "visual_information": [
                 {
                     "attribute": "name",
                     "type": "text/plain",
-                    "value": "Some text to show on the button"
+                    "value": "omelette recipe"
                 },
                 {
                     "attribute": "image",
                     "type": "image/jpeg",
-                    "value": "https://some-image-url"
+                    "value": "https://img.buzzfeed.com/thumbnailer-prod-us-east-1/d1cb1ef69a1c4b6c9a10e1662082f0e7/BFV77395_HowToCookAPerfectOmelet_ADB_032221_V06l_16x9_YT.jpg?resize=1200:*"
                 }
             ]
         }
     },
     {
-        "current_plan_item": "findout(?X.example_predicate(X), set([example_predicate(individual_1), example_predicate(individual_2), example_predicate(individual_3)]))",
-        "semantic_expression": "answer(example_predicate(individual_2))",
+        "current_plan_item": "findout(?set([goal(perform(omelette_recipe_action)), goal(perform(fries_recipe_action)), goal(perform(baked_mushroom_risotto_recipe_action))]))",
+        "semantic_expression": "request(fries_recipe_action)",
         "alternative": {
             "visual_information": [
                 {
                     "attribute": "name",
                     "type": "text/plain",
-                    "value": "Some other text to show on the button"
+                    "value": "fries recipe"
                 },
                 {
                     "attribute": "image",
                     "type": "image/jpeg",
-                    "value": "https://some-other-image-url"
+                    "value": "https://img.taste.com.au/ol2Jq8ZQ/taste/2016/11/rachel-87711-2.jpeg"
                 }
             ]
         }
     },
     {
-        "current_plan_item": "findout(?X.example_predicate(X), set([example_predicate(individual_1), example_predicate(individual_2), example_predicate(individual_3)]))",
-        "semantic_expression": "answer(example_predicate(individual_3))",
+        "current_plan_item": "findout(?set([goal(perform(omelette_recipe_action)), goal(perform(fries_recipe_action)), goal(perform(baked_mushroom_risotto_recipe_action))]))",
+        "semantic_expression": "request(baked_mushroom_risotto_recipe_action)",
         "alternative": {
             "visual_information": [
                 {
                     "attribute": "name",
                     "type": "text/plain",
-                    "value": "Another text to show on the button"
+                    "value": "baked mushroom risotto recipe"
                 },
                 {
                     "attribute": "image",
                     "type": "image/jpeg",
-                    "value": "https://another-image-url"
-                }
-            ]
-        }
-    },
-    {
-        "current_plan_item": "findout(?set([goal(perform(example_action_1)), goal(perform(example_action_2))]))",
-        "semantic_expression": "request(example_action_1)",
-        "alternative": {
-            "visual_information": [
-                {
-                    "attribute": "name",
-                    "type": "text/plain",
-                    "value": "Button text"
-                },
-                {
-                    "attribute": "image",
-                    "type": "image/jpeg",
-                    "value": "https://image-url"
-                }
-            ]
-        }
-    },
-    {
-        "current_plan_item": "findout(?set([goal(perform(example_action_1)), goal(perform(example_action_2))]))",
-        "semantic_expression": "request(example_action_2)",
-        "alternative": {
-            "visual_information": [
-                {
-                    "attribute": "name",
-                    "type": "text/plain",
-                    "value": "Button text"
-                },
-                {
-                    "attribute": "image",
-                    "type": "image/jpeg",
-                    "value": "https://image-url"
+                    "value": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chicken-mushroom-risotto-5ed8f22.jpg"
                 }
             ]
         }

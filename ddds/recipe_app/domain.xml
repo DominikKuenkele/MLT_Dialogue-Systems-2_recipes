@@ -54,7 +54,11 @@
       <assume_shared>
         <proposition predicate="baked_mushroom_risotto_recipe_parmesan_read" value="false"/>
       </assume_shared>
-      <findout type="goal"/>
+      <findout type="alt_question">
+        <alt><perform action="omelette_recipe_action"/></alt>
+        <alt><perform action="fries_recipe_action"/></alt>
+        <alt><perform action="baked_mushroom_risotto_recipe_action"/></alt>
+      </findout>
     </plan>
   </goal>
   

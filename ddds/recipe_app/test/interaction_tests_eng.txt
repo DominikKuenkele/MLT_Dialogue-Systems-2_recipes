@@ -1,5 +1,5 @@
 --- cooking french omelette
-S> What would you like to do?
+S> Do you want to prepare a French omelette, make fries or make a risotto?
 U> I want to make an omelette
 S> We need three eggs.
 U> yes
@@ -20,7 +20,7 @@ U> done
 S> Amazing! You have finished preparing a French omelette. Bon appétit!
 
 --- cooking french omelette (explicit question amount)
-S> What would you like to do?
+S> Do you want to prepare a French omelette, make fries or make a risotto?
 U> I want to make an omelette
 S> We need three eggs.
 U> yes
@@ -45,7 +45,7 @@ U> done
 S> Amazing! You have finished preparing a French omelette. Bon appétit!
 
 --- cooking french omelette (requesting help)
-S> What would you like to do?
+S> Do you want to prepare a French omelette, make fries or make a risotto?
 U> I want to make an omelette
 S> We need three eggs.
 U> yes
@@ -70,7 +70,7 @@ U> done
 S> Amazing! You have finished preparing a French omelette. Bon appétit!
 
 --- cooking fries
-S> What would you like to do?
+S> Do you want to prepare a French omelette, make fries or make a risotto?
 U> I want to make fries
 S> You need potatoes.
 U> yes
@@ -97,7 +97,7 @@ U> done
 S> Good job! You should serve and eat it as long as it is warm!
 
 --- cooking fries (explicit question amount)
-S> What would you like to do?
+S> Do you want to prepare a French omelette, make fries or make a risotto?
 U> I want to make fries
 S> You need potatoes.
 U> yes
@@ -128,7 +128,7 @@ U> done
 S> Good job! You should serve and eat it as long as it is warm!
 
 --- cooking fries (explicit question amount not in recipe)
-S> What would you like to do?
+S> Do you want to prepare a French omelette, make fries or make a risotto?
 U> I want to make fries
 S> You need potatoes.
 U> yes
@@ -159,7 +159,7 @@ U> done
 S> Good job! You should serve and eat it as long as it is warm!
 
 --- cooking fries (explicit question different amounts in steps)
-S> What would you like to do?
+S> Do you want to prepare a French omelette, make fries or make a risotto?
 U> I want to make fries
 S> You need potatoes.
 U> yes
@@ -194,7 +194,7 @@ U> done
 S> Good job! You should serve and eat it as long as it is warm!
 
 --- read ingredients with no user response
-S> What would you like to do?
+S> Do you want to prepare a French omelette, make fries or make a risotto?
 U> I want to make fries
 S> You need potatoes.
 U> 
@@ -203,7 +203,7 @@ U>
 S> We need a little sugar.
 
 --- read ingredients with user response
-S> What would you like to do?
+S> Do you want to prepare a French omelette, make fries or make a risotto?
 U> I want to make fries
 S> You need potatoes.
 U> yes
@@ -212,7 +212,7 @@ U> yes
 S> We need a little sugar.
 
 --- risotto (different utterances for ingredients list)
-S> What would you like to do?
+S> Do you want to prepare a French omelette, make fries or make a risotto?
 U> I want to make a risotto
 S> We need olive oil, two tablespoons.
 U> yes
@@ -233,7 +233,7 @@ U> yes
 S> And 30 grams of grated parmesan.
 
 --- risotto (mixed question about ingredients (form, amount), ingredients from previous steps)
-S> What would you like to do?
+S> Do you want to prepare a French omelette, make fries or make a risotto?
 U> I want to make a risotto
 S> We need olive oil, two tablespoons.
 U> yes
@@ -280,7 +280,7 @@ U> done
 S> then you can begin by preheating the oven to 180 degrees
 
 --- risotto (temperature in step with object and set temperature)
-S> What would you like to do?
+S> Do you want to prepare a French omelette, make fries or make a risotto?
 U> i want to make a risotto
 S> We need olive oil, two tablespoons.
 U> yes
@@ -315,7 +315,7 @@ U>
 S> then you can begin by preheating the oven to 180 degrees
 
 --- risotto (temperature in step with object and no set temperature)
-S> What would you like to do?
+S> Do you want to prepare a French omelette, make fries or make a risotto?
 U> i want to make a risotto
 S> We need olive oil, two tablespoons.
 U> yes
@@ -352,7 +352,7 @@ U>
 S> Then you take an oven proof lidded dish.
 
 --- risotto (temperature in previous step with object and set temperature)
-S> What would you like to do?
+S> Do you want to prepare a French omelette, make fries or make a risotto?
 U> i want to make a risotto
 S> We need olive oil, two tablespoons.
 U> yes
@@ -390,7 +390,7 @@ S> Then you take an oven proof lidded dish.
 U>
 
 --- risotto (time in step)
-S> What would you like to do?
+S> Do you want to prepare a French omelette, make fries or make a risotto?
 U> i want to make a risotto
 S> We need olive oil, two tablespoons.
 U> ok
@@ -430,7 +430,7 @@ S> Heat the oil and fry the onions for three minutes
 U> done
 
 --- risotto (time in previous step)
-S> What would you like to do?
+S> Do you want to prepare a French omelette, make fries or make a risotto?
 U> i want to make a risotto
 S> We need olive oil, two tablespoons.
 U> ok
@@ -475,7 +475,7 @@ U>
 S> Then you can stir in the Rosemary
 
 --- risotto (time before step)
-S> What would you like to do?
+S> Do you want to prepare a French omelette, make fries or make a risotto?
 U> i want to make a risotto
 S> We need olive oil, two tablespoons.
 U> ok
@@ -502,7 +502,7 @@ U>
 S> Chop the onions.
 
 --- risotto (condition in step)
-S> What would you like to do?
+S> Do you want to prepare a French omelette, make fries or make a risotto?
 U> i want to make a risotto
 S> We need olive oil, two tablespoons.
 U> ok
@@ -542,7 +542,7 @@ S> Heat the oil and fry the onions for three minutes
 U> done
 
 --- risotto (condition in previous step)
-S> What would you like to do?
+S> Do you want to prepare a French omelette, make fries or make a risotto?
 U> i want to make a risotto
 S> We need olive oil, two tablespoons.
 U> ok
@@ -587,7 +587,7 @@ U>
 S> Then you can stir in the Rosemary
 
 --- risotto (condition before step)
-S> What would you like to do?
+S> Do you want to prepare a French omelette, make fries or make a risotto?
 U> i want to make a risotto
 S> We need olive oil, two tablespoons.
 U> ok
@@ -614,7 +614,7 @@ U>
 S> Chop the onions.
 
 --- risotto (perception proplem)
-S> What would you like to do?
+S> Do you want to prepare a French omelette, make fries or make a risotto?
 U> i want to make a risotto
 S> We need olive oil, two tablespoons.
 U> ok
@@ -639,7 +639,7 @@ U> did you say onions?
 S> Yeah.
 
 --- risotto (perception different question)
-S> What would you like to do?
+S> Do you want to prepare a French omelette, make fries or make a risotto?
 U> i want to make a risotto
 S> We need olive oil, two tablespoons.
 U> ok
@@ -664,7 +664,7 @@ U> the onions?
 S> Yeah.
 
 --- risotto (perception problem, inflection)
-S> What would you like to do?
+S> Do you want to prepare a French omelette, make fries or make a risotto?
 U> i want to make a risotto
 S> We need olive oil, two tablespoons.
 U> ok
@@ -689,7 +689,7 @@ U> did you say onion?
 S> Yeah.
 
 --- risotto (perception problem, wrong)
-S> What would you like to do?
+S> Do you want to prepare a French omelette, make fries or make a risotto?
 U> i want to make a risotto
 S> We need olive oil, two tablespoons.
 U> ok
@@ -714,7 +714,7 @@ U> did you say rosemary?
 S> No, the onion.
 
 --- risotto (amount while reading ingredients)
-S> What would you like to do?
+S> Do you want to prepare a French omelette, make fries or make a risotto?
 U> i want to make a risotto
 S> We need olive oil, two tablespoons.
 U> how much?
@@ -723,7 +723,7 @@ U>
 S> One onion, finely chopped.
 
 --- risotto (perception while reading ingredients)
-S> What would you like to do?
+S> Do you want to prepare a French omelette, make fries or make a risotto?
 U> i want to make a risotto
 S> We need olive oil, two tablespoons.
 U> ok
@@ -734,7 +734,7 @@ U>
 S> Three garlic cloves, finely sliced.
 
 --- risotto (replacement with correct proposal)
-S> What would you like to do?
+S> Do you want to prepare a French omelette, make fries or make a risotto?
 U> i want to make a risotto
 S> We need olive oil, two tablespoons.
 U> yes
@@ -745,7 +745,7 @@ U>
 S> Three garlic cloves, finely sliced.
 
 --- risotto (replacement with incorrect proposal)
-S> What would you like to do?
+S> Do you want to prepare a French omelette, make fries or make a risotto?
 U> i want to make a risotto
 S> We need olive oil, two tablespoons.
 U> yes
@@ -756,7 +756,7 @@ U>
 S> Three garlic cloves, finely sliced.
 
 --- risotto (replacement, which is in database)
-S> What would you like to do?
+S> Do you want to prepare a French omelette, make fries or make a risotto?
 U> i want to make a risotto
 S> We need olive oil, two tablespoons.
 U> yes
@@ -769,7 +769,7 @@ U>
 S> Then 400 grams of mixed mushrooms.
 
 --- risotto (replacement, which is not in database)
-S> What would you like to do?
+S> Do you want to prepare a French omelette, make fries or make a risotto?
 U> i want to make a risotto
 S> We need olive oil, two tablespoons.
 U> yes
@@ -788,7 +788,7 @@ U>
 S> Then 100ml of white wine.
 
 --- risotto (how action)
-S> What would you like to do?
+S> Do you want to prepare a French omelette, make fries or make a risotto?
 U> i want to make a risotto
 S> We need olive oil, two tablespoons.
 U> ok
@@ -825,7 +825,7 @@ U>
 S> then you can begin by preheating the oven to 180 degrees
 
 --- risotto (how action, not implemented)
-S> What would you like to do?
+S> Do you want to prepare a French omelette, make fries or make a risotto?
 U> i want to make a risotto
 S> We need olive oil, two tablespoons.
 U> ok

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <recipes>
-    <recipe name="omelette">
+    <recipe name="omelette" image_url="https://img.buzzfeed.com/thumbnailer-prod-us-east-1/d1cb1ef69a1c4b6c9a10e1662082f0e7/BFV77395_HowToCookAPerfectOmelet_ADB_032221_V06l_16x9_YT.jpg?resize=1200:*">
         <utterances>
             <utterance>prepare a French omelette</utterance>
             <utterance>I want to prepare a French omelette</utterance>
@@ -43,7 +43,7 @@
         <finisher>Amazing! You have finished preparing a French omelette. Bon appétit!</finisher>
     </recipe>
 
-    <recipe name="fries">
+    <recipe name="fries" image_url="https://img.taste.com.au/ol2Jq8ZQ/taste/2016/11/rachel-87711-2.jpeg">
         <utterances>
             <utterance>make fries</utterance>
             <utterance>I want to make fries</utterance>
@@ -83,7 +83,7 @@
         </steps>
         <finisher>Good job! You should serve and eat it as long as it is warm!</finisher>
     </recipe>
-    <recipe name="baked mushroom risotto">
+    <recipe name="baked mushroom risotto" image_url="https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chicken-mushroom-risotto-5ed8f22.jpg">
         <utterances>
             <utterance>make a risotto</utterance>
             <utterance>I want to make a risotto</utterance>

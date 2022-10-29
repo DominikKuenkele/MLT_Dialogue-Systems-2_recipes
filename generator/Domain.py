@@ -6,6 +6,7 @@ class Domain(Template):
         super().__init__(template_file, target_file)
         self.recipes = {}
         self.hows = {}
+        self.featured = []
 
     def add_how(self, how_name) -> None:
         self.hows[self._cleanse_attribute(how_name)] = {
@@ -18,6 +19,9 @@ class Domain(Template):
             'ingredients': [],
             'get_dones': []
         }
+
+    def add_featured_recipe(self, recipe_name) -> None:
+        self.featured.append(f'''        <alt><perform action="{self._cleanse_attribute(recipe_name)}_action"/></alt>''')
 
     def add_ingredient(self, recipe_name, ingredient_name) -> None:
         recipe_name = self._cleanse_attribute(recipe_name)
@@ -78,21 +82,29 @@ class Domain(Template):
         for recipe in self.recipes.values():
             all_ingredients_read.extend(recipe['ingredient_reads'])
         ingredient_stub = '\n'.join(all_ingredients_read)
-            
+        
+        if len(self.featured) > 1:
+            featured = "\n".join(self.featured)
+            findout_stub = f'''      <findout type="alt_question">
+{featured}
+      </findout>'''
+        else:
+            findout_stub = '      <findout type="goal"/>'
+
         stub = f'''  <goal type="perform" action="top">
     <plan>
       <forget_all/>
 {ingredient_stub}
-      <findout type="goal"/>
+{findout_stub}
     </plan>
   </goal>
   
 '''
         for recipe, recipe_attributes in self.recipes.items():
-            stub += f'''  <goal type="perform" action="{self._cleanse_attribute(recipe)}_action" reraise_on_resume="false">
+            stub += f'''  <goal type="perform" action="{recipe}_action" reraise_on_resume="false">
     <plan>
       <assume_shared>
-        <proposition predicate="current_recipe" value="{self._cleanse_attribute(recipe)}"/>
+        <proposition predicate="current_recipe" value="{recipe}"/>
       </assume_shared>
       
 '''
@@ -115,7 +127,7 @@ class Domain(Template):
         for how, how_attributes in self.hows.items():
             if len(how_attributes['get_dones']) > 0:
                 how_get_done_stub = '\n'.join(how_attributes['get_dones'])
-                stub += f'''  <goal type="perform" action="{self._cleanse_attribute(how)}">
+                stub += f'''  <goal type="perform" action="{how}">
     <plan>
 {how_get_done_stub}
       <signal_action_completion/>
