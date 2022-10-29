@@ -61,7 +61,7 @@ S> Add the egg mixture to the pan and stir the eggs for about 30 seconds.
 U> How do I do that?
 S> Use a fork and stir them consistently
 U> done
-S> Perfect
+S> 
 U>
 S> When the eggs are set but look slightly wet, turn off the heat and fold the omelette.
 U> done
@@ -786,3 +786,65 @@ U> What could I use instead?
 S> I am not sure about that.
 U> 
 S> Then 100ml of white wine.
+
+--- risotto (how action)
+S> What would you like to do?
+U> i want to make a risotto
+S> We need olive oil, two tablespoons.
+U> ok
+S> One onion, finely chopped.
+U> ok
+S> Three garlic cloves, finely sliced.
+U> ok
+S> Then 400 grams of mixed mushrooms.
+U> ok
+S> 1-2 tablespoons of Rosemary, according to the taste. Also finely chopped.
+U> ok
+S> And 200 grams of Risotto rice.
+U> ok
+S> Then 100ml of white wine.
+U> ok
+S> We also need äh 750 milliliters of vegetable stock.
+U> ok
+S> And 30 grams of grated parmesan.
+U> ok
+S> Chop the onions.
+U> yes
+S> Then finely sliced garlic
+U> ok
+S> Then roughly chop the mushrooms
+U> hmm
+S> Then you should chop the rosemary finely
+U> how do I do that?
+S> Strip the leaves off with you fingers and place them on the cutting board
+U> hmm
+S> Now use a sharp knife and slice through the pile of rosemary
+U> ok
+S> 
+U>
+S> then you can begin by preheating the oven to 180 degrees
+
+--- risotto (how action, not implemented)
+S> What would you like to do?
+U> i want to make a risotto
+S> We need olive oil, two tablespoons.
+U> ok
+S> One onion, finely chopped.
+U> ok
+S> Three garlic cloves, finely sliced.
+U> ok
+S> Then 400 grams of mixed mushrooms.
+U> ok
+S> 1-2 tablespoons of Rosemary, according to the taste. Also finely chopped.
+U> ok
+S> And 200 grams of Risotto rice.
+U> ok
+S> Then 100ml of white wine.
+U> ok
+S> We also need äh 750 milliliters of vegetable stock.
+U> ok
+S> And 30 grams of grated parmesan.
+U> ok
+S> Chop the onions.
+U> how do I do that?
+S> Chop the onions.

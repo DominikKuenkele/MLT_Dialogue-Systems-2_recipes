@@ -7,12 +7,19 @@ from Grammar import Grammar
 from RecipeLookup import RecipeLookup
 
 
+def read_substeps():
+    pass
+
+
 def parse_xml(path):
     root = ElementTree.parse(path).getroot()
 
-    domain = Domain('templates/domain_template.xml', '../ddds/recipe_app/domain.xml')
-    ontology = Ontology('templates/ontology_template.xml', '../ddds/recipe_app/ontology.xml')
-    grammar = Grammar('templates/grammar_eng_template.xml', '../ddds/recipe_app/grammar/grammar_eng.xml')
+    domain = Domain('templates/domain_template.xml',
+                    '../ddds/recipe_app/domain.xml')
+    ontology = Ontology('templates/ontology_template.xml',
+                        '../ddds/recipe_app/ontology.xml')
+    grammar = Grammar('templates/grammar_eng_template.xml',
+                      '../ddds/recipe_app/grammar/grammar_eng.xml')
     nlg = NLG('templates/nlg_template.json', '../couch_dbs/nlg.json')
     recipe_lokup = RecipeLookup('', '../ddds/http-service/recipe_lookup.json')
 
@@ -38,9 +45,12 @@ def parse_xml(path):
                                         ingredient_name,
                                         ingredient.attrib.get('amount', None),
                                         ingredient.attrib.get('form', None))
-            ontology.add_predicate(f'{recipe_name}_{ingredient_name}_read', 'boolean')
-            ontology.add_individual(f'{recipe_name}_{ingredient_name}', 'ingredient_list')
-            grammar.add_individual(f'{recipe_name}_{ingredient_name}', ingredient.text)
+            ontology.add_predicate(
+                f'{recipe_name}_{ingredient_name}_read', 'boolean')
+            ontology.add_individual(
+                f'{recipe_name}_{ingredient_name}', 'ingredient_list')
+            grammar.add_individual(
+                f'{recipe_name}_{ingredient_name}', ingredient.text)
             domain.add_ingredient(recipe_name, ingredient_name)
 
         for stepnumber, step in enumerate(recipe.find('./steps')):
@@ -49,7 +59,7 @@ def parse_xml(path):
             last_ingredient = ''
             last_object = ''
 
-            for substep in step:
+            for substep in step.findall('./substep'):
                 step_utterances.append(substep.text)
 
                 ingredient_attributes = {}
@@ -58,7 +68,7 @@ def parse_xml(path):
                     last_ingredient = substep.attrib['ingredient']
 
                     ingredient_attributes = {
-                        'name': substep.attrib['ingredient'], 
+                        'name': substep.attrib['ingredient'],
                         'amount': substep.attrib.get('amount', None),
                         'form': substep.attrib.get('form', None)
                     }
@@ -68,17 +78,31 @@ def parse_xml(path):
                     objects.add(substep.attrib['object'])
                     last_object = substep.attrib['object']
                     object_attributes = {
-                        'name': substep.attrib['object'], 
+                        'name': substep.attrib['object'],
                         'temperature': substep.attrib.get('temperature', None),
                     }
+
+                recipe_lokup.add_substep(recipe_name,
+                                         step_name,
+                                         ingredient_attributes,
+                                         object_attributes,
+                                         substep.attrib.get('time', None),
+                                         substep.attrib.get('condition', None))
+
+            domain.add_how(step_name)
+            for how_step_number, how_step in enumerate(step.findall('how/step')):
+                how_step_name = f'{step_name}_how_step_{how_step_number}'
+                how_step_utterances = []
+                for how_substep in how_step.findall('./substep'):
+                    how_step_utterances.append(how_substep.text)
+
+                ontology.add_action(step_name)
+                ontology.add_individual(how_step_name, 'how_step')
+                grammar.add_individual(how_step_name)
+                domain.add_how_step(step_name, how_step_name)
+                nlg.add_request(how_step_name, ' and '.join(how_step_utterances))
                 
-                recipe_lokup .add_substep(recipe_name,
-                                          step_name,
-                                          ingredient_attributes,
-                                          object_attributes,
-                                          substep.attrib.get('time', None),
-                                          substep.attrib.get('condition', None))
-                                          
+
             ontology.add_individual(step_name, 'step')
             grammar.add_individual(step_name)
             domain.add_step(recipe_name, step_name,

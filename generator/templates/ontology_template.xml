@@ -2,6 +2,7 @@
 <ontology name="RecipeAppOntology">
   <sort name="recipe"/>
   <sort name="step"/>
+  <sort name="how_step"/>
   <sort name="ingredient" dynamic="true"/>
   <sort name="proposed_ingredient_sort" dynamic="true"/>
   <sort name="object" dynamic="true"/>

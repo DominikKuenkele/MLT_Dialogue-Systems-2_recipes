@@ -5,6 +5,12 @@ class Domain(Template):
     def __init__(self, template_file, target_file) -> None:
         super().__init__(template_file, target_file)
         self.recipes = {}
+        self.hows = {}
+
+    def add_how(self, how_name) -> None:
+        self.hows[self._cleanse_attribute(how_name)] = {
+            'get_dones': []
+        }
 
     def add_recipe(self, recipe_name) -> None:
         self.recipes[self._cleanse_attribute(recipe_name)] = {
@@ -62,6 +68,11 @@ class Domain(Template):
       <get_done action="{self._cleanse_attribute(action_name)}"/>
       ''')
 
+    def add_how_step(self, how_name, action_name) -> None:
+        how_name = self._cleanse_attribute(how_name)
+
+        self.hows[how_name]['get_dones'].append(f'      <get_done action="{self._cleanse_attribute(action_name)}"/>')
+
     def _get_stub(self) -> str:
         all_ingredients_read = []
         for recipe in self.recipes.values():
@@ -100,4 +111,16 @@ class Domain(Template):
   </goal>
   
 '''
+
+        for how, how_attributes in self.hows.items():
+            if len(how_attributes['get_dones']) > 0:
+                how_get_done_stub = '\n'.join(how_attributes['get_dones'])
+                stub += f'''  <goal type="perform" action="{self._cleanse_attribute(how)}">
+    <plan>
+{how_get_done_stub}
+      <signal_action_completion/>
+    </plan>
+  </goal>
+            
+            ''' 
         return stub

@@ -8,6 +8,10 @@
         "utterance": "Heat butter on a pan on high heat."
     },
     {
+        "match": "request(omelette_recipe_step_2_how_step_0)",
+        "utterance": "Use a fork and stir them consistently"
+    },
+    {
         "match": "request(omelette_recipe_step_2)",
         "utterance": "Add the egg mixture to the pan and stir the eggs for about 30 seconds."
     },
@@ -62,6 +66,14 @@
     {
         "match": "request(baked_mushroom_risotto_recipe_step_2)",
         "utterance": "Then roughly chop the mushrooms"
+    },
+    {
+        "match": "request(baked_mushroom_risotto_recipe_step_3_how_step_0)",
+        "utterance": "Strip the leaves off with you fingers and place them on the cutting board"
+    },
+    {
+        "match": "request(baked_mushroom_risotto_recipe_step_3_how_step_1)",
+        "utterance": "Now use a sharp knife and slice through the pile of rosemary"
     },
     {
         "match": "request(baked_mushroom_risotto_recipe_step_3)",

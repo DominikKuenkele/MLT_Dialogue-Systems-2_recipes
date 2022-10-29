@@ -26,6 +26,11 @@
             <step>
                 <substep ingredient="egg mixture" object="pan">Add the egg mixture to the pan</substep>
                 <substep ingredient="egg" amount="four" time="30 seconds">stir the eggs for about 30 seconds.</substep>
+                <how>
+                    <step>
+                        <substep>Use a fork and stir them consistently</substep>
+                    </step>
+                </how>
             </step>
             <step>
                 <substep object="heat" condition="when the eggs are set, but look slightly wet">When the eggs are set but look slightly wet, turn off the heat</substep>
@@ -108,6 +113,15 @@
             </step>
             <step>
                 <substep ingredient="rosemary">Then you should chop the rosemary finely</substep>
+                <how>
+                    <step>
+                        <substep>Strip the leaves off with you fingers</substep>
+                        <substep>place them on the cutting board</substep>
+                    </step>
+                    <step>
+                        <substep>Now use a sharp knife and slice through the pile of rosemary</substep>
+                    </step>
+                </how>
             </step>
             <step>
                 <substep object="oven" temperature="180 degrees">then you can begin by preheating the oven to 180 degrees</substep>
