@@ -77,6 +77,22 @@
     </one-of>
   </question>
 
+  <question speaker="user" type="wh_question" predicate="replace_ingredient">
+    <one-of>
+      <item>What can I use instead</item>
+      <item>What could I use instead</item>
+      <item>What should I use instead</item>
+      <item>What can I use instead <slot predicate="which_ingredient"/></item>
+      <item>What could I use instead <slot predicate="which_ingredient"/></item>
+      <item>What should I use instead <slot predicate="which_ingredient"/></item>
+      <item>Ok, <slot predicate="proposed_ingredient"/>, do they work</item>
+      <item>Do <slot predicate="proposed_ingredient"/> work</item>
+      <item>Can I use <slot predicate="proposed_ingredient"/> instead</item>
+      <item>I am allergic to that</item>
+      <item>I am allergic to <slot predicate="which_ingredient"/></item>
+    </one-of>
+  </question>
+
   <question speaker="system" predicate="perceived_ingredient">What?</question>
   <question speaker="system" predicate="which_ingredient">Of what?</question>
   <question speaker="system" predicate="which_object">Of which?</question>

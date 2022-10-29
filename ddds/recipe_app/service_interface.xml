@@ -56,4 +56,13 @@
       <http endpoint="http://ddds-http-service/reask_ingredient" />
     </target>
   </query>
+  <query name="replace_ingredient">
+    <parameters>
+      <parameter predicate="proposed_ingredient" format="grammar_entry" optional="true" />
+      <parameter predicate="which_ingredient" format="grammar_entry" />
+    </parameters>
+    <target>
+      <http endpoint="http://ddds-http-service/replace_ingredient" />
+    </target>
+  </query>
 </service_interface>

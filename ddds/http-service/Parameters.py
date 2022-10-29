@@ -11,5 +11,3 @@ class Parameters():
             self.object = facts["which_object"]["grammar_entry"]
         if 'perceived_ingredient' in facts:
             self.perceived_ingredient = facts["perceived_ingredient"]["grammar_entry"]
-        
-    

@@ -171,7 +171,13 @@
     </plan>
     <postplan>
       <assume_shared>
-        <proposition predicate="ingredients_read" value="false"/>
+        <proposition predicate="omelette_recipe_egg_read" value="false"/>
+      </assume_shared>
+      <assume_shared>
+        <proposition predicate="omelette_recipe_salt_read" value="false"/>
+      </assume_shared>
+      <assume_shared>
+        <proposition predicate="omelette_recipe_butter_read" value="false"/>
       </assume_shared>
     </postplan>
   </goal>
@@ -322,7 +328,19 @@
     </plan>
     <postplan>
       <assume_shared>
-        <proposition predicate="ingredients_read" value="false"/>
+        <proposition predicate="fries_recipe_potato_read" value="false"/>
+      </assume_shared>
+      <assume_shared>
+        <proposition predicate="fries_recipe_oil_read" value="false"/>
+      </assume_shared>
+      <assume_shared>
+        <proposition predicate="fries_recipe_sugar_read" value="false"/>
+      </assume_shared>
+      <assume_shared>
+        <proposition predicate="fries_recipe_salt_read" value="false"/>
+      </assume_shared>
+      <assume_shared>
+        <proposition predicate="fries_recipe_red_pepper_read" value="false"/>
       </assume_shared>
     </postplan>
   </goal>
@@ -634,7 +652,31 @@
     </plan>
     <postplan>
       <assume_shared>
-        <proposition predicate="ingredients_read" value="false"/>
+        <proposition predicate="baked_mushroom_risotto_recipe_olive_oil_read" value="false"/>
+      </assume_shared>
+      <assume_shared>
+        <proposition predicate="baked_mushroom_risotto_recipe_onion_read" value="false"/>
+      </assume_shared>
+      <assume_shared>
+        <proposition predicate="baked_mushroom_risotto_recipe_garlic_read" value="false"/>
+      </assume_shared>
+      <assume_shared>
+        <proposition predicate="baked_mushroom_risotto_recipe_mixed_mushrooms_read" value="false"/>
+      </assume_shared>
+      <assume_shared>
+        <proposition predicate="baked_mushroom_risotto_recipe_rosemary_read" value="false"/>
+      </assume_shared>
+      <assume_shared>
+        <proposition predicate="baked_mushroom_risotto_recipe_risotto_rice_read" value="false"/>
+      </assume_shared>
+      <assume_shared>
+        <proposition predicate="baked_mushroom_risotto_recipe_white_wine_read" value="false"/>
+      </assume_shared>
+      <assume_shared>
+        <proposition predicate="baked_mushroom_risotto_recipe_vegetable_stock_read" value="false"/>
+      </assume_shared>
+      <assume_shared>
+        <proposition predicate="baked_mushroom_risotto_recipe_parmesan_read" value="false"/>
       </assume_shared>
     </postplan>
   </goal>
@@ -688,6 +730,14 @@
     <plan>
       <invoke_service_query type="wh_question" predicate="reask_ingredient"/>
       <bind type="wh_question" predicate="perceived_ingredient"/>
+    </plan>
+  </goal>
+
+  <goal type="resolve" question_type="wh_question" predicate="replace_ingredient">
+    <plan>
+      <findout type="wh_question" predicate="which_ingredient"/>
+      <invoke_service_query type="wh_question" predicate="replace_ingredient"/>
+      <bind type="wh_question" predicate="proposed_ingredient"/>
     </plan>
   </goal>
 </domain>

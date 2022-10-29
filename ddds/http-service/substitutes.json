@@ -1,0 +1,827 @@
+{
+    "acorn_squash": [
+        "butternut squash",
+        "pumpkin"
+    ],
+    "almond_butter": [
+        "peanut butter",
+        "cashew butter"
+    ],
+    "almond_extract": [
+        "vanilla extract"
+    ],
+    "amberjack": [
+        "mahi-mahi",
+        "grouper",
+        "tilefish",
+        "mullet"
+    ],
+    "apples": [
+        "pears or quinces"
+    ],
+    "apple_juice": [
+        "apple cider",
+        "pear cider",
+        "or white grape juice"
+    ],
+    "arugula": [
+        "watercress",
+        "baby spinach",
+        "belgian endive",
+        "escarole",
+        "radicchio"
+    ],
+    "Asiago_cheese": [
+        "Parmesan cheese",
+        "Pecorino Romano cheese"
+    ],
+    "asparagus": [
+        "broccoli",
+        "canned hearts of palm",
+        "green beans"
+    ],
+    "avocado": [
+        "cooked chayote squash"
+    ],
+    "bacon": [
+        "pancetta",
+        "prosciutto",
+        "smoked sausage",
+        "ham"
+    ],
+    "beer": [
+        "chicken or beef stock",
+        "red wine",
+        "sake"
+    ],
+    "belgian_endive": [
+        "radicchio",
+        "arugula",
+        "watercress"
+    ],
+    "roasted_bell_pepper": [
+        "chopped jarred pimientos"
+    ],
+    "blackberries": [
+        "loganberries",
+        "boysenberries",
+        "raspberries"
+    ],
+    "blueberries": [
+        "huckleberries",
+        "red currants",
+        "raspberries",
+        "strawberries"
+    ],
+    "blue_cheese": [
+        "feta cheese"
+    ],
+    "bok_choy": [
+        "napa cabbage",
+        "collard greens"
+    ],
+    "boysenberries": [
+        "blackberries",
+        "raspberries"
+    ],
+    "dry_bread_crumbs": [
+        "crushed tortilla chips",
+        "crushed dry stuffing mix",
+        "crushed pretzels",
+        "crushed cornflakes",
+        "crushed potato chips"
+    ],
+    "broccoli": [
+        "cauliflower"
+    ],
+    "brussels_sprouts": [
+        "broccoli florets",
+        "chopped green cabbage"
+    ],
+    "buttermilk": [
+        "plain yogurt",
+        "sour cream"
+    ],
+    "butternut_squash": [
+        "pumpkin",
+        "sweet potato"
+    ],
+    "Canadian_bacon": [
+        "smoked ham",
+        "pancetta",
+        "bacon"
+    ],
+    "caraway_seeds": [
+        "dill seeds",
+        "anise seeds"
+    ],
+    "carrots": [
+        "parnsips",
+        "turnips"
+    ],
+    "catfish": [
+        "tilapia",
+        "grouper"
+    ],
+    "cauliflower": [
+        "broccoli"
+    ],
+    "cayenne_pepper": [
+        "chipotle powder",
+        "hot paprika",
+        "crushed red papper flakes",
+        "chili powder"
+    ],
+    "celery_salt": [
+        "Old Bay seasoning"
+    ],
+    "celery_seed": [
+        "celery salt",
+        "dill seeds"
+    ],
+    "chard": [
+        "turnip greens",
+        "spinach",
+        "mustard greens"
+    ],
+    "Cheddar_cheese": [
+        "Colby cheese",
+        "American cheese"
+    ],
+    "chicken": [
+        "ground turkey",
+        "veal",
+        "turkey breast"
+    ],
+    "chile_pepper": [
+        "hot pepper sauce",
+        "chile paste",
+        "ground cayenne",
+        "crushed red pepper flakes",
+        "paprika"
+    ],
+    "chile_powder": [
+        "cayenne pepper",
+        "paprika",
+        "chili powder"
+    ],
+    "chili_powder": [
+        "cayenne papper",
+        "paprika",
+        "chile oil"
+    ],
+    "chorizo": [
+        "andouille sausage",
+        "hot Italian sausage"
+    ],
+    "cloves": [
+        "allspice"
+    ],
+    "coffee_liqueur": [
+        "cognac",
+        "rum"
+    ],
+    "collards": [
+        "kale",
+        "mature spinach",
+        "mustard greens",
+        "turnip greens"
+    ],
+    "corned_beef": [
+        "pastrami"
+    ],
+    "cornstarch": [
+        "flour"
+    ],
+    "cottage_cheese": [
+        "ricotta cheese"
+    ],
+    "couscous": [
+        "quinoa",
+        "brown rice"
+    ],
+    "cracker_crumbs": [
+        "dry bread crumbs",
+        "crushed croutons or stuffing cubes",
+        "panko"
+    ],
+    "crayfish": [
+        "shrimp",
+        "lobster",
+        "crab"
+    ],
+    "cream_cheese": [
+        "ricotta cheese"
+    ],
+    "cream": [
+        "evaporated milk"
+    ],
+    "cream_of_tartar": [
+        "distilled white vinegar or lemon juice"
+    ],
+    "croissants": [
+        "crescent rolls from refrigerated dough"
+    ],
+    "cucumber": [
+        "small zucchini"
+    ],
+    "cumin": [
+        "chili powder",
+        "ground coriander"
+    ],
+    "dill": [
+        "tarragon"
+    ],
+    "dill_seeds": [
+        "caraway seeds",
+        "celery seeds"
+    ],
+    "egg_noodles": [
+        "dried linguine",
+        "fettuccine",
+        "pappardelle"
+    ],
+    "eggplant": [
+        "portobello mushroom caps",
+        "zucchini",
+        "yellow squash"
+    ],
+    "egg_white": [
+        "ground flaxseed simmered in water"
+    ],
+    "fish_sauce": [
+        "soy sauce",
+        "fermented tofu"
+    ],
+    "flaxseed": [
+        "wheat germ",
+        "wheat bran",
+        "oat bran",
+        "butter/margarine/oil"
+    ],
+    "garlic": [
+        "minced shallots",
+        "garlic powder",
+        "granulated garlic",
+        "garlic salt"
+    ],
+    "fresh_ginger": [
+        "ground ginger"
+    ],
+    "grounded_ginger": [
+        "grated or minced fresh ginger",
+        "pumpkin pie spice",
+        "allspice"
+    ],
+    "grenadine": [
+        "pomegranate juice",
+        "raspberry syrup"
+    ],
+    "grouper": [
+        "striped bass",
+        "cod",
+        "catfish",
+        "red snapper"
+    ],
+    "haddock": [
+        "cod",
+        "pollock",
+        "blackfish",
+        "grouper",
+        "red snapper",
+        "sea bass"
+    ],
+    "halibut": [
+        "cod",
+        "haddock",
+        "striped bass"
+    ],
+    "harissa": [
+        "chile paste",
+        "hot sauce"
+    ],
+    "hearts_of_palm": [
+        "canned or marinated artichoke hearts",
+        "cooked asparagus"
+    ],
+    "kale": [
+        "collard greens",
+        "turnip greens",
+        "mustard greens",
+        "spinach"
+    ],
+    "ketchup": [
+        "chili sauce",
+        "barbecue sauce"
+    ],
+    "kielbasa": [
+        "Cajun andouille sausage",
+        "Spanish chorizo"
+    ],
+    "lamb": [
+        "beef",
+        "pork",
+        "veal",
+        "mutton"
+    ],
+    "leeks": [
+        "chopped green onions or scallions",
+        "chopped shallots",
+        "chopped sweet or storage onions"
+    ],
+    "lima_beans": [
+        "green peas",
+        "edamame",
+        "sugar snap peas",
+        "chickpeas",
+        "red kidney peas",
+        "black-eyed peas",
+        "cannellini beans"
+    ],
+    "lobster": [
+        "crayfish",
+        "jumbo shrimp",
+        "crab",
+        "scallops"
+    ],
+    "mackerel": [
+        "mahi-mahi",
+        "pompano",
+        "striped bass",
+        "tuna"
+    ],
+    "mahi-mahi": [
+        "tuna",
+        "pompano",
+        "swordfish"
+    ],
+    "marjoram": [
+        "sweet basil",
+        "summer savory"
+    ],
+    "mayonnaise": [
+        "sour cream",
+        "yogurt"
+    ],
+    "mint": [
+        "basil"
+    ],
+    "mozzarella_cheese": [
+        "provolone cheese",
+        "gouda cheese"
+    ],
+    "mussels": [
+        "oysters",
+        "soft-shelled or littleneck clams",
+        "scallops"
+    ],
+    "mustard_greens": [
+        "turnip greens",
+        "arugula",
+        "collard greens",
+        "kale"
+    ],
+    "napa_cabbage": [
+        "green or red cabbage",
+        "collard greens"
+    ],
+    "nectarines": [
+        "peaches",
+        "plums",
+        "apricots",
+        "cherries"
+    ],
+    "nutmeg": [
+        "ground mace",
+        "ground allspice",
+        "ground cinnamon",
+        "apple pie spice",
+        "pumpkin pie spice"
+    ],
+    "oat_flour": [
+        "old-fashioned oatmeal",
+        "ground in blender"
+    ],
+    "okra": [
+        "green beans",
+        "asparagus",
+        "broccoli"
+    ],
+    "olive_oil": [
+        "corn oil",
+        "canola oil",
+        "peanut oil"
+    ],
+    "onion_flakes": [
+        "onion powder",
+        "chopped fresh or frozen onion"
+    ],
+    "onion": [
+        "a bunch of scallions",
+        "chopped shallots",
+        "dried onion flakes",
+        "onion powder"
+    ],
+    "orange_roughy": [
+        "flounder",
+        "red snapper",
+        "tilapia"
+    ],
+    "oregano": [
+        "marjoram",
+        "thyme",
+        "fresh basil",
+        "summer savory"
+    ],
+    "oysters": [
+        "mussels",
+        "soft-shell clams",
+        "littleneck clams",
+        "scallops"
+    ],
+    "oyster_liquor": [
+        "fresh or bottled clam juice"
+    ],
+    "pancetta": [
+        "Canadian bacon",
+        "bacon",
+        "prosciutto"
+    ],
+    "papaya": [
+        "mango",
+        "peaches",
+        "nectarines"
+    ],
+    "paprika": [
+        "chili powder"
+    ],
+    "Parmesan_cheese": [
+        "Pecorino Romano cheese",
+        "aged Asiago cheese"
+    ],
+    "peaches": [
+        "nectarines",
+        "apricots",
+        "plums",
+        "cherries",
+        "mango"
+    ],
+    "pears": [
+        "apples",
+        "asian pears",
+        "quinces"
+    ],
+    "Pecorino_cheese": [
+        "Parmesan cheese",
+        "aged Asiago cheese"
+    ],
+    "pickling_spice": [
+        "crab boil",
+        "Old Bay seasoning"
+    ],
+    "pineapple": [
+        "papaya",
+        "guava",
+        "mango"
+    ],
+    "pineapple_juice": [
+        "orange juice",
+        "grapefruit juice"
+    ],
+    "pine_nuts": [
+        "walnuts",
+        "almonds",
+        "pecans"
+    ],
+    "pomegranate_juice": [
+        "cranberry juice"
+    ],
+    "pompano": [
+        "mahi-mahi",
+        "tuna"
+    ],
+    "Provolone_cheese": [
+        "mozzarella cheese",
+        "Fontina cheese"
+    ],
+    "puff_pastry": [
+        "phyllo dough",
+        "pie dough"
+    ],
+    "pumpkin": [
+        "butternut squash",
+        "sweet potato"
+    ],
+    "pumpkin_pie_spice": [
+        "apple pie spice"
+    ],
+    "quail": [
+        "young pheasant",
+        "cornish hen"
+    ],
+    "queso_fresco": [
+        "feta cheese"
+    ],
+    "quinoa": [
+        "couscous",
+        "bulgur"
+    ],
+    "radicchio": [
+        "belgian endive",
+        "arugula",
+        "watercress"
+    ],
+    "radishes": [
+        "turnips",
+        "parsnips"
+    ],
+    "raisins": [
+        "other dried fruits like apricots",
+        "blueberries",
+        "cranberries",
+        "or cherries"
+    ],
+    "raspberries": [
+        "strawberries",
+        "blackberries"
+    ],
+    "red_cabbage": [
+        "green cabbage",
+        "brussels sprouts",
+        "napa cabbage"
+    ],
+    "red_snapper": [
+        "striped bass",
+        "grouper",
+        "halibut"
+    ],
+    "rhubarb": [
+        "cranberries"
+    ],
+    "ricotta_cheese": [
+        "pureed cottage cheese",
+        "fromage blanc",
+        "mashed firm tofu"
+    ],
+    "romaine_lettuce": [
+        "iceberg lettuce",
+        "butterhead lettuce"
+    ],
+    "romano_cheese": [
+        "Parmesan cheese",
+        "aged Asiago cheese"
+    ],
+    "rosemary": [
+        "summer savory",
+        "basil",
+        "oregano"
+    ],
+    "rum": [
+        "brandy",
+        "bourbon"
+    ],
+    "rutabaga": [
+        "turnips",
+        "broccoli stems"
+    ],
+    "sage": [
+        "summer savory thyme",
+        "basil",
+        "or oregano",
+        "rosemary",
+        "poultry seasoning"
+    ],
+    "salami": [
+        "pepperoni",
+        "spanish chorizo",
+        "prosciutto",
+        "summer sausage"
+    ],
+    "salmon": [
+        "trout",
+        "striped bass",
+        "tuna"
+    ],
+    "savory": [
+        "chopped thyme or rosemary",
+        "sage",
+        "herbes de Provence"
+    ],
+    "scallion": [
+        "a bunch of green onions",
+        "chopped leeks"
+    ],
+    "scallops": [
+        "mussels",
+        "clams",
+        "oysters",
+        "shrimp",
+        "lobster"
+    ],
+    "sesame_seeds": [
+        "white or black poppy seeds; finely chopped peanuts",
+        "almonds",
+        "or cashews"
+    ],
+    "shallot": [
+        "chopped green onions or scallions"
+    ],
+    "sherry": [
+        "sake",
+        "port"
+    ],
+    "shrimp": [
+        "prawns",
+        "crab",
+        "lobster",
+        "scallops"
+    ],
+    "snapper": [
+        "striped bass",
+        "grouper",
+        "halibut"
+    ],
+    "sole": [
+        "flounder",
+        "cod",
+        "whiting"
+    ],
+    "sorghum_molasses": [
+        "light or dark corn syrup",
+        "honey",
+        "pure maple syrup"
+    ],
+    "sour_cream": [
+        "plain yogurt"
+    ],
+    "soy_sauce": [
+        "teriyaki sauce"
+    ],
+    "spinach": [
+        "beet greens",
+        "turnip greens",
+        "kale",
+        "arugula",
+        "watercess"
+    ],
+    "stock,_beef": [
+        "canned beef broth",
+        "red wine or beer"
+    ],
+    "stock,_chicken": [
+        "canned chicken broth"
+    ],
+    "stock,_vegetable": [
+        "canned vegetable broth"
+    ],
+    "strawberries": [
+        "raspberries",
+        "blueberries"
+    ],
+    "striped_bass": [
+        "grouper",
+        "red snapper"
+    ],
+    "summer_sausage": [
+        "salami or other dry sausage",
+        "pepperoni",
+        "bologna"
+    ],
+    "sweet_potato": [
+        "pumpkin",
+        "butternut squash"
+    ],
+    "Swiss_cheese": [
+        "Provolone cheese",
+        "Gruyere cheese"
+    ],
+    "swordfish": [
+        "tuna",
+        "mahi-mahi",
+        "grouper",
+        "halibut"
+    ],
+    "tarragon": [
+        "dill"
+    ],
+    "tequila": [
+        "vodka",
+        "light rum"
+    ],
+    "thyme": [
+        "marjoram",
+        "oregano",
+        "basil",
+        "summer savory"
+    ],
+    "tilapia": [
+        "red snapper",
+        "orange roughy",
+        "sole",
+        "flounder"
+    ],
+    "tomatoes": [
+        "canned whole tomatoes",
+        "tomato paste"
+    ],
+    "tomato_paste": [
+        "tomato puree or tomato sauce",
+        "boil until reduced to"
+    ],
+    "tomato_puree": [
+        "tomato sauce"
+    ],
+    "tomato_sauce": [
+        "canned stewed tomatoes",
+        "blended until smooth"
+    ],
+    "trout": [
+        "salmon",
+        "ocean perch"
+    ],
+    "tuna": [
+        "swordfish",
+        "mahi-mahi",
+        "striped bass",
+        "salmon"
+    ],
+    "turmeric": [
+        "5 to 7 saffron threads",
+        "curry powder"
+    ],
+    "turnips": [
+        "parsnips",
+        "rutabaga",
+        "broccoli stems"
+    ],
+    "turnip_greens": [
+        "mustard greens",
+        "collards",
+        "kale",
+        "mature spinach"
+    ],
+    "vanilla_bean": [
+        "vanilla extract"
+    ],
+    "vermouth": [
+        "dry sherry",
+        "dry white wine"
+    ],
+    "vinegar": [
+        "lemon juice or lime juice"
+    ],
+    "vodka": [
+        "gin",
+        "white rum",
+        "tequila"
+    ],
+    "walnuts": [
+        "pine nuts",
+        "pecans",
+        "almonds"
+    ],
+    "wasabi": [
+        "well-drained prepared horseradish"
+    ],
+    "watermelon": [
+        "honeydew melon"
+    ],
+    "whiskey": [
+        "cognac",
+        "brandy",
+        "or rum"
+    ],
+    "whitefish": [
+        "perch",
+        "lake trout"
+    ],
+    "whiting": [
+        "cod",
+        "flounder",
+        "ocean perch",
+        "red snapper"
+    ],
+    "red_wine": [
+        "beef stock"
+    ],
+    "white_wine": [
+        "sherry",
+        "vermouth",
+        "sake",
+        "chicken or vegetable stock"
+    ],
+    "yellow_squash": [
+        "zucchini",
+        "pattypan squash"
+    ],
+    "yogurt": [
+        "sour cream",
+        "creme fraiche",
+        "silken tofu",
+        "mayonnaise"
+    ],
+    "zucchini": [
+        "yellow squash",
+        "pattypan squash"
+    ]
+}

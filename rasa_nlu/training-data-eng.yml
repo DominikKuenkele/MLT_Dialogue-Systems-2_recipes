@@ -32,50 +32,50 @@ nlu:
   examples: |
     - How much [black_pepper]{"entity": "sort.ingredient", "value": "individual.black_pepper"} should I use
     - How much [egg]{"entity": "sort.ingredient", "value": "individual.egg"} should I use
-    - How much [mixed_mushrooms]{"entity": "sort.ingredient", "value": "individual.mixed_mushrooms"} should I use
+    - How much [egg_mixture]{"entity": "sort.ingredient", "value": "individual.egg_mixture"} should I use
+    - How much [garlic]{"entity": "sort.ingredient", "value": "individual.garlic"} should I use
+    - How much [oil]{"entity": "sort.ingredient", "value": "individual.oil"} should I use
     - How much [olive_oil]{"entity": "sort.ingredient", "value": "individual.olive_oil"} should I use
     - How much [omelette]{"entity": "sort.ingredient", "value": "individual.omelette"} should I use
-    - How much [parmesan]{"entity": "sort.ingredient", "value": "individual.parmesan"} should I use
-    - How much [potato]{"entity": "sort.ingredient", "value": "individual.potato"} should I use
     - How much [risotto]{"entity": "sort.ingredient", "value": "individual.risotto"} should I use
-    - How much [rosemary]{"entity": "sort.ingredient", "value": "individual.rosemary"} should I use
+    - How much [risotto_rice]{"entity": "sort.ingredient", "value": "individual.risotto_rice"} should I use
     - How much [salt]{"entity": "sort.ingredient", "value": "individual.salt"} should I use
-    - How many [black_pepper]{"entity": "sort.ingredient", "value": "individual.black_pepper"}
-    - How many [egg]{"entity": "sort.ingredient", "value": "individual.egg"}
+    - How many [butter]{"entity": "sort.ingredient", "value": "individual.butter"}
     - How many [egg_mixture]{"entity": "sort.ingredient", "value": "individual.egg_mixture"}
+    - How many [garlic]{"entity": "sort.ingredient", "value": "individual.garlic"}
     - How many [mixed_mushrooms]{"entity": "sort.ingredient", "value": "individual.mixed_mushrooms"}
     - How many [olive_oil]{"entity": "sort.ingredient", "value": "individual.olive_oil"}
+    - How many [omelette]{"entity": "sort.ingredient", "value": "individual.omelette"}
     - How many [onion]{"entity": "sort.ingredient", "value": "individual.onion"}
-    - How many [potato]{"entity": "sort.ingredient", "value": "individual.potato"}
-    - How many [risotto_rice]{"entity": "sort.ingredient", "value": "individual.risotto_rice"}
+    - How many [parmesan]{"entity": "sort.ingredient", "value": "individual.parmesan"}
+    - How many [risotto]{"entity": "sort.ingredient", "value": "individual.risotto"}
     - How many [rosemary]{"entity": "sort.ingredient", "value": "individual.rosemary"}
-    - How many [salt]{"entity": "sort.ingredient", "value": "individual.salt"}
     - How much
     - A lot
     - What is the amount
 
 - intent: question::form_ingredient
   examples: |
+    - How should I cut the [black_pepper]{"entity": "sort.ingredient", "value": "individual.black_pepper"}
+    - How should I cut the [butter]{"entity": "sort.ingredient", "value": "individual.butter"}
     - How should I cut the [egg]{"entity": "sort.ingredient", "value": "individual.egg"}
-    - How should I cut the [egg_mixture]{"entity": "sort.ingredient", "value": "individual.egg_mixture"}
     - How should I cut the [garlic]{"entity": "sort.ingredient", "value": "individual.garlic"}
+    - How should I cut the [mixed_mushrooms]{"entity": "sort.ingredient", "value": "individual.mixed_mushrooms"}
     - How should I cut the [oil]{"entity": "sort.ingredient", "value": "individual.oil"}
     - How should I cut the [olive_oil]{"entity": "sort.ingredient", "value": "individual.olive_oil"}
-    - How should I cut the [onion]{"entity": "sort.ingredient", "value": "individual.onion"}
-    - How should I cut the [parmesan]{"entity": "sort.ingredient", "value": "individual.parmesan"}
     - How should I cut the [potato]{"entity": "sort.ingredient", "value": "individual.potato"}
     - How should I cut the [risotto]{"entity": "sort.ingredient", "value": "individual.risotto"}
     - How should I cut the [stock]{"entity": "sort.ingredient", "value": "individual.stock"}
-    - How big should the [egg]{"entity": "sort.ingredient", "value": "individual.egg"} be
     - How big should the [egg_mixture]{"entity": "sort.ingredient", "value": "individual.egg_mixture"} be
-    - How big should the [garlic]{"entity": "sort.ingredient", "value": "individual.garlic"} be
+    - How big should the [mixed_mushrooms]{"entity": "sort.ingredient", "value": "individual.mixed_mushrooms"} be
     - How big should the [oil]{"entity": "sort.ingredient", "value": "individual.oil"} be
-    - How big should the [olive_oil]{"entity": "sort.ingredient", "value": "individual.olive_oil"} be
-    - How big should the [onion]{"entity": "sort.ingredient", "value": "individual.onion"} be
+    - How big should the [omelette]{"entity": "sort.ingredient", "value": "individual.omelette"} be
     - How big should the [parmesan]{"entity": "sort.ingredient", "value": "individual.parmesan"} be
-    - How big should the [potato]{"entity": "sort.ingredient", "value": "individual.potato"} be
+    - How big should the [risotto]{"entity": "sort.ingredient", "value": "individual.risotto"} be
+    - How big should the [rosemary]{"entity": "sort.ingredient", "value": "individual.rosemary"} be
+    - How big should the [salt]{"entity": "sort.ingredient", "value": "individual.salt"} be
     - How big should the [stock]{"entity": "sort.ingredient", "value": "individual.stock"} be
-    - How big should the [wine]{"entity": "sort.ingredient", "value": "individual.wine"} be
+    - How big should the [white_wine]{"entity": "sort.ingredient", "value": "individual.white_wine"} be
     - How big
     - What size
 
@@ -119,46 +119,93 @@ nlu:
 
 - intent: question::reask_ingredient
   examples: |
-    - Did you say [egg]{"entity": "sort.ingredient", "value": "individual.egg"}
-    - Did you say [garlic]{"entity": "sort.ingredient", "value": "individual.garlic"}
     - Did you say [oil]{"entity": "sort.ingredient", "value": "individual.oil"}
-    - Did you say [olive_oil]{"entity": "sort.ingredient", "value": "individual.olive_oil"}
     - Did you say [onion]{"entity": "sort.ingredient", "value": "individual.onion"}
     - Did you say [parmesan]{"entity": "sort.ingredient", "value": "individual.parmesan"}
     - Did you say [potato]{"entity": "sort.ingredient", "value": "individual.potato"}
     - Did you say [risotto]{"entity": "sort.ingredient", "value": "individual.risotto"}
     - Did you say [risotto_rice]{"entity": "sort.ingredient", "value": "individual.risotto_rice"}
+    - Did you say [rosemary]{"entity": "sort.ingredient", "value": "individual.rosemary"}
+    - Did you say [salt]{"entity": "sort.ingredient", "value": "individual.salt"}
     - Did you say [stock]{"entity": "sort.ingredient", "value": "individual.stock"}
-    - Did you mean [butter]{"entity": "sort.ingredient", "value": "individual.butter"}
+    - Did you say [white_wine]{"entity": "sort.ingredient", "value": "individual.white_wine"}
+    - Did you mean [black_pepper]{"entity": "sort.ingredient", "value": "individual.black_pepper"}
     - Did you mean [egg]{"entity": "sort.ingredient", "value": "individual.egg"}
     - Did you mean [garlic]{"entity": "sort.ingredient", "value": "individual.garlic"}
-    - Did you mean [oil]{"entity": "sort.ingredient", "value": "individual.oil"}
+    - Did you mean [olive_oil]{"entity": "sort.ingredient", "value": "individual.olive_oil"}
+    - Did you mean [omelette]{"entity": "sort.ingredient", "value": "individual.omelette"}
     - Did you mean [parmesan]{"entity": "sort.ingredient", "value": "individual.parmesan"}
-    - Did you mean [potato]{"entity": "sort.ingredient", "value": "individual.potato"}
     - Did you mean [risotto_rice]{"entity": "sort.ingredient", "value": "individual.risotto_rice"}
     - Did you mean [rosemary]{"entity": "sort.ingredient", "value": "individual.rosemary"}
-    - Did you mean [salt]{"entity": "sort.ingredient", "value": "individual.salt"}
     - Did you mean [stock]{"entity": "sort.ingredient", "value": "individual.stock"}
-    - You meant [egg]{"entity": "sort.ingredient", "value": "individual.egg"}
-    - You meant [garlic]{"entity": "sort.ingredient", "value": "individual.garlic"}
+    - Did you mean [white_wine]{"entity": "sort.ingredient", "value": "individual.white_wine"}
+    - You meant [egg_mixture]{"entity": "sort.ingredient", "value": "individual.egg_mixture"}
     - You meant [mixed_mushrooms]{"entity": "sort.ingredient", "value": "individual.mixed_mushrooms"}
+    - You meant [oil]{"entity": "sort.ingredient", "value": "individual.oil"}
+    - You meant [omelette]{"entity": "sort.ingredient", "value": "individual.omelette"}
     - You meant [onion]{"entity": "sort.ingredient", "value": "individual.onion"}
     - You meant [parmesan]{"entity": "sort.ingredient", "value": "individual.parmesan"}
     - You meant [risotto]{"entity": "sort.ingredient", "value": "individual.risotto"}
     - You meant [risotto_rice]{"entity": "sort.ingredient", "value": "individual.risotto_rice"}
     - You meant [rosemary]{"entity": "sort.ingredient", "value": "individual.rosemary"}
-    - You meant [salt]{"entity": "sort.ingredient", "value": "individual.salt"}
-    - You meant [wine]{"entity": "sort.ingredient", "value": "individual.wine"}
+    - You meant [stock]{"entity": "sort.ingredient", "value": "individual.stock"}
+    - The [black_pepper]{"entity": "sort.ingredient", "value": "individual.black_pepper"}
+    - The [butter]{"entity": "sort.ingredient", "value": "individual.butter"}
+    - The [egg]{"entity": "sort.ingredient", "value": "individual.egg"}
     - The [egg_mixture]{"entity": "sort.ingredient", "value": "individual.egg_mixture"}
-    - The [mixed_mushrooms]{"entity": "sort.ingredient", "value": "individual.mixed_mushrooms"}
-    - The [oil]{"entity": "sort.ingredient", "value": "individual.oil"}
     - The [olive_oil]{"entity": "sort.ingredient", "value": "individual.olive_oil"}
+    - The [omelette]{"entity": "sort.ingredient", "value": "individual.omelette"}
     - The [onion]{"entity": "sort.ingredient", "value": "individual.onion"}
-    - The [parmesan]{"entity": "sort.ingredient", "value": "individual.parmesan"}
-    - The [potato]{"entity": "sort.ingredient", "value": "individual.potato"}
     - The [risotto_rice]{"entity": "sort.ingredient", "value": "individual.risotto_rice"}
-    - The [stock]{"entity": "sort.ingredient", "value": "individual.stock"}
-    - The [wine]{"entity": "sort.ingredient", "value": "individual.wine"}
+    - The [rosemary]{"entity": "sort.ingredient", "value": "individual.rosemary"}
+    - The [white_wine]{"entity": "sort.ingredient", "value": "individual.white_wine"}
+
+- intent: question::replace_ingredient
+  examples: |
+    - What can I use instead
+    - What could I use instead
+    - What should I use instead
+    - What can I use instead [egg_mixture]{"entity": "sort.ingredient", "value": "individual.egg_mixture"}
+    - What can I use instead [garlic]{"entity": "sort.ingredient", "value": "individual.garlic"}
+    - What can I use instead [oil]{"entity": "sort.ingredient", "value": "individual.oil"}
+    - What can I use instead [onion]{"entity": "sort.ingredient", "value": "individual.onion"}
+    - What can I use instead [parmesan]{"entity": "sort.ingredient", "value": "individual.parmesan"}
+    - What can I use instead [potato]{"entity": "sort.ingredient", "value": "individual.potato"}
+    - What can I use instead [risotto]{"entity": "sort.ingredient", "value": "individual.risotto"}
+    - What can I use instead [rosemary]{"entity": "sort.ingredient", "value": "individual.rosemary"}
+    - What can I use instead [stock]{"entity": "sort.ingredient", "value": "individual.stock"}
+    - What can I use instead [white_wine]{"entity": "sort.ingredient", "value": "individual.white_wine"}
+    - What could I use instead [butter]{"entity": "sort.ingredient", "value": "individual.butter"}
+    - What could I use instead [egg]{"entity": "sort.ingredient", "value": "individual.egg"}
+    - What could I use instead [egg_mixture]{"entity": "sort.ingredient", "value": "individual.egg_mixture"}
+    - What could I use instead [oil]{"entity": "sort.ingredient", "value": "individual.oil"}
+    - What could I use instead [olive_oil]{"entity": "sort.ingredient", "value": "individual.olive_oil"}
+    - What could I use instead [parmesan]{"entity": "sort.ingredient", "value": "individual.parmesan"}
+    - What could I use instead [potato]{"entity": "sort.ingredient", "value": "individual.potato"}
+    - What could I use instead [risotto]{"entity": "sort.ingredient", "value": "individual.risotto"}
+    - What could I use instead [salt]{"entity": "sort.ingredient", "value": "individual.salt"}
+    - What could I use instead [white_wine]{"entity": "sort.ingredient", "value": "individual.white_wine"}
+    - What should I use instead [butter]{"entity": "sort.ingredient", "value": "individual.butter"}
+    - What should I use instead [egg_mixture]{"entity": "sort.ingredient", "value": "individual.egg_mixture"}
+    - What should I use instead [garlic]{"entity": "sort.ingredient", "value": "individual.garlic"}
+    - What should I use instead [mixed_mushrooms]{"entity": "sort.ingredient", "value": "individual.mixed_mushrooms"}
+    - What should I use instead [oil]{"entity": "sort.ingredient", "value": "individual.oil"}
+    - What should I use instead [omelette]{"entity": "sort.ingredient", "value": "individual.omelette"}
+    - What should I use instead [risotto]{"entity": "sort.ingredient", "value": "individual.risotto"}
+    - What should I use instead [risotto_rice]{"entity": "sort.ingredient", "value": "individual.risotto_rice"}
+    - What should I use instead [rosemary]{"entity": "sort.ingredient", "value": "individual.rosemary"}
+    - What should I use instead [stock]{"entity": "sort.ingredient", "value": "individual.stock"}
+    - I am allergic to that
+    - I am allergic to [butter]{"entity": "sort.ingredient", "value": "individual.butter"}
+    - I am allergic to [egg_mixture]{"entity": "sort.ingredient", "value": "individual.egg_mixture"}
+    - I am allergic to [oil]{"entity": "sort.ingredient", "value": "individual.oil"}
+    - I am allergic to [parmesan]{"entity": "sort.ingredient", "value": "individual.parmesan"}
+    - I am allergic to [potato]{"entity": "sort.ingredient", "value": "individual.potato"}
+    - I am allergic to [risotto]{"entity": "sort.ingredient", "value": "individual.risotto"}
+    - I am allergic to [rosemary]{"entity": "sort.ingredient", "value": "individual.rosemary"}
+    - I am allergic to [salt]{"entity": "sort.ingredient", "value": "individual.salt"}
+    - I am allergic to [stock]{"entity": "sort.ingredient", "value": "individual.stock"}
+    - I am allergic to [white_wine]{"entity": "sort.ingredient", "value": "individual.white_wine"}
 
 - intent: answer
   examples: |
@@ -203,24 +250,24 @@ nlu:
     - [baked_mushroom_risotto_recipe_step_14]{"entity": "sort.step", "value": "individual.baked_mushroom_risotto_recipe_step_14"}
     - [baked_mushroom_risotto_recipe_step_15]{"entity": "sort.step", "value": "individual.baked_mushroom_risotto_recipe_step_15"}
     - [baked_mushroom_risotto_recipe_step_16]{"entity": "sort.step", "value": "individual.baked_mushroom_risotto_recipe_step_16"}
-    - [stock]{"entity": "sort.ingredient", "value": "individual.stock"}
     - [egg]{"entity": "sort.ingredient", "value": "individual.egg"}
-    - [black_pepper]{"entity": "sort.ingredient", "value": "individual.black_pepper"}
-    - [salt]{"entity": "sort.ingredient", "value": "individual.salt"}
     - [onion]{"entity": "sort.ingredient", "value": "individual.onion"}
-    - [risotto]{"entity": "sort.ingredient", "value": "individual.risotto"}
-    - [rosemary]{"entity": "sort.ingredient", "value": "individual.rosemary"}
     - [mixed_mushrooms]{"entity": "sort.ingredient", "value": "individual.mixed_mushrooms"}
-    - [olive_oil]{"entity": "sort.ingredient", "value": "individual.olive_oil"}
-    - [egg_mixture]{"entity": "sort.ingredient", "value": "individual.egg_mixture"}
+    - [risotto_rice]{"entity": "sort.ingredient", "value": "individual.risotto_rice"}
     - [potato]{"entity": "sort.ingredient", "value": "individual.potato"}
     - [butter]{"entity": "sort.ingredient", "value": "individual.butter"}
-    - [omelette]{"entity": "sort.ingredient", "value": "individual.omelette"}
     - [garlic]{"entity": "sort.ingredient", "value": "individual.garlic"}
-    - [wine]{"entity": "sort.ingredient", "value": "individual.wine"}
-    - [risotto_rice]{"entity": "sort.ingredient", "value": "individual.risotto_rice"}
+    - [salt]{"entity": "sort.ingredient", "value": "individual.salt"}
+    - [white_wine]{"entity": "sort.ingredient", "value": "individual.white_wine"}
+    - [stock]{"entity": "sort.ingredient", "value": "individual.stock"}
+    - [risotto]{"entity": "sort.ingredient", "value": "individual.risotto"}
     - [parmesan]{"entity": "sort.ingredient", "value": "individual.parmesan"}
+    - [olive_oil]{"entity": "sort.ingredient", "value": "individual.olive_oil"}
+    - [black_pepper]{"entity": "sort.ingredient", "value": "individual.black_pepper"}
     - [oil]{"entity": "sort.ingredient", "value": "individual.oil"}
+    - [rosemary]{"entity": "sort.ingredient", "value": "individual.rosemary"}
+    - [egg_mixture]{"entity": "sort.ingredient", "value": "individual.egg_mixture"}
+    - [omelette]{"entity": "sort.ingredient", "value": "individual.omelette"}
     - [We need three eggs]{"entity": "sort.ingredient_list", "value": "individual.omelette_recipe_egg"}
     - [And a pinch of salt]{"entity": "sort.ingredient_list", "value": "individual.omelette_recipe_salt"}
     - [We also need some butter]{"entity": "sort.ingredient_list", "value": "individual.omelette_recipe_butter"}
@@ -238,33 +285,33 @@ nlu:
     - [Then 100ml of white wine]{"entity": "sort.ingredient_list", "value": "individual.baked_mushroom_risotto_recipe_white_wine"}
     - [We also need äh 750 milliliters of vegetable stock]{"entity": "sort.ingredient_list", "value": "individual.baked_mushroom_risotto_recipe_vegetable_stock"}
     - [And 30 grams of grated parmesan]{"entity": "sort.ingredient_list", "value": "individual.baked_mushroom_risotto_recipe_parmesan"}
+    - [oven]{"entity": "sort.object", "value": "individual.oven"}
     - [pan]{"entity": "sort.object", "value": "individual.pan"}
-    - [baking_sheet]{"entity": "sort.object", "value": "individual.baking_sheet"}
+    - [oven_proof_lidded_dish]{"entity": "sort.object", "value": "individual.oven_proof_lidded_dish"}
+    - [bowl]{"entity": "sort.object", "value": "individual.bowl"}
     - [mixing_bowl]{"entity": "sort.object", "value": "individual.mixing_bowl"}
     - [lid]{"entity": "sort.object", "value": "individual.lid"}
-    - [oven_proof_lidded_dish]{"entity": "sort.object", "value": "individual.oven_proof_lidded_dish"}
-    - [oven]{"entity": "sort.object", "value": "individual.oven"}
+    - [baking_sheet]{"entity": "sort.object", "value": "individual.baking_sheet"}
     - [plate]{"entity": "sort.object", "value": "individual.plate"}
-    - [bowl]{"entity": "sort.object", "value": "individual.bowl"}
     - [heat]{"entity": "sort.object", "value": "individual.heat"}
     - yes [single](sort.string)
     - yes [omelette_recipe]{"entity": "sort.recipe", "value": "individual.omelette_recipe"}
     - yes [fries_recipe_step_2]{"entity": "sort.step", "value": "individual.fries_recipe_step_2"}
     - yes [baked_mushroom_risotto_recipe_step_6]{"entity": "sort.step", "value": "individual.baked_mushroom_risotto_recipe_step_6"}
     - yes [baked_mushroom_risotto_recipe_step_16]{"entity": "sort.step", "value": "individual.baked_mushroom_risotto_recipe_step_16"}
-    - yes [egg_mixture]{"entity": "sort.ingredient", "value": "individual.egg_mixture"}
+    - yes [stock]{"entity": "sort.ingredient", "value": "individual.stock"}
     - yes [And a pinch of salt]{"entity": "sort.ingredient_list", "value": "individual.omelette_recipe_salt"}
     - yes [Then 400 grams of mixed mushrooms]{"entity": "sort.ingredient_list", "value": "individual.baked_mushroom_risotto_recipe_mixed_mushrooms"}
-    - yes [oven_proof_lidded_dish]{"entity": "sort.object", "value": "individual.oven_proof_lidded_dish"}
+    - yes [mixing_bowl]{"entity": "sort.object", "value": "individual.mixing_bowl"}
     - no [double word](sort.string)
     - no [fries_recipe]{"entity": "sort.recipe", "value": "individual.fries_recipe"}
     - no [fries_recipe_step_3]{"entity": "sort.step", "value": "individual.fries_recipe_step_3"}
     - no [baked_mushroom_risotto_recipe_step_7]{"entity": "sort.step", "value": "individual.baked_mushroom_risotto_recipe_step_7"}
-    - no [stock]{"entity": "sort.ingredient", "value": "individual.stock"}
-    - no [potato]{"entity": "sort.ingredient", "value": "individual.potato"}
+    - no [egg]{"entity": "sort.ingredient", "value": "individual.egg"}
+    - no [risotto]{"entity": "sort.ingredient", "value": "individual.risotto"}
     - no [We also need some butter]{"entity": "sort.ingredient_list", "value": "individual.omelette_recipe_butter"}
     - no [1-2 tablespoons of Rosemary, according to the taste. Also finely chopped]{"entity": "sort.ingredient_list", "value": "individual.baked_mushroom_risotto_recipe_rosemary"}
-    - no [oven]{"entity": "sort.object", "value": "individual.oven"}
+    - no [lid]{"entity": "sort.object", "value": "individual.lid"}
 
 - intent: answer_negation
   examples: |
@@ -299,24 +346,24 @@ nlu:
     - not [baked_mushroom_risotto_recipe_step_14]{"entity": "sort.step", "value": "individual.baked_mushroom_risotto_recipe_step_14"}
     - not [baked_mushroom_risotto_recipe_step_15]{"entity": "sort.step", "value": "individual.baked_mushroom_risotto_recipe_step_15"}
     - not [baked_mushroom_risotto_recipe_step_16]{"entity": "sort.step", "value": "individual.baked_mushroom_risotto_recipe_step_16"}
-    - not [stock]{"entity": "sort.ingredient", "value": "individual.stock"}
     - not [egg]{"entity": "sort.ingredient", "value": "individual.egg"}
-    - not [black_pepper]{"entity": "sort.ingredient", "value": "individual.black_pepper"}
-    - not [salt]{"entity": "sort.ingredient", "value": "individual.salt"}
     - not [onion]{"entity": "sort.ingredient", "value": "individual.onion"}
-    - not [risotto]{"entity": "sort.ingredient", "value": "individual.risotto"}
-    - not [rosemary]{"entity": "sort.ingredient", "value": "individual.rosemary"}
     - not [mixed_mushrooms]{"entity": "sort.ingredient", "value": "individual.mixed_mushrooms"}
-    - not [olive_oil]{"entity": "sort.ingredient", "value": "individual.olive_oil"}
-    - not [egg_mixture]{"entity": "sort.ingredient", "value": "individual.egg_mixture"}
+    - not [risotto_rice]{"entity": "sort.ingredient", "value": "individual.risotto_rice"}
     - not [potato]{"entity": "sort.ingredient", "value": "individual.potato"}
     - not [butter]{"entity": "sort.ingredient", "value": "individual.butter"}
-    - not [omelette]{"entity": "sort.ingredient", "value": "individual.omelette"}
     - not [garlic]{"entity": "sort.ingredient", "value": "individual.garlic"}
-    - not [wine]{"entity": "sort.ingredient", "value": "individual.wine"}
-    - not [risotto_rice]{"entity": "sort.ingredient", "value": "individual.risotto_rice"}
+    - not [salt]{"entity": "sort.ingredient", "value": "individual.salt"}
+    - not [white_wine]{"entity": "sort.ingredient", "value": "individual.white_wine"}
+    - not [stock]{"entity": "sort.ingredient", "value": "individual.stock"}
+    - not [risotto]{"entity": "sort.ingredient", "value": "individual.risotto"}
     - not [parmesan]{"entity": "sort.ingredient", "value": "individual.parmesan"}
+    - not [olive_oil]{"entity": "sort.ingredient", "value": "individual.olive_oil"}
+    - not [black_pepper]{"entity": "sort.ingredient", "value": "individual.black_pepper"}
     - not [oil]{"entity": "sort.ingredient", "value": "individual.oil"}
+    - not [rosemary]{"entity": "sort.ingredient", "value": "individual.rosemary"}
+    - not [egg_mixture]{"entity": "sort.ingredient", "value": "individual.egg_mixture"}
+    - not [omelette]{"entity": "sort.ingredient", "value": "individual.omelette"}
     - not [We need three eggs]{"entity": "sort.ingredient_list", "value": "individual.omelette_recipe_egg"}
     - not [And a pinch of salt]{"entity": "sort.ingredient_list", "value": "individual.omelette_recipe_salt"}
     - not [We also need some butter]{"entity": "sort.ingredient_list", "value": "individual.omelette_recipe_butter"}
@@ -334,14 +381,14 @@ nlu:
     - not [Then 100ml of white wine]{"entity": "sort.ingredient_list", "value": "individual.baked_mushroom_risotto_recipe_white_wine"}
     - not [We also need äh 750 milliliters of vegetable stock]{"entity": "sort.ingredient_list", "value": "individual.baked_mushroom_risotto_recipe_vegetable_stock"}
     - not [And 30 grams of grated parmesan]{"entity": "sort.ingredient_list", "value": "individual.baked_mushroom_risotto_recipe_parmesan"}
+    - not [oven]{"entity": "sort.object", "value": "individual.oven"}
     - not [pan]{"entity": "sort.object", "value": "individual.pan"}
-    - not [baking_sheet]{"entity": "sort.object", "value": "individual.baking_sheet"}
+    - not [oven_proof_lidded_dish]{"entity": "sort.object", "value": "individual.oven_proof_lidded_dish"}
+    - not [bowl]{"entity": "sort.object", "value": "individual.bowl"}
     - not [mixing_bowl]{"entity": "sort.object", "value": "individual.mixing_bowl"}
     - not [lid]{"entity": "sort.object", "value": "individual.lid"}
-    - not [oven_proof_lidded_dish]{"entity": "sort.object", "value": "individual.oven_proof_lidded_dish"}
-    - not [oven]{"entity": "sort.object", "value": "individual.oven"}
+    - not [baking_sheet]{"entity": "sort.object", "value": "individual.baking_sheet"}
     - not [plate]{"entity": "sort.object", "value": "individual.plate"}
-    - not [bowl]{"entity": "sort.object", "value": "individual.bowl"}
     - not [heat]{"entity": "sort.object", "value": "individual.heat"}
 
 - intent: NEGATIVE

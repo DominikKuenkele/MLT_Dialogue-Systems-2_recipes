@@ -51,4 +51,12 @@
       <bind type="wh_question" predicate="perceived_ingredient"/>
     </plan>
   </goal>
+
+  <goal type="resolve" question_type="wh_question" predicate="replace_ingredient">
+    <plan>
+      <findout type="wh_question" predicate="which_ingredient"/>
+      <invoke_service_query type="wh_question" predicate="replace_ingredient"/>
+      <bind type="wh_question" predicate="proposed_ingredient"/>
+    </plan>
+  </goal>
 </domain>

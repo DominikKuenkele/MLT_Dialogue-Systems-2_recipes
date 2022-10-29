@@ -3,6 +3,7 @@
   <sort name="recipe"/>
   <sort name="step"/>
   <sort name="ingredient" dynamic="true"/>
+  <sort name="proposed_ingredient_sort" dynamic="true"/>
   <sort name="object" dynamic="true"/>
   <sort name="ingredient_list"/>
 
@@ -10,9 +11,11 @@
   <predicate name="current_step" sort="step"/>
 
   <predicate name="which_ingredient" sort="ingredient"/>
+  <predicate name="proposed_ingredient" sort="proposed_ingredient_sort"/>
   <predicate name="perceived_ingredient" sort="ingredient"/>
   <predicate name="which_object" sort="object"/>
 
+  <predicate name="replace_ingredient" sort="string"/>
   <predicate name="reask_ingredient" sort="string"/>
   <predicate name="amount_ingredient" sort="string"/>
   <predicate name="form_ingredient" sort="string"/>
@@ -20,7 +23,6 @@
   <predicate name="time_for_step" sort="string"/>
   <predicate name="condition_for_step" sort="string"/>
 
-  <predicate name="ingredients_read" sort="boolean"/>
   <predicate name="read_ingredient_list" sort="ingredient_list"/>
   <action name="omelette_recipe_action"/>
   <individual name="omelette_recipe" sort="recipe"/>
@@ -90,31 +92,31 @@
   <individual name="baked_mushroom_risotto_recipe_step_14" sort="step"/>
   <individual name="baked_mushroom_risotto_recipe_step_15" sort="step"/>
   <individual name="baked_mushroom_risotto_recipe_step_16" sort="step"/>
-  <individual name="egg_mixture" sort="ingredient"/>
-  <individual name="rosemary" sort="ingredient"/>
-  <individual name="salt" sort="ingredient"/>
-  <individual name="omelette" sort="ingredient"/>
-  <individual name="butter" sort="ingredient"/>
-  <individual name="stock" sort="ingredient"/>
-  <individual name="onion" sort="ingredient"/>
   <individual name="egg" sort="ingredient"/>
-  <individual name="garlic" sort="ingredient"/>
-  <individual name="potato" sort="ingredient"/>
-  <individual name="oil" sort="ingredient"/>
-  <individual name="parmesan" sort="ingredient"/>
-  <individual name="risotto_rice" sort="ingredient"/>
-  <individual name="olive_oil" sort="ingredient"/>
-  <individual name="risotto" sort="ingredient"/>
-  <individual name="white_wine" sort="ingredient"/>
+  <individual name="onion" sort="ingredient"/>
   <individual name="mixed_mushrooms" sort="ingredient"/>
+  <individual name="risotto_rice" sort="ingredient"/>
+  <individual name="potato" sort="ingredient"/>
+  <individual name="butter" sort="ingredient"/>
+  <individual name="garlic" sort="ingredient"/>
+  <individual name="salt" sort="ingredient"/>
+  <individual name="white_wine" sort="ingredient"/>
+  <individual name="stock" sort="ingredient"/>
+  <individual name="risotto" sort="ingredient"/>
+  <individual name="parmesan" sort="ingredient"/>
+  <individual name="olive_oil" sort="ingredient"/>
   <individual name="black_pepper" sort="ingredient"/>
+  <individual name="oil" sort="ingredient"/>
+  <individual name="rosemary" sort="ingredient"/>
+  <individual name="egg_mixture" sort="ingredient"/>
+  <individual name="omelette" sort="ingredient"/>
   <individual name="oven" sort="object"/>
-  <individual name="mixing_bowl" sort="object"/>
   <individual name="pan" sort="object"/>
-  <individual name="baking_sheet" sort="object"/>
-  <individual name="bowl" sort="object"/>
-  <individual name="plate" sort="object"/>
   <individual name="oven_proof_lidded_dish" sort="object"/>
+  <individual name="bowl" sort="object"/>
+  <individual name="mixing_bowl" sort="object"/>
   <individual name="lid" sort="object"/>
+  <individual name="baking_sheet" sort="object"/>
+  <individual name="plate" sort="object"/>
   <individual name="heat" sort="object"/>
 </ontology>

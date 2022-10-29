@@ -291,3 +291,12 @@ def reask_ingredient():
         utterance = f'No, the {parameters.ingredient}'
 
     return query_response(value=utterance, grammar_entry=None)
+
+@ app.route("/replace_ingredient", methods=['POST'])
+def replace_ingredient():
+    parameters = Parameters(request)
+    if hasattr(parameters, 'proposed_ingredient'):
+        print('prop:', parameters.proposed_ingredient)
+
+    print('ingr:', parameters.ingredient)
+    return query_response(value='utterance', grammar_entry=None)

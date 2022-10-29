@@ -4,11 +4,11 @@ from Template import Template
 class Domain(Template):
     def __init__(self, template_file, target_file) -> None:
         super().__init__(template_file, target_file)
-        self.ingredients = []
         self.recipes = {}
 
     def add_recipe(self, recipe_name) -> None:
         self.recipes[self._cleanse_attribute(recipe_name)] = {
+            'ingredient_reads': [],
             'ingredients': [],
             'get_dones': []
         }
@@ -19,7 +19,7 @@ class Domain(Template):
         full_ingredient_name = f'{recipe_name}_{ingredient_name}'
         read_predicate_name = f'{full_ingredient_name}_read'
         
-        self.ingredients.append(f'''      <assume_shared>
+        self.recipes[recipe_name]['ingredient_reads'].append(f'''      <assume_shared>
         <proposition predicate="{read_predicate_name}" value="false"/>
       </assume_shared>''')
 
@@ -62,7 +62,10 @@ class Domain(Template):
       ''')
 
     def _get_stub(self) -> str:
-        ingredient_stub = '\n'.join(self.ingredients)
+        all_ingredients_read = []
+        for recipe in self.recipes.values():
+            all_ingredients_read.extend(recipe['ingredient_reads'])
+        ingredient_stub = '\n'.join(all_ingredients_read)
             
         stub = f'''  <goal type="perform" action="top">
     <plan>
@@ -85,14 +88,13 @@ class Domain(Template):
                 stub += '\n'.join(recipe_attributes['ingredients'])
 
             get_done_stub = '\n'.join(recipe_attributes['get_dones'])
+            ingredients_reads_stub = '\n'.join(recipe_attributes['ingredient_reads'])
             stub += f'''
 {get_done_stub}
       <signal_action_completion/>
     </plan>
     <postplan>
-      <assume_shared>
-        <proposition predicate="ingredients_read" value="false"/>
-      </assume_shared>
+{ingredients_reads_stub}
     </postplan>
   </goal>
   

@@ -3,6 +3,7 @@
   <sort name="recipe"/>
   <sort name="step"/>
   <sort name="ingredient" dynamic="true"/>
+  <sort name="proposed_ingredient_sort" dynamic="true"/>
   <sort name="object" dynamic="true"/>
   <sort name="ingredient_list"/>
 
@@ -10,9 +11,11 @@
   <predicate name="current_step" sort="step"/>
 
   <predicate name="which_ingredient" sort="ingredient"/>
+  <predicate name="proposed_ingredient" sort="proposed_ingredient_sort"/>
   <predicate name="perceived_ingredient" sort="ingredient"/>
   <predicate name="which_object" sort="object"/>
 
+  <predicate name="replace_ingredient" sort="string"/>
   <predicate name="reask_ingredient" sort="string"/>
   <predicate name="amount_ingredient" sort="string"/>
   <predicate name="form_ingredient" sort="string"/>
@@ -20,7 +23,6 @@
   <predicate name="time_for_step" sort="string"/>
   <predicate name="condition_for_step" sort="string"/>
 
-  <predicate name="ingredients_read" sort="boolean"/>
   <predicate name="read_ingredient_list" sort="ingredient_list"/>
 &generated
 </ontology>
