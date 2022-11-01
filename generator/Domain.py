@@ -133,6 +133,6 @@ class Domain(Template):
       <signal_action_completion/>
     </plan>
   </goal>
-            
-            ''' 
+
+''' 
         return stub

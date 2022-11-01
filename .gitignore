@@ -133,3 +133,10 @@ grammar/build/
 .tala/
 logs/
 .idea/
+
+# Latex
+*.aux
+*.log
+*.fls
+*.fdb_latexmk
+*.synctex.gz

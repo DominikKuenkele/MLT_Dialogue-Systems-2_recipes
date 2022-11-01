@@ -709,7 +709,7 @@
     </plan>
   </goal>
             
-              <goal type="perform" action="baked_mushroom_risotto_recipe_step_3">
+  <goal type="perform" action="baked_mushroom_risotto_recipe_step_3">
     <plan>
       <get_done action="baked_mushroom_risotto_recipe_step_3_how_step_0"/>
       <get_done action="baked_mushroom_risotto_recipe_step_3_how_step_1"/>
