@@ -30,6 +30,7 @@
                     <step>
                         <substep>Use a fork and stir them consistently</substep>
                     </step>
+                    <finisher>Now the eggs are mixed up.</finisher>
                 </how>
             </step>
             <step>
@@ -114,13 +115,14 @@
             <step>
                 <substep ingredient="rosemary">Then you should chop the rosemary finely</substep>
                 <how>
-                    <step>
+                    <step image_url="https://www.wikihow.com/images/thumb/e/ee/Cut-Fresh-Rosemary-Step-8.jpg/550px-nowatermark-Cut-Fresh-Rosemary-Step-8.jpg">
                         <substep>Strip the leaves off with you fingers</substep>
                         <substep>place them on the cutting board</substep>
                     </step>
-                    <step>
+                    <step image_url="https://i.ytimg.com/vi/qdU3_Z33BYQ/maxresdefault.jpg">
                         <substep>Now use a sharp knife and slice through the pile of rosemary</substep>
                     </step>
+                    <finisher>They should be sliced finely</finisher>
                 </how>
             </step>
             <step>

@@ -6,6 +6,7 @@ from Ontology import Ontology
 from Grammar import Grammar
 from RecipeLookup import RecipeLookup
 from ExpectedInput import ExpectedInput
+from VisualOutput import VisualOutput
 
 
 def parse_xml(path):
@@ -19,6 +20,7 @@ def parse_xml(path):
                       '../ddds/recipe_app/grammar/grammar_eng.xml')
     nlg = NLG('templates/nlg_template.json', '../couch_dbs/nlg.json')
     expected_input = ExpectedInput('templates/expected_input_template.json', '../couch_dbs/expected_input.json')
+    visual_output = VisualOutput('templates/visual_output_template.json', '../couch_dbs/visual_output.json')
     recipe_lokup = RecipeLookup('', '../ddds/http-service/recipe_lookup.json')
 
     ingredients = set()
@@ -98,11 +100,17 @@ def parse_xml(path):
                 for how_substep in how_step.findall('./substep'):
                     how_step_utterances.append(how_substep.text)
 
+                if 'image_url' in how_step.attrib:
+                    visual_output.add_expression(how_step_name, how_step.attrib['image_url'], f'step {how_step_number + 1}')
                 ontology.add_action(step_name)
                 ontology.add_individual(how_step_name, 'how_step')
                 grammar.add_individual(how_step_name)
                 domain.add_how_step(step_name, how_step_name)
                 nlg.add_request(how_step_name, ' and '.join(how_step_utterances))
+            
+            if step.find('how/finisher') != None:
+                nlg.add_action_completion(f'{step_name}', 'done', step.find('how/finisher').text)
+            
                 
 
             ontology.add_individual(step_name, 'step')
@@ -127,6 +135,7 @@ def parse_xml(path):
     grammar.generate_file()
     nlg.generate_file()
     expected_input.generate_file()
+    visual_output.generate_file()
     recipe_lokup.generate_file()
 
 

@@ -1,31 +1,31 @@
 [
     {
-        "semantic_expression": "some(semantic_expression_of_a_move)",
+        "semantic_expression": "request(baked_mushroom_risotto_recipe_step_3_how_step_0)",
         "visual_information": [
             {
                 "attribute": "name",
                 "type": "text/plain",
-                "value": "Some text to show if the image cannot be shown"
+                "value": "step 1"
             },
             {
                 "attribute": "image",
                 "type": "image/jpeg",
-                "value": "https://some-image-url"
+                "value": "https://www.wikihow.com/images/thumb/e/ee/Cut-Fresh-Rosemary-Step-8.jpg/550px-nowatermark-Cut-Fresh-Rosemary-Step-8.jpg"
             }
         ]
     },
     {
-        "semantic_expression": "another(semantic_expression_of_a_move)",
+        "semantic_expression": "request(baked_mushroom_risotto_recipe_step_3_how_step_1)",
         "visual_information": [
             {
                 "attribute": "name",
                 "type": "text/plain",
-                "value": "Another text to show if the image cannot be shown"
+                "value": "step 2"
             },
             {
                 "attribute": "image",
                 "type": "image/jpeg",
-                "value": "https://another-image-url"
+                "value": "https://i.ytimg.com/vi/qdU3_Z33BYQ/maxresdefault.jpg"
             }
         ]
     }
