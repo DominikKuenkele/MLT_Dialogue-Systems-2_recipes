@@ -61,7 +61,7 @@ S> Add the egg mixture to the pan and stir the eggs for about 30 seconds.
 U> How do I do that?
 S> Use a fork and stir them consistently
 U> done
-S> 
+S> Now the eggs are mixed up.
 U>
 S> When the eggs are set but look slightly wet, turn off the heat and fold the omelette.
 U> done
@@ -820,7 +820,7 @@ S> Strip the leaves off with you fingers and place them on the cutting board
 U> hmm
 S> Now use a sharp knife and slice through the pile of rosemary
 U> ok
-S> 
+S> They should be sliced finely
 U>
 S> then you can begin by preheating the oven to 180 degrees
 
