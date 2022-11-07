@@ -1,0 +1,48 @@
+"omelette_recipe": {
+    "ingredients": {
+        "egg": {
+            "amount": "three",
+            "form": null
+        },
+        "salt": {
+            "amount": "a pinch",
+            "form": null
+        }
+    },
+    "steps": {
+        "omelette_recipe_step_0": [
+            {
+                "time": null,
+                "condition": null,
+                "ingredients": {
+                    "egg": {
+                        "amount": "three",
+                        "form": null
+                    }
+                },
+                "objects": {
+                    "bowl": {
+                        "temperature": null
+                    }
+                }
+            }
+        ],
+        "omelette_recipe_step_1": [
+            {
+                "time": null,
+                "condition": null,
+                "ingredients": {
+                    "butter": {
+                        "amount": null,
+                        "form": null
+                    }
+                },
+                "objects": {
+                    "pan": {
+                        "temperature": "high heat"
+                    }
+                }
+            }
+        ]
+    }
+}

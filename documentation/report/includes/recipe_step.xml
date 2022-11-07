@@ -1,0 +1,10 @@
+<assume_shared>
+    <proposition predicate="current_step" value="omelette_recipe_step_0"/>
+</assume_shared>
+<assume_shared>
+    <proposition predicate="which_ingredient" value="salt"/>
+</assume_shared>
+<assume_shared>
+    <proposition predicate="which_object" value="bowl"/>
+</assume_shared>
+<get_done action="omelette_recipe_step_0"/>

@@ -1,0 +1,18 @@
+<if>
+    <proposition predicate="omelette_recipe_salt_read" value="false"/>
+    <then>
+        <inform insist="true">
+            <proposition predicate="read_ingredient_list" value="omelette_recipe_salt"/>
+        </inform>
+        <end_turn expected_passivity="3.0"/>
+
+        <forget predicate="proposed_ingredient"/>
+
+        <assume_shared>
+            <proposition predicate="omelette_recipe_salt_read" value="true"/>
+        </assume_shared>
+        <assume_shared>
+            <proposition predicate="which_ingredient" value="salt"/>
+        </assume_shared>
+    </then>
+</if>

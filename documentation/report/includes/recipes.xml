@@ -1,0 +1,46 @@
+<recipes>
+    <recipe name="omelette" image_url="www.link.to/image">
+        <utterances>
+            <utterance>make an omelette</utterance>
+            ...
+        </utterances>
+        <ingredients>
+            <!-- can have attributes 'amount' and 'form' -->
+            <ingredient name="onion" amount="two" form="roughly chopped">
+                We need two onions
+            </ingredient>
+            ...
+        </ingredients>
+        <steps>
+            <step>
+                <!-- 
+                    - can have general attributes 'time' and 'condition'
+                    - can have attribute 'ingredient' with optionally 'amount' and 'form'
+                    - can have attribute 'object' with optionally 'temperature'
+                -->
+                <substep ingredient="egg" amount="three" object="bowl">
+                    Crack three eggs on a bowl
+                </substep>
+                <substep ingredient="salt" amount="a pinch">
+                    whisk with a pinch of salt.
+                </substep>
+
+                <!-- optional -->
+                <how>
+                    <step>
+                        <!-- substeps can't contain any attributes -->
+                        <substep>
+                            Strip the leaves off with your fingers
+                        </substep>
+                        ...
+                    </step>
+                    ...
+                </how>
+            </step>
+            ...
+        </steps>
+        
+        <finisher>Now serve and enjoy your meal</finisher>
+    </recipe>
+    ...
+</recipes>

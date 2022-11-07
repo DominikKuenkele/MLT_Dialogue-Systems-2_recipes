@@ -41,72 +41,49 @@
 \usepackage{dialogue}
 \usepackage{scrextend}
 \usepackage{caption}
-\usepackage{tcolorbox}
+\usepackage{nameref}
+\usepackage{hyperref}
+\usepackage{minted}
+\usepackage{framed}
 
 
 \definecolor{color_background}{rgb}{0.98,0.98,0.98}
-\definecolor{color_comment}{rgb}{0.45,0.73,0.72}
-\definecolor{color_number}{rgb}{0.5,0.5,0.5}
-\definecolor{color_string}{rgb}{0.57,0.72,0.35}
-\definecolor{color_keyword}{rgb}{1,0.33,0.44}
-\definecolor{color_text}{rgb}{0.56,0.64,0.68}
-\definecolor{color_attributes}{rgb}{0.49,0.3,1}
+\definecolor{shadecolor}{rgb}{0.98,0.98,0.98}
 
-\lstset{
-    language=XML,
-    morestring=[s]{"}{"},
-    morecomment=[s]{?}{?},
-    morecomment=[s]{!--}{--},
-    moredelim=[s][\color{color_text}]{>}{<},
-    moredelim=[s][\color{color_attributes}]{\ }{=},
-    identifierstyle=\color{color_keyword},
-    numberstyle=\tiny\color{color_number},
-    commentstyle=\color{color_comment},
-    stringstyle=\color{color_string},
-    backgroundcolor=\color{color_background},
-    frame=tb,
-	breaklines=true,
-	basicstyle=\small\sffamily\color{color_keyword},
-    numbers=left,
-    numberstyle=\tiny,
-    columns=fullflexible,
-    showstringspaces=false
-	}
+\newenvironment{code}
+    {\captionsetup{
+        type=listing,
+        skip=2pt,
+        belowskip=15pt
+        }}
+    {}
 
-\lstdefinelanguage{json}{
-    basicstyle=\small\sffamily\color{color_keyword},
-    numbers=left,
-    numberstyle=\tiny,
-    stepnumber=1,
-    numbersep=8pt,
-    showstringspaces=false,
-    breaklines=true,
+\setminted{
+    linenos=true, 
     frame=lines,
-    backgroundcolor=\color{color_background},
-    literate=
-        *{0}{{{\color{color_number}0}}}{1}
-        {1}{{{\color{color_number}1}}}{1}
-        {2}{{{\color{color_number}2}}}{1}
-        {3}{{{\color{color_number}3}}}{1}
-        {4}{{{\color{color_number}4}}}{1}
-        {5}{{{\color{color_number}5}}}{1}
-        {6}{{{\color{color_number}6}}}{1}
-        {7}{{{\color{color_number}7}}}{1}
-        {8}{{{\color{color_number}8}}}{1}
-        {9}{{{\color{color_number}9}}}{1}
-        {:}{{{\color{color_text}{:}}}}{1}
-        {,}{{{\color{color_text}{,}}}}{1}
-        {"}{{{\color{color_string}{"}}}}{1}
-        {\{}{{{\color{color_text}{\{}}}}{1}
-        {\}}{{{\color{color_text}{\}}}}}{1}
-        {[}{{{\color{color_text}{[}}}}{1}
-        {]}{{{\color{color_text}{]}}}}{1},
+    breaklines=true,
+    bgcolor=color_background,
     }
+\usemintedstyle{one-dark}
 
 \DeclareCaptionType{Dialogue}
+
+\newenvironment{captionedDialogue}
+    {\captionsetup{
+        type=Dialogue,
+        skip=2pt,
+        belowskip=15pt
+        }
+    }
+    {}
+
 \newenvironment{mydialogue}
-    {\begin{tcolorbox}[colback=color_background]\begin{dialogue}}
-    {\end{dialogue}\end{tcolorbox}}
+    {\begin{snugshade}
+     \hrulefill
+     \begin{dialogue}}
+    {\end{dialogue}
+     \hrulefill
+     \end{snugshade}}
 
 %----------------------------------------------------------------------------------------
 %	ASSIGNMENT INFORMATION
@@ -136,61 +113,15 @@
 \section*{Introduction}
 In this project,I wanted to create something, I could actually use in my life. Since I like very much to cook, building a dialogue system that supports here, was not far fetched. The goal however was not only to create a system that can handle only few recipes and situations, but can also be extended easily with many more recipes. For this, I wrote a script in \emph{python} that can translate a more user friendly description of a recipe into the necessary goals, actions and so on in TDM.
 
-\section*{APIs}
+\section*{APIs}\label{section:api}
 I didn't use any explicit external API in the project. However, I relied heavily on the http service to add functionality to the dialogue system and lookup information from local files. This includes firstly a lookup dictionary for detailed information about steps in the recipes. Here, I listed the needed ingredients for each step with their amount and form (e.g. onions: two, roughly chopped), used objects and their temperature (e.g. oven: 180 degrees) as well as information about time end ending conditions of a step. With this service, I was able to feed the system the needed information for a specific step. Was the information not specified in the current step, it utilized the information from to the last step. With this approach, I could respond to retroactive questions of a user. A simple lookup file lookes like the following:
 
-\begin{lstlisting}[language=json, caption={Example of recipe loopup},captionpos=b]
-"omelette_recipe": {
-    "ingredients": {
-        "egg": {
-            "amount": "three",
-            "form": null
-        },
-        "salt": {
-            "amount": "a pinch",
-            "form": null
-        }
-    },
-    "steps": {
-        "omelette_recipe_step_0": [
-            {
-                "time": null,
-                "condition": null,
-                "ingredients": {
-                    "egg": {
-                        "amount": "three",
-                        "form": null
-                    }
-                },
-                "objects": {
-                    "bowl": {
-                        "temperature": null
-                    }
-                }
-            }
-        ],
-        "omelette_recipe_step_1": [
-            {
-                "time": null,
-                "condition": null,
-                "ingredients": {
-                    "butter": {
-                        "amount": null,
-                        "form": null
-                    }
-                },
-                "objects": {
-                    "pan": {
-                        "temperature": "high heat"
-                    }
-                }
-            }
-        ]
-    }
-}
-\end{lstlisting}
+\begin{code}
+    \inputminted{json}{includes/recipe_lookup.json}
+    \caption{Example of recipe loopup}
+\end{code}
 
-Secondly, I used a simple dictionary to lookup subsitute for ingredients. Unfortunately, I couldn't find an API for it, but just text on a website. To make the http service faster and simpler, I downloaded the data and stored it in a json file, which can be easily accessed by the service.
+Secondly, I used a simple dictionary to lookup substitutes for ingredients. Unfortunately, I couldn't find an API for it, but just text on a website. To make the http service faster and simpler, I downloaded the data and stored it in a json file, which can be easily accessed by the service.
 
 \section*{Data collection}
 For the data collection I recorded four dialogues. Two of them lasted around 10 minutes, while only the first minute was recorded for the other two. Still, these short beginnings held some interesting information and I distilled and analyzed them as well.
@@ -201,72 +132,186 @@ The dialogues were recorded in a roleplay scenario and not actually while cookin
 First, I tried to analyze the dialgues in respect to the domain and how the participants were talking about the topic of cooking. The instructions consisted of a verb that was either intransitive, transitive or ditransitive. The transitive and ditransitive verbs only referred to \emph{ingredients} or \emph{objects}. If it was an ingredient, they could add the amount (e.g. 'two teaspoons') to use or the form, it should be in (e.g. 'roughly chopped'). Objects could optionally be enriched with information about it's temperature. 
 In some cases, the instructor could add also information to the whole step about time (e.g. 'for three minutes') or an ending condition (e.g. 'until it appears glassy').
 
-\begin{mydialogue}
-    \speak{S>} OK, perfect. And also ähh \textcolor{orange}{juniper berries}. 
-    \speak{U>} Hmm. I have.
-    \speak{S>} Hmm..ok. \textcolor{purple}{Around a teaspoon}.
-    \speak{U>} Hmm
 
-	\captionof{Dialogue}{Ingredient with amount}
+\begin{captionedDialogue}
+    \begin{mydialogue}
+        \speak{S>} OK, perfect. And also ähh \textcolor{orange}{juniper berries}. 
+        \speak{U>} Hmm. I have.
+        \speak{S>} Hmm..ok. \textcolor{purple}{Around a teaspoon}.
+        \speak{U>} Hmm
+    \end{mydialogue}
+    \caption{Ingredient with amount}
     \label{dia:ingredient}
-\end{mydialogue}
+\end{captionedDialogue}
 
-\begin{mydialogue}
-	\speak{S>} And now you can start preheat the \textcolor{blue}{oven} for \textcolor{red}{220 degrees}. 
-    \speak{U>} I have done it. What should we do? 
-
-	\captionof{Dialogue}{Object with temperature}
+\begin{captionedDialogue}
+    \begin{mydialogue}
+        \speak{S>} And now you can start preheat the \textcolor{blue}{oven} for \textcolor{red}{220 degrees}. 
+        \speak{U>} I have done it. What should we do? 
+    \end{mydialogue}
+    \caption{Object with temperature}
     \label{dia:object}
-\end{mydialogue}
+\end{captionedDialogue}
 
-\begin{mydialogue}
-    \speak{S>} Leave the \textcolor{orange}{meat} for further \textcolor{cyan}{15 minutes}. 
-    \speak{U>} OK, done.
-    \speak{S>} \textcolor{brown}{The rind should be very crusty, but not burned.}
-    \speak{U>} Hmm, hmm.
-    \speak{S>} So around \textcolor{cyan}{15 minutes}. If takes longer, leave it longer. If it is already...
-    \speak{U>} Should I take a look sometimes? 
+\begin{captionedDialogue}
+    \begin{mydialogue}
+        \speak{S>} Leave the \textcolor{orange}{meat} for further \textcolor{cyan}{15 minutes}. 
+        \speak{U>} OK, done.
+        \speak{S>} \textcolor{brown}{The rind should be very crusty, but not burned.}
+        \speak{U>} Hmm, hmm.
+        \speak{S>} So around \textcolor{cyan}{15 minutes}. If takes longer, leave it longer. If it is already...
+        \speak{U>} Should I take a look sometimes? 
+    \end{mydialogue}
+    \caption{Step with time and condition}
+\label{dia:step}
+\end{captionedDialogue}
 
-	\captionof{Dialogue}{Step with time and condition}
-    \label{dia:step}
-\end{mydialogue}
+These attributes are also used in the \emph{recipe\_lookup} mentioned in the APIs chapter and are the core of the implemented dialogue system itself.
 
 \subsection*{Analysis of dialogue}
 Looking at how the dialogue was built up, I could also find some interesting ideas. These can be differentiated into behaviour of the system and behaviour of the user.
 
-\subsubsection*{User behaviour}
-It was very noticeable, how often the user was acknowledging and confirming the utterances by the system. I could differentiate three different types. In the first, the user was just using one word (e.g. 'ok', 'yes') or a non-lexical sound (e.g. 'hmm', 'uh-hmm'). In the second one, the user repeated a word from the previous system utterance. This can also be seen as a perceptual confirmation in some cases. In the last, the user describes the current situation and by this verifies it with the system. Dialogues \ref{dia:ack1} and \ref{dia:ack2} show some examples.
+\subsubsection*{Acknowledgements (user)}
+It was very noticeable, how often the user was acknowledging and confirming the utterances by the system. I could differentiate three different types. In the first, the user was just using one word (e.g. 'ok', 'yes') or a non-lexical sound (e.g. 'hmm', 'uh-hmm'). In the second one, the user repeated a word from the previous system utterance. This can also be seen as a perceptual confirmation in some cases. In the last, the user describes the current situation and by this verifies it with the system. This type is often on the border of being an acknowledgement and a question by the user. Dialogues \ref{dia:ack1} and \ref{dia:ack2} show some examples.
 
-\begin{mydialogue}
-    \speak{S>} Then 400 grams of mixed mushrooms. 
-    \speak{U>} Mixed mushrooms, OK, OK, Champions, do they work? \textcolor{red}{(Type 2)}
-
-	\captionof{Dialogue}{Acknowledgement (Type 2)}
+\begin{captionedDialogue}
+    \begin{mydialogue}
+        \speak{S>} Then 400 grams of mixed mushrooms. 
+        \speak{U>} Mixed mushrooms, OK, OK, Champions, do they work? \textcolor{red}{(Type 2)}
+    \end{mydialogue}
+    \caption{Acknowledgement (Type 2)}
     \label{dia:ack1}
-\end{mydialogue}
+\end{captionedDialogue}
 
-\begin{mydialogue}
-    \speak{S>} OK, you can try to feel the meat with the tip of a knife. if it's tender or not. Is it tender?
-    \speak{U>} It's bleeding. \textcolor{red}{(Type 3)}
-    \speak{S>} Then you can give it another 30 minutes in the oven. 
-    \speak{U>} OK. \textcolor{red}{(Type 1)}
-    \speak{S>} And the oven goes back up to 220 degrees. 
-    \speak{U>} Hmm \textcolor{red}{(Type 1)}
-
-	\captionof{Dialogue}{Acknowledgement (Type 1 and 3)}
+\begin{captionedDialogue}
+    \begin{mydialogue}
+        \speak{S>} OK, you can try to feel the meat with the tip of a knife. if it's tender or not. Is it tender?
+        \speak{U>} It's bleeding. \textcolor{red}{(Type 3)}
+        \speak{S>} Then you can give it another 30 minutes in the oven. 
+        \speak{U>} OK. \textcolor{red}{(Type 1)}
+        \speak{S>} And the oven goes back up to 220 degrees. 
+        \speak{U>} Hmm \textcolor{red}{(Type 1)}
+    \end{mydialogue}
+    \caption{Acknowledgement (Type 1 and 3)}
     \label{dia:ack2}
-\end{mydialogue}
+\end{captionedDialogue}
 
-- user doing steps earlier
-- explicit substitutions, without proposal
-    --> memory
-- jokes
-- ask actions
+\subsubsection*{Early steps (user)}
+Another behaviour by the user was that they were sometimes doing steps, before they were told by the instructor. In Dialoge \ref{dia:early_step}, the user is deciding to already cut the onions, while the instructor is just listing the ingredients. Later in the dialogue, the instructor rembers it and omits the actual step in the recipe.
 
-\subsubsection*{System behaviour}
-- separate ingredient/amount
-- system was waiting for user to request step
-- adapt language to user
+\begin{captionedDialogue}
+    \begin{mydialogue}
+        \speak{S>} [...] Additionally you need also two onions. 
+        \speak{U>} Yes.
+        \speak{S>} And they ähh need to be peeled and also cut later in...
+        \speak{U>} I will do that now.
+        \speak{S>} ...three thick slices. Not chopped.
+        \speak{U>} Done
+        \speak{S>} OK. [...]
+    \end{mydialogue}
+    \caption{User is doing steps before instructed}
+    \label{dia:early_step}
+\end{captionedDialogue}
+
+\subsubsection*{Substitutions (user)}
+Furthermore, the user was also asking the instructor to substitute ingredients. This was done by either explicitly proposing an ingredient or just asking the instructor for any ingredient. In some cases the user was also explicitly stating, which ingredient should be substituted, in most cases, this information was implicitly in the context. Dialoges \ref{dia:impl_substitution} and \ref{dia:expl_substitution} show some examples.
+
+\begin{captionedDialogue}
+    \begin{mydialogue}
+        \speak{S>} Ähh, we need \textcolor{orange}{garlic}. 
+        \speak{U>} I have allergic to \textcolor{orange}{garlic}.
+        \speak{S>} Ohh 
+        \speak{U>} What could what should I use instead? 
+        \speak{S>} I think you can just leave it out in this case.
+    \end{mydialogue}
+    \caption{User asking for substitutions}
+    \label{dia:impl_substitution}
+\end{captionedDialogue}
+
+\begin{captionedDialogue}
+    \begin{mydialogue}
+        \speak{S>} Then 400 grams of \textcolor{orange}{mixed mushrooms}. 
+        \speak{U>} \textcolor{orange}{Mixed mushrooms}, OK, OK, \textcolor{teal}{Champions}, do they work? 
+        \speak{S>} Yes, here it suggests button and Portobello. 
+        \speak{U>} Ahh 
+        \speak{S>} But I think it just, uh, accords to taste.
+    \end{mydialogue}
+    \caption{User explicitly proposing substitution}
+    \label{dia:expl_substitution}
+\end{captionedDialogue}
+
+This doesn't only apply to ingredients, but also objects as seen in Dialogue \ref{dia:memory_substitution}. The instructor then also remebers that the ingredient/object were substituted and uses the substitutions in the rest of the dialogue.
+
+\begin{captionedDialogue}
+    \begin{mydialogue}
+        \speak{S>} I know. Cover the tin with ähh with \textcolor{blue}{kitchen foil}. 
+        \speak{U>} I don't have a \textcolor{blue}{kitchen foil}. What should I use instead? 
+        \speak{S>} Then you can maybe use a \textcolor{olive}{lid}
+        \speak{U>} OK.
+        
+        \medskip
+        \direct{\dots}
+        \medskip
+
+        \speak{S>} ...very quick 45 minutes. And now you take out the pork and remove they \textcolor{olive}{lid}. 
+    \end{mydialogue}
+    \caption{Instructor remembering substitutions}
+    \label{dia:memory_substitution}
+\end{captionedDialogue}
+
+\subsubsection*{Jokes (user/system)}
+Additionally, the user, as well as the instructor were using jokes or 'unserious' utterances multiple times. This consisted of answering in a jokingly way or also making a joke why the user or respectivley the instructor didn't say anything for some time. Dialogue \ref{dia:joke} gives an example.
+
+\begin{captionedDialogue}
+    \begin{mydialogue}
+        \speak{U>} OK. Hmm..ok. Throwing mushrooms in. Shall I stir them around or just let them be? 
+        \speak{S>} Yes..yes. Stir them around a bit, not too much, to not break them. 
+        \speak{U>} Doing it, doing it. 
+        
+        \medskip
+        \direct{pause} 
+        \medskip
+
+        \speak{S>} What are you doing? Are you going to collect the mushrooms youself?
+        \speak{U>} Haha..ok. I'm done.
+    \end{mydialogue}
+    \caption{Instructor making a joke after the user didn't say anything}
+    \label{dia:joke}
+\end{captionedDialogue}
+
+\subsubsection*{Ask for steps (user)}
+
+
+\subsubsection*{Giving information step by step (system)}
+In some cases, the system was not giving all information in one step, but in multiple turns. That happened for example, when the instructor was reading the ingredients. Sometimes they were giving the ingredient in the first turn and after the user acknowledged it they gave the amount or form (see Dialogue \ref{dia:multiple_turns}).
+
+\begin{captionedDialogue}
+    \begin{mydialogue}
+        \speak{S>} OK, perfect. And also ähh juniper berries. 
+        \speak{U>} Hmm. I have.
+        \speak{S>} Hmm..ok. Around a teaspoon.
+    \end{mydialogue}
+    \caption{Instructor giving information in multiple turns}
+    \label{dia:multiple_turns}
+\end{captionedDialogue}
+
+\subsubsection*{Wating for user (system)}
+
+
+\subsubsection*{Adapting to user language (system)}
+In some few cases, the instructor also adpated his answers to the language and words, the user used as seen in Dialogue \ref{dia:user_language}.
+
+\begin{captionedDialogue}
+    \begin{mydialogue}
+        \speak{S>} Then you should chop the Rosemary finely.
+        \speak{U>} OK. 3 branches or how many \textcolor{red}{was it}? 
+        \speak{S>} \textcolor{red}{It was} just one to two tablespoons... 
+        \speak{U>} Tablespoon. 
+        \speak{S>} ...of just the chopped Rosemary.
+    \end{mydialogue}
+    \caption{Instructor reusing words of the user}
+    \label{dia:user_language}
+\end{captionedDialogue}
 
 
 \section*{Implementation}
@@ -283,77 +328,22 @@ The generator is adapting the content of the following files: \emph{domain.xml},
 
 \subsubsection*{recipes.xml}
 The \emph{recipes.xml} file has the following structure:
-\begin{lstlisting}[caption={Example of recipes.xml},captionpos=b]
-<recipes>
-    <recipe name="omelette" image_url="www.link.to/image">
-        <utterances>
-            <utterance>make an omelette</utterance>
-            ...
-        </utterances>
-        <ingredients>
-            <!-- can have attributes 'amount' and 'form' -->
-            <ingredient name="onion" amount="two" form="roughly chopped">
-                We need two onions
-            </ingredient>
-            ...
-        </ingredients>
-        <steps>
-            <step>
-                <!-- 
-                    - can have general attributes 'time' and 'condition'
-                    - can have attribute 'ingredient' with optionally 'amount' and 'form'
-                    - can have attribute 'object' with optionally 'temperature'
-                -->
-                <substep ingredient="egg" amount="three" object="bowl">
-                    Crack three eggs on a bowl
-                </substep>
-                <substep ingredient="salt" amount="a pinch">
-                    whisk with a pinch of salt.
-                </substep>
 
-                <!-- optional -->
-                <how>
-                    <step>
-                        <!-- substeps can't contain any attributes -->
-                        <substep>Strip the leaves off with you fingers</substep>
-                        ...
-                    </step>
-                    ...
-                </how>
-            </step>
-            ...
-        </steps>
-        
-        <finisher>Now serve and enjoy your meal</finisher>
-    </recipe>
-    ...
-</recipes>
-\end{lstlisting}
+\begin{code}
+    \inputminted{xml}{includes/recipes.xml}
+    \caption{Example of recipes.xml}
+\end{code}
 
 In the following paragraphs, I will include the corresponding tag with an emphasized attribute in square brackets. If for example the \emph{domain.xml} uses the \emph{name} attribute of the \emph{ingredient} tag, this will be referenced as [<ingredient \emph{name="..."} />].
 
 \subsubsection*{Domain}
 Every recipe will generate a \emph{perform goal} in the \emph{domain.xml}. Each \emph{perfom goal} consists of two parts, the listing of the ingredients and the step-by-step instructions. The analysis of the recorded dialogue showed that the user doesn't necessarily acknoledge every ingredient, but just let's the system/instructor read all ingredients. That's why, I included a way to optionally acknowledge an ingredient. If the user doesn't say anything, the system automatically goes on with the next ingredient after a pause of three seconds. The following code is added for each ingredient:
-\begin{lstlisting}[caption={Listing of ingredients},captionpos=b]
-<if>
-    <proposition predicate="omelette_recipe_salt_read" value="false"/>
-    <then>
-        <inform insist="true">
-            <proposition predicate="read_ingredient_list" value="omelette_recipe_salt"/>
-        </inform>
-        <end_turn expected_passivity="3.0"/>
 
-        <forget predicate="proposed_ingredient"/>
+\begin{code}
+    \inputminted{xml}{includes/ingredients_listing.xml}
+    \caption{Listing of ingredients}
+\end{code}
 
-        <assume_shared>
-            <proposition predicate="omelette_recipe_salt_read" value="true"/>
-        </assume_shared>
-        <assume_shared>
-            <proposition predicate="which_ingredient" value="salt"/>
-        </assume_shared>
-    </then>
-</if>
-\end{lstlisting}
 The reason for this complicated structure is the behaviour if the \emph{<end\_turn/>} tag. When the user only acknowledged the ingredient or didn't say anything, the system worked perfectly fine. But as soon as the system switched to another goal (after the user e.g. asked a question) and returned back, it got stuck in the \emph{expected\_passivity}. For this, I introduced a \emph{boolean} variable that kept track if an ingredient was already read to the user. If so, it would be skipped, when returning back to this goal.
 
 Furthermore, I stored the name of the ingredient [<ingredient \emph{name="..."} />] in the predicate \emph{which\_ingredient}. This will get useful later, when the user raises questions like "How much?" or similar without explicitly specifying the ingredient, they are talking about.
@@ -361,18 +351,11 @@ Furthermore, I stored the name of the ingredient [<ingredient \emph{name="..."} 
 The predicate \emph{proposed\_ingredient} will be exlained later \todo{explain proposed ingredient}
 
 Each step of a recipe will add the following to the \emph{goal} in the domain:
-\begin{lstlisting}[caption={Step of a recipe},captionpos=b]
-<assume_shared>
-    <proposition predicate="current_step" value="omelette_recipe_step_0"/>
-</assume_shared>
-<assume_shared>
-    <proposition predicate="which_ingredient" value="salt"/>
-</assume_shared>
-<assume_shared>
-    <proposition predicate="which_object" value="bowl"/>
-</assume_shared>
-<get_done action="omelette_recipe_step_0"/>
-\end{lstlisting}
+
+\begin{code}
+    \inputminted{xml}{includes/recipe_step.xml}
+    \caption{Step of a recipe}
+\end{code}
 
 The analysis showed that the user always acknowledged a step in a recipe. For this reason, I used a \emph{get\_done} element. As before, I try to give the system as much information as possible about the current state. Accordingly, I fill the predicates \emph{current\_step}, \emph{which\_ingredient} and \emph{which\_object} [last substep in step: <substep \emph{ingredient="..."} \emph{object="..."}>].
 

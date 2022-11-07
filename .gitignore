@@ -140,3 +140,5 @@ logs/
 *.fls
 *.fdb_latexmk
 *.synctex.gz
+*.out
+_minted-report/
