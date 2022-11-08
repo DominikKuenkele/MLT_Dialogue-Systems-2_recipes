@@ -1,0 +1,10 @@
+U> I would like to make ähh a typical Italian dish. 
+S> Ah, Italian. There are different kind of Italian dishes. Would you like to do pasta or pizza or hmm something else? Some pies? # SYNTAX
+U> I would like to do some pasta recipe. 
+S> Ok. Hmm. I think one of the most famous dishes is the Lasagne. Do you want to do Lasagne? # SYNTAX
+U> Oh, sure.  
+S> OK. I have a recipe for you and you can prepare it. # SYNTAX
+U> Yes, I would like to do. Please ähh, what are the ingredients? 
+S> You need a little bit olive oil. You need beef mince. Then we need two onions. Four sticks celery if you like. You can choose. # SYNTAX/FOCUS
+U> What could I  use as a substitute of celery. 
+S> Of celery? 

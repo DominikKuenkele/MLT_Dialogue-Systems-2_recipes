@@ -1,0 +1,187 @@
+U> Hello, Dominik. 
+S> Hello, Francesca. Good evening.
+U> Good evening. Shall we cook something? 
+S> Yes, sounds really good. What would you like to eat? # SYNTAX
+U> Well, I have ähh some meat in the freezer. I have some Ribs.
+S> Some ribs?
+U> Do you..can you suggest me a good recipe for ribs, please? 
+S> Hmm..let me think, I have found something Norwegian. # SYNTAX 
+U> Oh
+S> Would you like to try that? # FOCUS/RELEVANCE
+U> Yes, yes. Sure. I would be interested. 
+S> It is pork, right? 
+U> I have it, yes, pork ribs. 
+S> Perfect. I think we can try that maybe. It'll take around 2 hours and additionally 30 minutes for preparation Is it fine? # FOCUS
+U> It is. It is fine. It is for a later dinner. 
+S> OK. Then we can try that. So, we would need the pork ribs. 
+U> Hmm
+S> Ähh, we need garlic. 
+U> I have allergic to garlic.
+S> Ohh 
+U> What could what should I use instead? 
+S> I think you can just leave it out in this case. # FOCUS/RELEVANCE
+U> OK. What else then? 
+S> Sea salt, flakes. 
+U> Yes
+S> Hmm. You have flakes?. 
+U> Yes, I do. Yeah. I happen to have. 
+S> OK, perfect. And also ähh juniper berries. 
+U> Hmm. I have.
+S> Hmm..ok. Around a teaspoon. # SYNTAX 
+U> Hmm
+S> And a large bunch of ähh fresh dill. 
+U> I have. Who doesn't? 
+S> OK. The fronds and stalks should be separated # SYNTAX
+U> I have.
+S> Ok, perfect. Ähh.. around 40 grams. # SYNTAX 
+U> I went to the forest just yesterday. To grab my dill. 
+S> That's great. That's perfectly prepared. Additionally you need also two onions. 
+U> Yes.
+S> And they ähh need to be peeled and also cut later in...
+U> I will do that now.
+S> ...three thick slices. Not chopped. # SYNTAX
+U> Done
+S> OK. And in the end you also need around ähhmm 250 milliliters boiled water. # SYNTAX 
+U> OK. 
+S> Do you want to start? Do you have everything? # SYNTAX 
+U> Yes, I am ready. 
+S> OK then. We start by taking the pork out of the fridge. # SYNTAX
+U> Yes
+S> Let it rest for an hour. # SYNTAX
+U> OK, what should they do in the mean times? 
+S> You need to wait right now. # SYNTAX/MEMORY
+U> Yes, I wait, waiting, waiting, waiting. And now? # REPETITION
+S> Take two tablespoons of salt and put them in the mortar. # MEMORY
+U> OK. 
+S> And add the juniper berries 
+U> Hmm
+S> and the stalks of the dill. 
+U> Ok.
+S> The rest you need for later. 
+U> Ok.
+S> And then you just start ähmm bashing them, grinding, crushing, whizzing, whatever you need to do. 
+U> Done it. All
+S> In the end you should have an aromatic green paste. # SYNTAX
+U> It does. 
+S> OK. 
+U> It is totally green. 
+S> OK, perfect. # SYNTAX/TURNKEEPING
+S> You take the meat and you squish the paste into the places, the butcher has sawed through. There should be two cuts. # SYNTAX/FOCUS 
+U> Done.
+S> You also can take a knife to run through them a little bit to open it up #SYNTAX
+U> Ok
+S> and then press the cream paste into it evenly. 
+U> I have done it.
+S> Hmm 
+U> What's next? 
+S> Use the rest of the dill, the fronds # SYNTAX
+U> Hmm
+S> And push them also in
+U> Sorry? 
+S> You push them also in
+U> OK. 
+S> OK. And now you can turn the pork, rindside up
+U> OK. 
+S> And rub the rind and sides of the pork with the remaining ähmm sea salt. One tablespoon. 
+U> My salt is finished. 
+S> Then use just more salt. 
+U> OK. 
+S> OK, and now you can get out ähh a large roasting tin.
+U> Hmm 
+S> Ähmm And you place the very rough onlion slices in the tin. # SYNTAX
+U> It is done. 
+S> And now you need to place the pork onto the onion. 
+U> How should I do that?
+S> The important thing here is that one side is slightly higher than the other side. So the onions are some kind of pillars. # FOCUS/SYNTAX
+U> OK. I really don't even have the slightest clue, what should, how i should do that. I will just do that randomly. Done. # FOCUS
+S> Ok. ähh. So the reason for that is that the liquid can just pour down # SYNTAX
+U> OK. 
+S> And it doesn't pool in that rind there, because that would make the meat a lttle bit soaky. 
+U> Hmm
+S> So, you place the pork rindside up onto the onions, and then you leave them for an hour ähm until the meat has reached room temperature. # SYNTAX
+U> Hmm
+S> And now you can start preheat the oven for 220 degrees. 
+U> I have done it. What should we do? 
+S> Ähm then pour the 250 milliliters boiled water into the roasting tin and now... # SYNTAX
+U> That's a weird recipe. 
+S> I know. Cover the tin ähh with kitchen foil. # SYNTAX
+U> I don't have a kitchen foil. What should I use instead? 
+S> Then you can maybe use a lid
+U> OK. 
+S> And cook it for around 45 minutes in the hot oven. 
+U> Hmm
+S> And after that just wait 
+U> I have done. 
+S> Aha? Already? These were... # SYNTAX 
+U> Yes, I'm very quick. 
+S> ...very quick 45 minutes. And now you take out the pork and remove they lid. 
+U> Hmm
+S> The meat shoud have softened up and ...
+U> Damn it, I burned myself. 
+S> You're stupid. Ähm..I don't care. 
+U> Haha..about my burned meat. OK, what's next? 
+S> You need a sharp knife, because now you need to define these squares on the rind. 
+U> Ah..I've got cut.  
+S> You're so stupid. 
+S> Just maybe you should just stop with cooking. 
+U> No, no, I want to do that. 
+S> We could just order pizza. 
+U> Haha..do something on your league: order pizza. 
+S> Are you sure that you want to go on? 
+U> I am, I am, I am. 
+S> OK, then be a little bit more careful next time. 
+U> I will. 
+S> Take again a sharp knife. Careful, it is sharp! # SYNTAX
+U> Hmm
+S> And now you can define the squares on the ähh rind. 
+U> OK. 
+S> Cut a little deeper into the original scoring marks. That you have squares of around 2 centimeters. Now, # SYNTAX
+U> Done. Hey, weren't you be waiting for me to say done? 
+S> No, no, I'm not, because you're too slow. Ähh..I should be waiting for you because you're very slow today. # SYNTAX
+U> Yes, please. 
+S> Turn down the oven to 170 degrees. 
+U> Hmm..done.
+S> The pork goes back into the oven. This time without the lid. # SYNTAX/MEMORY
+U> OK. 
+S> And make sure that one side is still higher... # SYNTAX
+U> Yes 
+S> ...than the other. And now roast it for two and a half hours. # SYNTAX
+[pause]
+U> Done
+S> OK, you can try to feel the meat with the tip of a knife. if it's tender or not. Is it tender? # SYNTAX
+U> It's bleeding. 
+S> Then you can give it another 30 minutes in the oven. 
+U> OK. 
+S> And the oven goes back up to 220 degrees. 
+U> Hmm
+S> Leave the meat for further 15 minutes. # SYNTAX/FOCUS 
+U> OK, done. 
+S> The rind should be very crusty, but not burned. # FOCUS
+U> Hmm, hmm.
+S> So around 15 minutes. If takes longer, leave it longer. If it is already...
+U> Should I take a look sometimes? 
+S> Yes, all the time. Just don't burn it. # SYNTAX
+U> Ok. I will try. 
+S> Also, it should be still crispy. 
+U> OK. 
+S> And gold crunchy. Ähh. Some of these, these sqaures should have just popped up. # FOCUS/RELEVANCE
+U> It does. One popped up. 
+S> Yeah, then just wait a little bit. And then...
+U> Ok. They are all popped up
+S> Yeah, then take the pork out and and remove the pork carefully from the from the pan to a cutting board. # SYNTAX
+U> What should I use to do that? 
+S> Think.
+U> And aren't you here to help me? 
+S> OK. Then you use two forks. # RELEVANCE
+U> OK. I have done it. 
+S> OK. Hmm. So now, you cut through both sides of the rib. 
+U> Hmm
+S> And down to where the butcher cut through the bones again. 
+U> Hmm
+S> Then cut a chunky rip section for each person. 
+U> That is done. 
+S> Then you can enjoy your meal now. # RELEVANCE/SYNTAX
+U> OK. Thank you very much.
+S> Prego 
+U> It was a pleasure cooking with you. 
+S> OK.

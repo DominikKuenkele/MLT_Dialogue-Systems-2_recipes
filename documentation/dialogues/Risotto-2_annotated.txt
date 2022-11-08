@@ -1,0 +1,122 @@
+U> <greet>Hello, good evening, Francesca.</greet> 
+S> <greet>Hello, Dominik.</greet>
+U> <answer>Ähmm should we cook something today?</answer> 
+S> <icm:acc*pos>Sure!</icm:acc> <ask>What äh kind äh of ähh kitchen would you like?</ask> # SYNTAX
+U> <answer>I think Italian kitchen would be quite nice.</answer>
+S> <icm:acc*pos>Nice,</icm:acc> <ask>ähh should we prepare ähhh a first course or a second course?</ask> # SYNTAX
+U> <icm:request-pause>Aha.</icm:request-pause> <answer>First course today.</answer> 
+S> <icm:acc*pos>Sure.</icm:acc> <icm:loadplan>OK.</icm:loadplan> <ask>Shall we go for something vegetarian or something with meat?</ask> # keeping 'Ok.' as part of turn-keeping (looking up recepy)
+U> <icm:sem*pos>Hmmmm...meat, vegetarian.</icm:sem> <answer>I think vegetarian is äh..vegetarian today.</answer> 
+S> <icm:acc*pos>Ok.</icm:acc> <ask>And we have a lot of choices. We could do pasta, we could do polenta, we could do hmm Pizza.</ask>  
+U> <answer>Do you have something with rice?</answer> <answer>Maybe a Risotto...</answer>
+S> <icm:acc*pos>Yes, yes. Oh yes.</icm:acc> <ask>I have a baked mushroom risotto.</ask>
+U> <icm:sem*pos>Baked? Hmm..never heard of that.</icm:sem> <icm:acc*pos>But we can try.</icm:acc> 
+S> <joke>Nor I. Haha. Some fake Italian.</joke> <icm:loadplan>OK, well,</icm:loadplan> <answer>ähh it's just 10 to 30 minutes for cooking and less than 30 minutes for preparation.</answer> # SYNTAX; (UN)SERIOUSNESS: keeping humor 
+U> <icm:acc*pos>Sounds good</icm:acc>. <ask>What do we need?</ask> 
+S> <answer>We need olive oil, two tablespoons. One onion, finely chopped.</answer> 
+U> <icm:sem*pos>OK, chopped. aha. </icm:sem>
+S> <answer>Three garlic cloves, finely sliced.</answer> 
+U> <icm:acc*pos>Ah, yes. Sounds good. Sounds good.</icm:acc> 
+S> <answer>Then 400 grams of mixed mushrooms. </answer>
+U> <icm:sem*pos>Mixed mushrooms,</icm:sem> <icm:request-pause> OK, OK,</icm:request-pause> <ask>Champions, do they work?</ask> 
+S> <answer>Yes, here it suggests button and Portobello.</answer> 
+U> <icm:acc*pos>Ahh</icm:acc> 
+S> <answer>But I think it just, uh, accords to taste.</answer> # SYNTAX
+U> <icm:acc*pos>OK,</icm:acc> <ask>I only have champions, but, ....</ask>
+S> <answer>It should be fine.</answer> <answer>And they should be roughly chopped.</answer> 
+U> <icm:sem*pos>Roughly chopped. Ok.</icm:sem> <ask>What else?</ask> 
+S> <answer>Hmm..1-2 tablespoons of Rosemary, according to the taste. Also finely chopped.</answer> # SYNTAX
+U> <icm:acc*pos>Ah.</icm:acc> <ask>Fresh?</ask>   
+S> <answer>Yes, why not?</answer> 
+U> <icm:acc*pos>Ok</icm:acc> 
+S> <answer>And 200 grams of Risotto rice.</answer> 
+U> <icm:acc*pos>Aha</icm:acc> 
+S> <answer>Then ähh 100ml of white wine. </answer>
+U> <icm:sem*pos>Right, perfect. I have some leftover from yesterday evening. </icm:sem>
+S> <icm:acc*pos>Perfect.</icm:acc> <icm:reraise>So,</icm:reraise> <answer>we also need äh 750 milliliters of vegetable stock.</answer> # SYNTAX; LIMITED INPUT ANALYSES/QUANTITY
+U> <icm:acc*pos>Aha. Yes.. perfect </icm:acc>
+S> <answer>And 30 grams of grated parmesan, but we need also a little extra for the topping.</answer> # SYNTAX
+U> <icm:acc*pos>Ok</icm:acc> 
+S> <answer>so like 50 grams.</answer> # FOCUS
+U> <icm:sem*pos>50 grams parmesan. OK. I see, I see.</icm:sem> 
+S> <answer>and extra virgin olive oil for the drizzling.</answer>
+U> <icm:acc*pos>Yeah, sounds good. Sounds good.</icm:acc> <icm:sem*pos>I have that.</icm:sem> <ask>OK, so how do I start? </ask>
+S> <ask>Have you already ähh chopped all of ähh ...</ask> # SYNTAX
+U> <answer>No, no, no, of course not. </answer>
+S> <ask:continuation>...vegetables?</ask:continuation> <request>Then you shall begin by chop everything.</request> # FEEDBACK(2): not changing anything
+U> <ask>That means onions?</ask> 
+S> <answer>Onions.</answer> 
+U> <report:ended>finely chopped in dice. Fine dice.</report:ended> 
+S> <icm:acc*pos>Yes.</icm:acc> <request>Ähh. Then finely sliced garlic. </request>
+U> <icm:acc*pos>OK,</icm:acc> <icm:request-pause> wait, wait, wait.</icm:request-pause> <report:ongoing>I'm chopping, chopping.</report:ongoing> <report:started>OK, slicing the garlic.</report:started> <report:ended>OK, sliced the garlic.</report:ended> 
+S> <request>Then roughly chop the mushrooms. </request>
+U> <icm:sem*neg>Roughly</icm:sem>, <ask>what does roughly mean? </ask>
+S> <answer>It means quite big and irregular. </answer>
+U> <icm:acc*pos>OK, OK. Yes, yes. Hmm.</icm:acc> <answer>Yes, I ähh I think that's fine.</answer> 
+S> <request>Then you should chop the Rosemary finely.</request> # SYNTAX
+U> <icm:acc*pos>OK.</icm:acc> <ask>3 branches or how many was it?</ask> 
+S> <answer>It was just one to two tablespoons...</answer> 
+U> <icm:sem*pos>Tablespoon.</icm:sem> 
+S> <answer:continuation>...of just the chopped Rosemary.</answer:continuation> # FOCUS
+U> <icm:acc*pos>OK, OK, I see.</icm:acc> <report:started>Chopping.</report:started> <report:ended>Ok, done.</report:ended> 
+S> <icm:acc*pos>OK,</icm:acc> <request>then you can begin by preheating the oven to 180 degrees</request> # SYNTAX
+U> <icm:sem*pos>OK 180 degrees.</icm:sem> <report:ended>Yeah, ok. Done.</report:ended>
+S> <request>Then ähh you take an oven proof lidded dish.</request> 
+U> <icm:acc*pos> Hmm </icm:acc>
+S> <request> Heat the oil and fry the onions for three minutes.</request> 
+U> <icm:sem*pos> OK,</icm:sem> <report:ended>throwing in the onions.</report:ended>
+S> <request:continuation> Or until they start to soften. </request:continuation># SYNTAX
+U> <icm:acc*pos>OK,</icm:acc> <ask>what about the garlic?</ask> 
+S> <answer>You should add it later when the onions are softer.</answer> # SYNTAX
+U> <icm:acc*pos>Ok</icm:acc> 
+S> <request>You add the garlic and cook it for 5 minutes.</request> # SYNTAX
+U> <icm:acc*pos>OK,</icm:acc> <report:ended>both is done.</report:ended> 
+S> <request>Add the mushrooms for three to four minutes or until they are soft.</request> # SYNTAX
+U> <icm:acc*pos>OK. Hmm..ok.</icm:acc> <report:ended>Throwing mushrooms in.</report:ended> <ask>Shall I stir them around or just let them be?</ask> 
+S> <answer>Yes..yes. Stir them around a bit, not too much, to not break them.</answer> 
+U> <report:ongoing>Doing it, doing it.</report:ongoing> 
+[pause] 
+S> <icm:con*neg>What are you doing?</icm:con> <joke>Are you going to collect the mushrooms youself?</joke> # (UN)SERIOUSNESS: keeping humor
+U> <report:ended>Haha..ok. I'm done.</report:ended> 
+S> <icm:acc*pos>Perfect.</icm:acc> <request>Then you can stir in the Rosemary.</request> 
+U> <icm:per*neg>The Rosemary?</icm:per> 
+S> <answer>Yes</answer>
+U> <icm:acc*pos>Ok</icm:acc> 
+S> <request>Add the Risotto rice and cook until the grains appear glassy.</request> 
+U> <ask>What does glassy mean?</ask> 
+S> <answer>Hmm..I think transparent maybe.</answer> # FOCUS/RELEVANCE
+U> <icm:acc*pos>I will try that. Hmm. Hmm.</icm:acc> <ask>And now?</ask> 
+S> <request>Stir in the wine and stock</request> 
+U> <icm:sem*pos>The wine?</icm:sem> <ask>Shall I ähmm...use a different temperature or just the same?</ask> 
+S> <answer>No, it's ok.</answer> 
+U> <icm:acc*pos>Hmm..OK.</icm:acc> <answer>It starts zisching.</answer> <report:started>Ok..adding the stock now.</report:started> <ask>And now?</ask> 
+S> <answer>Now...</answer> 
+U> <ask>Stirring?</ask> <ask>Lid on?</ask> <ask>Or what?</ask> 
+S> <answer>It is fine.</answer> <request>Now you just place the lid on the dish and bake it for 15 minutes</request> # SYNTAX
+U> <icm:acc*pos>Ok</icm:acc> 
+S> <request:continuation>but stir it half way through.</request:continuation> # SYNTAX
+U> <icm:acc*pos>OK.</icm:acc> 
+S> <proposal>So you we might put ähh a 7 1/2 minutes timer, stir, and then another 7 1/2 minutes timer.</proposal>
+U> <icm:acc*pos>Ok, ok. Perfect.</icm:acc> <request>Can you set the timer, please?</request>
+S> <icm:acc*pos>Ok</icm:acc> 
+U> <thank>Thanks</thank> 
+S> <icm:reraise>Now,</icm:reraise> <request>stir in the parmesan and bake it for three more minutes.</request>
+U> <icm:acc*pos>Hmm</icm:acc> 
+S> <proposal>Should I set the timer?</proposal>
+U> <icm:acc*pos>Yeah..</icm:acc> <report:ended>parmesan is in</report:ended>
+S> <report:ended>Timer is set.</report:ended> <request>Now sprinkle over some extra parmesan.</request> # FOCUS
+U> <report:failed>Oh no, I forgot it again. I just put all of the parmesan into the dish.</report:failed>
+S> <request>Then grape it quickly.</request> # SERIOUSNESS
+U> <report:failed>I don't have any anymore.</report:failed> <icm:request-pause>OK. Next time maybe.</icm:request-pause> <ask>Well, can I use something else?</ask>
+S> <answer>Can you maybe use another cheese?</answer> # SYNTAX
+U> <ask>I have some tasty cheddar.</ask> 
+S> <joke>Perfect, it will ruin the whole dish, but already the Risotto is completely mushy.</joke> # (UN)SERIOUSNESS
+U> <ask>What would you recommend? Should add it, or...</ask> 
+S> <answer>Hmm. You can ähh add it a bit and not too much please.</answer> 
+U> <icm:acc*pos>Ok</icm:acc> 
+S> <joke>Please!</joke> # (UN)SERIOUSNESS
+U> <icm:acc*pos>Haha..ok.</icm:acc> 
+S> <request>Now drizzle extra virgin olive oil on top and finish with a little black pepper.</request> # SYNTAX
+U> <icm:sem*pos>Hmm. Black pepper? I like black pepper.</icm:sem> 
+S> <request>Now serve and enjoy your meal.</request> <greet>Bon appetit!</greet> 
+U> <thank>Thank you very much.</thank> 

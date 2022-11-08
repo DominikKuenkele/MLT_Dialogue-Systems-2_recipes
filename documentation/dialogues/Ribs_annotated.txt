@@ -1,0 +1,186 @@
+U> <greet>Hello, Dominik.</greet> 
+S> <greet>Hello, Francesca. Good evening.</greet>
+U> <greet>Good evening.</greet> <answer>Shall we cook something?</answer> 
+S> <icm:acc*pos>Yes, sounds really good.</icm:acc> <ask>What would you like to eat?</ask> # SYNTAX
+U> <answer>Well, I have ähh some meat in the freezer. I have some Ribs.</answer>
+S> <icm:und*chk>Some ribs?</icm:und>
+U> <answer>Do you..can you suggest me a good recipe for ribs, please? </answer>
+S> <icm:loadplan>Hmm..let me think,</icm:loadplan> <ask>I have found something Norwegian.</ask> # SYNTAX 
+U> <icm:acc*pos>Oh</icm:acc>
+S> <ask>Would you like to try that?</ask> # FOCUS/RELEVANCE
+U> <icm:acc*pos>Yes, yes. Sure. I would be interested. </icm:acc>
+S> <icm:und*chk>It is pork, right? </icm:und>
+U> <icm:acc*pos>I have it, yes, pork ribs. </icm:acc>
+S> <icm:acc*pos>Perfect.</icm:acc> <icm:loadplan>I think we can try that maybe.</icm:loadplan> <ask>It'll take around 2 hours and additionally 30 minutes for preparation Is it fine?</ask> # FOCUS
+U> <icm:acc*pos>It is. It is fine. It is for a later dinner. </icm:acc>
+S> <icm:acc*pos>OK. Then we can try that.</icm:acc> <answer>So, we would need the pork ribs. </answer>
+U> <icm:acc*pos>Hmm</icm:acc>
+S> <answer>Ähh, we need garlic. </answer>
+U> <icm:acc*neg> I have allergic to garlic.</icm:acc>
+S> <icm:acc*pos>Ohh</icm:acc> 
+U> <ask>What could what should I use instead? </ask>
+S> <answer>I think you can just leave it out in this case.</answer> # FOCUS/RELEVANCE
+U> <icm:acc*pos>OK.</icm:acc> <ask>What else then?</ask> 
+S> <answer>Sea salt, flakes. </answer>
+U> <icm:acc*pos>Yes</icm:acc>
+S> <icm:und*chk>Hmm. You have flakes? </icm:und>
+U> <icm:acc*pos>Yes, I do. Yeah. I happen to have.</icm:acc> 
+S> <icm:acc*pos>OK, perfect.</icm:acc> <answer>And also ähh juniper berries.</answer> 
+U> <icm:acc*pos>Hmm. I have.</icm:acc>
+S> <icm:acc*pos>Hmm..ok.</icm:acc> <answer>Around a teaspoon.</answer> # SYNTAX 
+U> <icm:acc*pos>Hmm</icm:acc>
+S> <answer>And a large bunch of ähh fresh dill. </answer>
+U> <icm:acc*pos>I have.</icm:acc> <joke>Who doesn't?</joke> 
+S> <icm:acc*pos>OK.</icm:acc> <request>The fronds and stalks should be separated</request> # SYNTAX
+U> <report:ended>I have.</report:ended>
+S> <icm:acc*pos>Ok, perfect.</icm:acc> <answer>Ähh.. around 40 grams.</answer> # SYNTAX 
+U> <joke>I went to the forest just yesterday. To grab my dill.</joke>
+S> <joke:response>That's great. That's perfectly prepared.</joke:response> <answer>Additionally you need also two onions. </answer>
+U> <icm:acc*pos>Yes.</icm:acc>
+S> <answer>And they ähh need to be peeled and also cut later in...</answer>
+U> <report:started>I will do that now.</report:started>
+S> <answer:continuation>...three thick slices. Not chopped.</answer:continuation> # SYNTAX
+U> <report:ended>Done</report:ended>
+S> <icm:acc*pos>OK.</icm:acc> <answer>And in the end you also need around ähhmm 250 milliliters boiled water.</answer> # SYNTAX 
+U> <icm:acc*pos>OK. </icm:acc>
+S> <ask>Do you want to start?</ask> <ask>Do you have everything?</ask> # SYNTAX 
+U> <icm:sem*pos>Yes, I am ready. </icm:sem>
+S> <icm:acc*pos>OK then.</icm:acc*pos> <request>We start by taking the pork out of the fridge.</request> # SYNTAX
+U> <icm:acc*pos>Yes</icm:acc>
+S> <request>Let it rest for an hour.</request> # SYNTAX
+U> <icm:acc*pos>OK,</icm:acc> <ask>what should they do in the mean times? </ask>
+S> <request>You need to wait right now.</request> # SYNTAX/MEMORY
+U> <icm:acc*pos>Yes,</icm:acc> <report:started>I wait,</report:started> <report:ongoing>waiting, waiting, waiting.</report:ongoing> <ask>And now?</ask> # REPETITION
+S> <request>Take two tablespoons of salt and put them in the mortar.</request> # MEMORY
+U> <icm:acc*pos>OK.</icm:acc> 
+S> <request>And add the juniper berries </request>
+U> <icm:acc*pos>Hmm</icm:acc>
+S> <request>and the stalks of the dill. </request>
+U> <icm:acc*pos>Ok.</icm:acc>
+S> <answer>The rest you need for later.</answer> 
+U> <icm:acc*pos>Ok.</icm:acc>
+S> <request>And then you just start ähmm bashing them, grinding, crushing, whizzing, whatever you need to do. </request>
+U> <report:ended>Done it. All </report:ended>
+S> <ask>In the end you should have an aromatic green paste.</ask> # SYNTAX
+U> <answer>It does.</answer> 
+S> <icm:acc*pos>Ok.</icm:acc> 
+U> <answer>It is totally green.</answer> 
+S> <icm:acc*pos>OK, perfect.</icm:acc> # SYNTAX/TURNKEEPING
+S> <request>You take the meat and you squish the paste into the places, the butcher has sawed through. There should be two cuts.</request> # SYNTAX/FOCUS 
+U> <report:ended>Done.</report:ended>
+S> <answer>You also can take a knife to run through them a little bit to open it up</answer> #SYNTAX
+U> <icm:acc*pos>Ok</icm:acc>
+S> <request>and then press the cream paste into it evenly.</request> 
+U> <report:ended>I have done it.</report:ended>
+S> <icm:acc*pos>Hmm</icm:acc> 
+U> <ask>What's next?</ask> 
+S> <request>Use the rest of the dill, the fronds</request> # SYNTAX
+U> <icm:acc>Hmm</icm:acc>
+S> <request:continuation>And push them also in</request:continuation>
+U> <icm:per*neg>Sorry?</icm:per> 
+S> <request>You push them also in</request>
+U> <icm:acc*pos>OK.</icm:acc> 
+S> <icm:acc*pos>OK.</icm:acc> <request>And now you can turn the pork, rindside up</request>
+U> <icm:acc*pos>OK.</icm:acc> 
+S> <request>And rub the rind and sides of the pork with the remaining ähmm sea salt. One tablespoon. </request>
+U> <ask>My salt is finished. </ask>
+S> <answer>Then use just more salt. </answer>
+U> <icm:acc*pos>OK.</icm:acc> 
+S> <icm:acc*pos>OK,</icm:acc> <request>and now you can get out ähh a large roasting tin.</request>
+U> <icm:acc*pos>Hmm</icm:acc> 
+S> <request>Ähmm And you place the very rough onlion slices in the tin. </request> # SYNTAX
+U> <report:ended>It is done. </report:ended>
+S> <request>And now you need to place the pork onto the onion. </request>
+U> <ask>How should I do that?</ask>
+S> <answer>The important thing here is that one side is slightly higher than the other side. So the onions are some kind of pillars.</answer> # FOCUS/SYNTAX
+U> <icm:sem*neg>OK. I really don't even have the slightest clue, what should, how i should do that.</icm:sem><report:started>I will just do that randomly.</report:started> <report:ended>Done.</report:ended> # FOCUS
+S> <icm:acc*pos>Ok.</icm:acc> <answer>ähh. So the reason for that is that the liquid can just pour down </answer># SYNTAX
+U> <icm:acc*pos>Ok.</icm:acc>
+S> <answer>And it doesn't pool in that rind there, because that would make the meat a lttle bit soaky.</answer> 
+U> <icm:acc*pos>Hmm</icm:acc>
+S> <icm:reraise>So,</icm:reraise> <request>you place the pork rindside up onto the onions, and then you leave them for an hour ähm until the meat has reached room temperature. </request># SYNTAX
+U> <icm:acc*pos>Hmm</icm:acc>
+S> <request>And now you can start preheat the oven for 220 degrees. </request>
+U> <report:ended>I have done it.</report:ended> <ask>What should we do?</ask> 
+S> <request>Ähm then pour the 250 milliliters boiled water into the roasting tin and now...</request> # SYNTAX
+U> <joke>That's a weird recipe.</joke> 
+S> <joke:response>I know.</joke:response> <request>Cover the tin ähh with kitchen foil.</request> # SYNTAX
+U> <icm:sem*neg>I don't have a kitchen foil.</icm:sem> <ask>What should I use instead?</ask> 
+S> <answer>Then you can maybe use a lid</answer>
+U> <icm:acc*pos>OK.</icm:acc> 
+S> <request>And cook it for around 45 minutes in the hot oven. </request>
+U> <icm:acc*pos>Hmm</icm:acc>
+S> <request>And after that just wait </request>
+U> <report:ended>I have done.</report:ended> 
+S> <icm:und*chk>Aha? Already?</icm:und> <joke>These were...</joke> # SYNTAX 
+U> <joke:response>Yes, I'm very quick.</joke:response> 
+S> <joke:continuation>...very quick 45 minutes.</joke:continuation> <request>And now you take out the pork and remove they lid.</request> 
+U> <icm:acc*pos>Hmm</icm:acc>
+S> <ask>The meat shoud have softened up and ...</ask>
+U> <report:failed>Damn it, I burned myself. </report:failed>
+S> <joke>You're stupid. Ähm..I don't care.</joke> 
+U> <joke:response>Haha..about my burned meat.</joke:response> <ask>OK, what's next?</ask> 
+S> <reqeust>You need a sharp knife, because now you need to define these squares on the rind. </reqeust>
+U> <report:failed>Ah..I've got cut.</report:failed>  
+S> <joke>You're so stupid.</joke> <ask>Just maybe you should just stop with cooking. </ask>
+U> <answer>No, no, I want to do that.</answer> 
+S> <joke>We could just order pizza. </joke>
+U> <joke:response>Haha..do something on your league: order pizza. </joke:response>
+S> <ask>Are you sure that you want to go on? </ask>
+U> <answer>I am, I am, I am. </answer>
+S> <icm:acc*pos>OK,</icm:acc> <joke>then be a little bit more careful next time. </joke>
+U> <icm:acc*pos>I will. </icm:acc>
+S> <request>Take again a sharp knife.</request> <joke>Careful, it is sharp!</joke> # SYNTAX
+U> <icm:acc*pos>Hmm</icm:acc>
+S> <request>And now you can define the squares on the ähh rind.</request> 
+U> <icm:acc*pos>OK.</icm:acc> 
+S> <request>Cut a little deeper into the original scoring marks. That you have squares of around 2 centimeters.</request> <request>Now,</request> # SYNTAX
+U> <report:ended>Done.</report:ended> <icm:acc*neg>Hey, weren't you be waiting for me to say done? </icm:acc>
+S> <joke>No, no, I'm not, because you're too slow. Ähh..I should be waiting for you because you're very slow today. </joke># SYNTAX
+U> <joke:response>Yes, please.</joke:response> 
+S> <request>Turn down the oven to 170 degrees.</request> 
+U> <report:ended>Hmm..done.</report:ended>
+S> <request>The pork goes back into the oven. This time without the lid.</request> # SYNTAX/MEMORY
+U> <icm:acc*pos>OK.</icm:acc> 
+S> <request>And make sure that one side is still higher...</request> # SYNTAX
+U> <icm:acc*pos>Yes </icm:acc>
+S> <request:continuation>...than the other.</request:continuation> <request>And now roast it for two and a half hours.</request> # SYNTAX
+[pause]
+U> <report:ended>Done</report:ended>
+S> <icm:acc*pos>OK,</icm:acc> <ask>you can try to feel the meat with the tip of a knife. if it's tender or not. Is it tender?</ask> # SYNTAX
+U> <answer>It's bleeding. </answer>
+S> <request>Then you can give it another 30 minutes in the oven. </request>
+U> <icm:acc*pos>OK.</icm:acc> 
+S> <request>And the oven goes back up to 220 degrees. </request>
+U> <icm:acc*pos>Hmm</icm:acc>
+S> <request>Leave the meat for further 15 minutes.</request> # SYNTAX/FOCUS 
+U> <report:ongoing>OK, done. </report:ongoing>
+S> <request:continuation>The rind should be very crusty, but not burned.</request:continuation> # FOCUS
+U> <icm:acc*pos>Hmm, hmm.</icm:acc>
+S> <request:continuation>So around 15 minutes. If takes longer, leave it longer. If it is already...</request:continuation>
+U> <ask>Should I take a look sometimes? </ask>
+S> <answer>Yes, all the time. Just don't burn it.</answer> # SYNTAX
+U> <icm:acc*pos>Ok. I will try.</icm:acc> 
+S> <request:continuation>Also, it should be still crispy.</request:continuation> 
+U> <icm:acc*pos>OK.</icm:acc> 
+S> <request:continuation>And gold crunchy.</request:continuation> <ask>Ähh. Some of these, these sqaures should have just popped up.</ask> # FOCUS/RELEVANCE
+U> <answer>It does. One popped up.</answer> 
+S> <icm:acc*pos>Yeah,</icm:acc> <request>then just wait a little bit. And then...</request>
+U> <icm:acc*pos>Ok.</icm:acc> <report:ended>They are all popped up</report:ended>
+S> <icm:acc*pos>Yeah,</icm:acc> <request>then take the pork out and and remove the pork carefully from the from the pan to a cutting board.</request> # SYNTAX
+U> <ask>What should I use to do that? </ask>
+S> <joke>Think.</joke>
+U> <joke:response>And aren't you here to help me?</joke:response> 
+S> <icm:acc*pos>OK.</icm:acc> <answer>Then you use two forks.</answer> # RELEVANCE
+U> <icm:acc*pos>OK.</icm:acc> <report:ended>I have done it.</report:ended> 
+S> <icm:acc*pos>OK.</icm:acc> <request>Hmm. So now, you cut through both sides of the rib. </request>
+U> <icm:acc*pos>Hmm</icm:acc>
+S> <request:continuation>And down to where the butcher cut through the bones again. </request:continuation>
+U> <icm:acc*pos>Hmm</icm:acc>
+S> <request>Then cut a chunky rip section for each person. </request>
+U> <report:ended>That is done.</report:ended> 
+S> <greet>Then you can enjoy your meal now.</greet> # RELEVANCE/SYNTAX
+U> <icm:acc*pos>OK.</icm:acc> <thank>Thank you very much.</thank>
+S> <thank>Prego</thank> 
+U> <greet>It was a pleasure cooking with you.</greet> 
+S> <icm:acc*pos>OK.</icm:acc>

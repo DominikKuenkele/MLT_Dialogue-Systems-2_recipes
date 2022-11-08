@@ -1,0 +1,10 @@
+U> <answer>I would like to make ähh a typical Italian dish. </answer>
+S> <icm:sem*pos>Ah, Italian.</icm:sem> <ask>There are different kind of Italian dishes. Would you like to do pasta or pizza or hmm something else? Some pies?</ask> # SYNTAX
+U> <answer>I would like to do some pasta recipe.</answer>
+S> <icm:acc*pos>Ok.</icm:acc> <icm:loadplan>Hmm.</icm:loadplan> <ask>I think one of the most famous dishes is the Lasagne. Do you want to do Lasagne?</ask> # SYNTAX
+U> <icm:acc*pos>Oh, sure.</icm:acc*pos>  
+S> <icm:loadplan>OK. I have a recipe for you and you can prepare it.</icm:loadplan> # SYNTAX
+U> <icm:acc*pos>Yes, I would like to do.</icm:acc> <ask>Please ähh, what are the ingredients?</ask> 
+S> <answer>You need a little bit olive oil.</answer> <answer>You need beef mince.</answer> <answer>Then we need two onions.</answer> <answer>Four sticks celery if you like.</answer> <ask>You can choose.</ask> # SYNTAX/FOCUS
+U> <ask>What could I  use as a substitute of celery.</ask>
+S> <icm:und*chk>Of celery?</icm:und>

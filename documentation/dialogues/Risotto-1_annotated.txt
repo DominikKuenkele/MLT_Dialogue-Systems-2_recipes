@@ -1,0 +1,15 @@
+U> <greet>Hejhej.</greet> 
+S> <greet>Hej</greet> 
+U> <answer>Shall we cook something?</answer> <answer>I would..I would like to cook something Italian today</answer> 
+S> <icm:acc*pos>Sure.</icm:acc> <ask>What ähh kind of hmm dish would you like to prepare? First course, second course?</ask> 
+U> <answer>Ähhh. First course sounds good.</answer> 
+S> <icm:acc*pos>OK.</icm:acc> <ask>Shall we go then for a pizza? Lasagne? Pasta? Rice maybe?</ask> # SYNTAX
+U> <icm:sem*pos>Ähh Rice?</icm:sem> <answer>Risotto maybe. What do you think of a Risotto? </answer>
+S> <icm:sem*pos>OK, Risotto.</icm:sem> <ask>Ähmm. Would you prefer a vegetarian recipe or a meat recipe?</ask> 
+U> <answer>Ähh..vegetarian I think today.</answer> 
+S> <icm:acc*pos>Ok.</icm:acc> <ask>What about a baked mushroom Risotto?</ask> # SYNTAX/IMMEDIACY
+U> <icm:sem*chk>Baked? Mushroom?</icm:sem>
+S> <icm:acc*pos>Yes.</icm:acc> 
+U> <decleratice>it sounds very traditional Italian.</decleratice> 
+S> <ask>We can give it a try.</ask> # LIMITED INPUT ANALYSIS
+U> </icm:acc*pos>Yes</icm:acc> 
