@@ -45,7 +45,11 @@
 \usepackage{hyperref}
 \usepackage{minted}
 \usepackage{framed}
+\usepackage{multirow}
+\usepackage{pifont}
+\usepackage{float}
 
+\restylefloat{table}
 
 \definecolor{color_background}{rgb}{0.98,0.98,0.98}
 \definecolor{shadecolor}{rgb}{0.98,0.98,0.98}
@@ -65,6 +69,7 @@
     bgcolor=color_background,
     }
 \usemintedstyle{one-dark}
+\setmintedinline{breaklines}
 
 \DeclareCaptionType{Dialogue}
 
@@ -72,7 +77,7 @@
     {\captionsetup{
         type=Dialogue,
         skip=2pt,
-        belowskip=15pt
+        belowskip=13pt
         }
     }
     {}
@@ -108,20 +113,18 @@
 %----------------------------------------------------------------------------------------
 %	ASSIGNMENT CONTENT
 %----------------------------------------------------------------------------------------
-\listoftodos
-
 \section*{Introduction}
-In this project,I wanted to create something, I could actually use in my life. Since I like very much to cook, building a dialogue system that supports here, was not far fetched. The goal however was not only to create a system that can handle only few recipes and situations, but can also be extended easily with many more recipes. For this, I wrote a script in \emph{python} that can translate a more user friendly description of a recipe into the necessary goals, actions and so on in TDM.
+In this project, I wanted to create something, I could also actually use in my daily life. Since I like very much to cook, building a dialogue system that supports here, was not far fetched. The goal however was not only to create a system that can handle just a few recipes and situations, but can also be extended easily with many more recipes. For this, I wrote a script in \emph{python} that can translate a more user friendly description of a recipe into the necessary goals, actions and so on in TDM.
 
 \section*{APIs}\label{section:api}
-I didn't use any explicit external API in the project. However, I relied heavily on the http service to add functionality to the dialogue system and lookup information from local files. This includes firstly a lookup dictionary for detailed information about steps in the recipes. Here, I listed the needed ingredients for each step with their amount and form (e.g. onions: two, roughly chopped), used objects and their temperature (e.g. oven: 180 degrees) as well as information about time end ending conditions of a step. With this service, I was able to feed the system the needed information for a specific step. Was the information not specified in the current step, it utilized the information from to the last step. With this approach, I could respond to retroactive questions of a user. A simple lookup file lookes like the following:
+I didn't use any explicit external API in the project. However, I relied heavily on the http service to add functionality to the dialogue system and look up information from local files. This includes firstly a lookup dictionary for detailed information about steps in the recipes. Here, I listed the needed ingredients for each step with their amount and form (e.g. onions: two, roughly chopped), used objects and their temperature (e.g. oven: 180 degrees) as well as information about time end ending conditions of a step. With this service, I was able to feed the system the needed information for a specific step. Was the information not specified in the current step, it utilized the information from to the last step. With this approach, I could respond to retroactive questions of a user. A simple lookup file lookes like the following:
 
 \begin{code}
     \inputminted{json}{includes/recipe_lookup.json}
     \caption{Example of recipe loopup}
 \end{code}
 
-Secondly, I used a simple dictionary to lookup substitutes for ingredients. Unfortunately, I couldn't find an API for it, but just text on a website. To make the http service faster and simpler, I downloaded the data and stored it in a json file, which can be easily accessed by the service.
+Secondly, I used a simple dictionary to look up substitutes for ingredients. Unfortunately, I couldn't find an API for it, but just text on a website. To make the http service faster and simpler, I downloaded the data and stored it in a json file, which can be easily accessed by the service.
 
 \section*{Data collection}
 For the data collection I recorded four dialogues. Two of them lasted around 10 minutes, while only the first minute was recorded for the other two. Still, these short beginnings held some interesting information and I distilled and analyzed them as well.
@@ -131,7 +134,6 @@ The dialogues were recorded in a roleplay scenario and not actually while cookin
 \subsection*{Analysis of content}
 First, I tried to analyze the dialgues in respect to the domain and how the participants were talking about the topic of cooking. The instructions consisted of a verb that was either intransitive, transitive or ditransitive. The transitive and ditransitive verbs only referred to \emph{ingredients} or \emph{objects}. If it was an ingredient, they could add the amount (e.g. 'two teaspoons') to use or the form, it should be in (e.g. 'roughly chopped'). Objects could optionally be enriched with information about it's temperature. 
 In some cases, the instructor could add also information to the whole step about time (e.g. 'for three minutes') or an ending condition (e.g. 'until it appears glassy').
-
 
 \begin{captionedDialogue}
     \begin{mydialogue}
@@ -172,8 +174,8 @@ These attributes are also used in the \emph{recipe\_lookup} mentioned in the API
 Looking at how the dialogue was built up, I could also find some interesting ideas. These can be differentiated into behaviour of the system and behaviour of the user.
 
 \subsubsection*{Acknowledgements (user)}
-It was very noticeable, how often the user was acknowledging and confirming the utterances by the system. I could differentiate three different types. In the first, the user was just using one word (e.g. 'ok', 'yes') or a non-lexical sound (e.g. 'hmm', 'uh-hmm'). In the second one, the user repeated a word from the previous system utterance. This can also be seen as a perceptual confirmation in some cases. In the last, the user describes the current situation and by this verifies it with the system. This type is often on the border of being an acknowledgement and a question by the user. Dialogues \ref{dia:ack1} and \ref{dia:ack2} show some examples.
-
+It was very noticeable, how often the user was acknowledging and confirming the utterances by the system. I could differentiate three different types. In the first, the user was just using one word (e.g. 'ok', 'yes') or a non-lexical sound (e.g. 'hmm', 'uh-hmm'). In the second one, the user repeated a word from the previous system utterance. This can also be seen as a perceptual confirmation in some cases. In the last, the user describes the current situation and by this verifies it with the system. This type is often on the border of being an acknowledgement or being a question by the user. Dialogues \ref{dia:ack1} and \ref{dia:ack2} show some examples.
+\newpage
 \begin{captionedDialogue}
     \begin{mydialogue}
         \speak{S>} Then 400 grams of mixed mushrooms. 
@@ -197,7 +199,7 @@ It was very noticeable, how often the user was acknowledging and confirming the 
 \end{captionedDialogue}
 
 \subsubsection*{Early steps (user)}
-Another behaviour by the user was that they were sometimes doing steps, before they were told by the instructor. In Dialoge \ref{dia:early_step}, the user is deciding to already cut the onions, while the instructor is just listing the ingredients. Later in the dialogue, the instructor rembers it and omits the actual step in the recipe.
+Another behaviour by the user was that they were sometimes doing steps, before they were told to by the instructor. In Dialoge \ref{dia:early_step}, the user is deciding to already cut the onions, while the instructor is just listing the ingredients. Later in the dialogue, the instructor remembers it and omits the actual step in the recipe.
 
 \begin{captionedDialogue}
     \begin{mydialogue}
@@ -214,7 +216,7 @@ Another behaviour by the user was that they were sometimes doing steps, before t
 \end{captionedDialogue}
 
 \subsubsection*{Substitutions (user)}
-Furthermore, the user was also asking the instructor to substitute ingredients. This was done by either explicitly proposing an ingredient or just asking the instructor for any ingredient. In some cases the user was also explicitly stating, which ingredient should be substituted, in most cases, this information was implicitly in the context. Dialoges \ref{dia:impl_substitution} and \ref{dia:expl_substitution} show some examples.
+Furthermore, the user was also asking the instructor to substitute ingredients. This was done by either explicitly proposing an ingredient or just asking the instructor for any ingredient. In some cases the user was also explicitly stating, which ingredient should be substituted, in most cases, this information was implicit in the context. Dialoges \ref{dia:impl_substitution} and \ref{dia:expl_substitution} show some examples.
 
 \begin{captionedDialogue}
     \begin{mydialogue}
@@ -264,8 +266,7 @@ Additionally, the user, as well as the instructor were using jokes or 'unserious
 
 \begin{captionedDialogue}
     \begin{mydialogue}
-        \speak{U>} OK. Hmm..ok. Throwing mushrooms in. Shall I stir them around or just let them be? 
-        \speak{S>} Yes..yes. Stir them around a bit, not too much, to not break them. 
+        \speak{S>} [...] Stir them around a bit, not too much, to not break them. 
         \speak{U>} Doing it, doing it. 
         
         \medskip
@@ -279,8 +280,18 @@ Additionally, the user, as well as the instructor were using jokes or 'unserious
     \label{dia:joke}
 \end{captionedDialogue}
 
-\subsubsection*{Ask for steps (user)}
-
+\subsubsection*{Ask for specific action (user)}
+In the dialogues, it could also be seen that the user sometimes asks if they should do a specific action. In contrast to a \emph{how} question, the user already proposes something he should (or should not) do.
+\begin{captionedDialogue}
+    \begin{mydialogue}
+        \speak{S>} Add the mushrooms for three to four minutes or until they are soft.
+        \speak{U>} OK. Hmm..ok. Throwing mushrooms in. Shall I stir them around or just let them be? 
+        \speak{S>} Yes..yes. Stir them around a bit, not too much, to not break them. 
+        \speak{U>} Doing it, doing it. 
+    \end{mydialogue}
+    \caption{User asking for specific action}
+    \label{dia:asking_action}
+\end{captionedDialogue}
 
 \subsubsection*{Giving information step by step (system)}
 In some cases, the system was not giving all information in one step, but in multiple turns. That happened for example, when the instructor was reading the ingredients. Sometimes they were giving the ingredient in the first turn and after the user acknowledged it they gave the amount or form (see Dialogue \ref{dia:multiple_turns}).
@@ -296,7 +307,19 @@ In some cases, the system was not giving all information in one step, but in mul
 \end{captionedDialogue}
 
 \subsubsection*{Wating for user (system)}
+Most of the time the instructor was giving the next instruction, after the user acknowledged the previous. But occasionally, the instructor also waited for the user to request the next step. This may be due to the roleplay setting and would need to be verified in future experiments.
 
+\begin{captionedDialogue}
+    \begin{mydialogue}
+        \speak{S>} and then press the cream paste into it evenly. 
+        \speak{U>} I have done it.
+        \speak{S>} Hmm 
+        \speak{U>} What's next? 
+        \speak{S>} Use the dill, the rest of the dill. You have the fronds
+    \end{mydialogue}
+    \caption{Instructor waiting for user to request step}
+    \label{dia:instructor_waiting}
+\end{captionedDialogue}
 
 \subsubsection*{Adapting to user language (system)}
 In some few cases, the instructor also adpated his answers to the language and words, the user used as seen in Dialogue \ref{dia:user_language}.
@@ -315,16 +338,16 @@ In some few cases, the instructor also adpated his answers to the language and w
 
 
 \section*{Implementation}
-The goal of my project was to create a dialogue system that can handle user input as flexible as possible, but at the same time is also easy to extend. This especially applied to adding new recipes to the system. For this, it is now possible to write recipe instructions in a rather simple XML file. A \emph{generator} is translating this file into the necessary changes of the TDM files (Ontology, Domain, Grammar, nlg, expected input). There are two main reasons for this approach. 
+As mentioned, I wanted to create a \emph{generator} that is translating an easy to write description of recipes into the necessary changes of the TDM files (Ontology, Domain, Grammar, nlg, expected input, visual output). There are two main reasons for this approach. 
 
-First of all, an end-user shouldn't need to have too much knowledge of TDM to adapt the system to his needs. Adding a recipe involves changing a lot of different files. All these changes furthermore need to be aligned and are not allowed to be in conflict with each other. If a user would only need to change one file with a rather simple syntax, the user experience would be much better, and errors will be prevented.
+First of all, an end-user shouldn't need to have too much knowledge of how to implement it technically. These changes furthermore need to be aligned and are not allowed to be in conflict with each other. If a user would only need to change one file with a rather simple syntax, the user experience would be much better, and errors will be prevented.
 
 The second reason that was also much more important for myself in the last weeks is the simplification of the develeopment process itself. With this approach, I didn't need to worry of forgetting to change files or to add specific tags to a file. I only needed to define them once in the \emph{generator} and it was applied to all recipes. Furthermore, this made it much easier to change a certain behaviour that applied to all recipes, since I only needed to change the template instead of every single recipe itself. And lastly, this also gave me a quick lookup, how I implemented a feature and which files it involved.
 
-One restriction of this approach is that I could implement features only in a generic way, since it needs to take all recipes into account. Very specific recipe-dependent requirements couldn't be implemented in an easy way. On the other hand, this makes the system predictable and the user a better understanding of the features and when to use them.
+One restriction of this approach is that I could implement features only in a generic way, since it needs to take all recipes into account. Very specific recipe-dependent requirements couldn't be implemented in an easy way. On the other hand, this makes the system predictable and gives the user a better understanding of the features and how to use them.
 
 \subsection*{Generator}
-The generator is adapting the content of the following files: \emph{domain.xml}, \emph{ontology.xml}, \emph{grammer\_eng.xml}, \emph{nlg.json} and \emph{expected\_input.json}. Some parts of these files are recipe-independent. These static parts can be added to the corresponding template file. The generator will then read the XML file containing the recipes (\emph{recipes.xml}) and insert the dynamic recipe-dependent parts into the templates. Furthermore, it will generate a \emph{recipe lookup} file that contains information about each step of all recipes.
+The generator is adapting the content of the following files: \emph{domain.xml}, \emph{ontology.xml}, \emph{grammer\_eng.xml}, \emph{nlg.json}, \emph{visual\_output.json} and \emph{expected\_input.json}. Some parts of these files are recipe-independent. These static parts can be added to the corresponding template file. The generator will then read the XML file containing the recipes (\emph{recipes.xml}) and insert the dynamic recipe-dependent parts into the templates. Furthermore, it will generate the \emph{recipe lookup} file that contains information about each step of all recipes.
 
 \subsubsection*{recipes.xml}
 The \emph{recipes.xml} file has the following structure:
@@ -334,21 +357,19 @@ The \emph{recipes.xml} file has the following structure:
     \caption{Example of recipes.xml}
 \end{code}
 
-In the following paragraphs, I will include the corresponding tag with an emphasized attribute in square brackets. If for example the \emph{domain.xml} uses the \emph{name} attribute of the \emph{ingredient} tag, this will be referenced as [<ingredient \emph{name="..."} />].
+In the following paragraphs, I will include the corresponding tag of this file with an emphasized attribute in square brackets. If for example the \emph{domain.xml} uses the \emph{name} attribute of the \emph{ingredient} tag, this will be referenced as [<ingredient \emph{name="..."} />].
 
 \subsubsection*{Domain}
-Every recipe will generate a \emph{perform goal} in the \emph{domain.xml}. Each \emph{perfom goal} consists of two parts, the listing of the ingredients and the step-by-step instructions. The analysis of the recorded dialogue showed that the user doesn't necessarily acknoledge every ingredient, but just let's the system/instructor read all ingredients. That's why, I included a way to optionally acknowledge an ingredient. If the user doesn't say anything, the system automatically goes on with the next ingredient after a pause of three seconds. The following code is added for each ingredient:
+Every recipe will generate a \emph{perform goal} in the \emph{domain.xml}. Each \emph{perfom goal} consists of two parts, the listing of the ingredients and the step-by-step instructions. The analysis of the recorded dialogue showed that the user doesn't necessarily acknowledge every ingredient, but just let's the system/instructor read all ingredients. That's why, I included a way to optionally acknowledge an ingredient. If the user doesn't say anything, the system automatically goes on with the next ingredient after a pause of three seconds. The following code is added for each ingredient:
 
 \begin{code}
     \inputminted{xml}{includes/ingredients_listing.xml}
     \caption{Listing of ingredients}
 \end{code}
 
-The reason for this complicated structure is the behaviour if the \emph{<end\_turn/>} tag. When the user only acknowledged the ingredient or didn't say anything, the system worked perfectly fine. But as soon as the system switched to another goal (after the user e.g. asked a question) and returned back, it got stuck in the \emph{expected\_passivity}. For this, I introduced a \emph{boolean} variable that kept track if an ingredient was already read to the user. If so, it would be skipped, when returning back to this goal.
+The reason for this complicated structure is the behaviour if the \mintinline{xml}{<end_turn/>} tag. When the user only acknowledged the ingredient or didn't say anything, the system worked perfectly fine. But as soon as the system switched to another goal (after the user e.g. asked a question) and returned back, it got stuck in the \emph{expected\_passivity}. For this, I introduced a \emph{boolean} variable that kept track if an ingredient was already read to the user. If so, it would be skipped, when returning back to this goal.
 
 Furthermore, I stored the name of the ingredient [<ingredient \emph{name="..."} />] in the predicate \emph{which\_ingredient}. This will get useful later, when the user raises questions like "How much?" or similar without explicitly specifying the ingredient, they are talking about.
-
-The predicate \emph{proposed\_ingredient} will be exlained later \todo{explain proposed ingredient}
 
 Each step of a recipe will add the following to the \emph{goal} in the domain:
 
@@ -357,15 +378,178 @@ Each step of a recipe will add the following to the \emph{goal} in the domain:
     \caption{Step of a recipe}
 \end{code}
 
-The analysis showed that the user always acknowledged a step in a recipe. For this reason, I used a \emph{get\_done} element. As before, I try to give the system as much information as possible about the current state. Accordingly, I fill the predicates \emph{current\_step}, \emph{which\_ingredient} and \emph{which\_object} [last substep in step: <substep \emph{ingredient="..."} \emph{object="..."}>].
+The analysis showed that the user always acknowledged a step in a recipe. For this reason, I used a \mintinline{xml}{<get_done/>} element. As before, I try to give the system as much information as possible about the current state. Accordingly, I fill the predicates \emph{current\_step}, \emph{which\_ingredient} and \emph{which\_object} [last substep in step: <substep \emph{ingredient="..."} \emph{object="..."}>].
 
-If the step contains a \emph{how} element in the \emph{recipes.xml}, the generator will create also a new \emph{perform goal} with the name of the step. This new goal will only contain the \emph{get\_done} elements and will not share any propositions. The reason for this is that the effort for implementing it seemed complex while the benefit was not to big. In the recorded dialogues, the users never asked further questions in these situations. In the future, this could be implemented to also react to the less common responses.
+If the step contains a \mintinline{xml}{<how/>} element in the \emph{recipes.xml}, the generator will create also a new \emph{perform goal} with the name of the step. This new goal will only contain the \mintinline{xml}{<get_done/>} elements and will not share any propositions. The reason for this is that the effort for implementing it seemed complex while the benefit was not to big. In the recorded dialogues, the users never asked further questions in these situations. In the future, this could be implemented to also react to the less common responses.
 
+The static, recipe independent part of the domain consists of the questions the user can ask during the recipe. This includes question about the five core attributes as well as a request for substitutes and grounding of a mentioned ingredient. All questions are implemented as service queries in \emph{python} and take the previously shared predicates as arguments. Optionally, the user can overwrite these in his questions. 
 
+\subsubsection*{Ontology}
+The ontology contains the necessary predicates for each service query as well predicates for the entities that are currently under discussion (recipe, step, ingredient, object). Furthermore, I introduced another predicate \emph{proposed\_ingredient} used for substitutions. This is utilizing the sort \emph{proposed\_ingredient\_sort} instead of \emph{ingredient}, to help \emph{Rasa} differentiating these when a user is asking a question in the following format:
+\begin{center}
+\mintinline{xml}{<item>Can I use <slot predicate="proposed_ingredient"/> instead</item>}
+\end{center}
+Unfortunately, \emph{Rasa} was often still recognizing an ingredient in this slot as an enitity of the normal sort \emph{ingredient}. 
+
+The \emph{generator} created the rest of the necessary predicates, actions and individuals.
+
+\subsubsection*{Grammar}
+The static part of the grammar consists mainly of utterances, how a user can ask one of the questions. Furthermore, it also includes some utterances for system questions. Normally, theses won't be used, since the referenced predicates will already be shared in the domain.
+
+The \emph{generator} then adds utterances to refer to the recipes ([<utterances/>]), individuals for the listing of the recipes [<ingredients><ingredient>\emph{utterance}</ingredient></ingredients>] and individuals for all ingredients and objects [<ingredient \emph{name=""}/>, <substep \emph{ingredient=""} \emph{object=""}/>].
+
+\subsubsection*{NLG}
+The \emph{generator} adds utterances for all \mintinline{xml}{<get_done/>} elements of the main recipes as well as the \mintinline{xml}{<how/>} actions and what the system says, when the recipe is finished.
 
 \section*{Sample dialogues}
+In the following dialogues, I collected some important samples which the system can handle. The interaction test file as well as the demo video contain more examples and use cases for the system.
 
-\section*{Discussion}
+\begin{captionedDialogue}
+    \begin{mydialogue}
+        \speak{S>} In a large mixing bowl, toss potatoes with oil, sugar, salt and red pepper.
+        \speak{U>} How much salt?
+        \speak{S>} As much as you like. Spread on baking sheet in one layer.
+        \speak{U>} done
+        \speak{S>} Bake for 30 minutes in the preheated oven, until potatoes are tender and browned.
+        \speak{U>} done
+        \speak{S>} Add some salt to the potatoes
+        \speak{U>} How much salt?
+        \speak{S>} Uhh, a tablespoon is fine.
+    \end{mydialogue}
+    \caption{Handling different amounts in steps}
+    \label{dia:different_amounts}
+\end{captionedDialogue}
 
-\section*{Future work}
+\begin{captionedDialogue}
+    \begin{mydialogue}
+        \speak{S>} Three garlic cloves, finely sliced.
+        \speak{U>}
+        \speak{S>} Then 400 grams of mixed mushrooms.
+        \speak{U>} ok
+        \speak{S>} 1-2 tablespoons of Rosemary, according to the taste. Also finely chopped.
+        \speak{U>} hmm, ok
+        \speak{S>} And 200 grams of Risotto rice.
+        \speak{U>} hmm
+        \speak{S>} Then 100ml of white wine.
+        \speak{U>} yes
+        \speak{S>} Chop the onions.
+        \speak{U>} Done.
+        \speak{S>} Then finely slices garlic.
+        \speak{U>} What next?
+    \end{mydialogue}
+    \caption{User using different acknowledgements}
+    \label{dia:different_acks}
+\end{captionedDialogue}
+
+\begin{captionedDialogue}
+    \begin{mydialogue}
+        \speak{S>} Chop the onions.
+        \speak{U>} ok
+        \speak{S>} Then finely sliced garlic
+        \speak{U>} How big should the onions be?
+        \speak{S>} It should be eh finely chopped.
+        \speak{U>}
+        \speak{S>} Then finely sliced garlic
+    \end{mydialogue}
+    \caption{Retroactive questions}
+    \label{dia:retroactive_questions}
+\end{captionedDialogue}
+
+\begin{captionedDialogue}
+    \begin{mydialogue}
+        \speak{S>} Chop the onions.
+        \speak{U>} the rosemary?
+        \speak{S>} No, the onion.
+    \end{mydialogue}
+    \caption{Grounding}
+    \label{dia:grounding}
+\end{captionedDialogue}
+
+\begin{captionedDialogue}
+    \begin{mydialogue}
+        \speak{S>} Chop the onions.
+        \speak{U>} did you say onion?
+        \speak{S>} Yeah.
+    \end{mydialogue}
+    \caption{Grounding with different inflection}
+    \label{dia:grounding_inflection}
+\end{captionedDialogue}
+
+\begin{captionedDialogue}
+    \begin{mydialogue}
+        \speak{S>} One onion, finely chopped.
+        \speak{U>} can i use a squash instead?
+        \speak{S>} I don't think so.
+        \speak{U>}
+        \speak{S>} Three garlic cloves, finely sliced.
+        \speak{U>} i am allergic to that
+        \speak{S>} You could use minced shallots, garlic powder, granulated garlic, or garlic salt instead.
+    \end{mydialogue}
+    \caption{Substitutions with and without proposals}
+    \label{dia:substitutions}
+\end{captionedDialogue}
+
+\section*{Discussion \& Future work}
+In Table \ref{tab:implemented_features}, I listed the features that I found during the analysis and marked if they are already implemented or not. It can be seen that there are still a lot of features that can be added to the system. In a next step, further dialogues in a real setting should be recorded and analyzed, to let the system handle more situations in a natural way.
+
+\begin{table}[ht!]
+    \centering
+    \begin{tabular}{l|l|c||c}
+    \multicolumn{2}{c|}{Feature}                                   & system/user & implemented  \\
+    \hline
+    \hline
+    \multirow{5}{*}{Handling core attributes } & amount           & user        & \ding{51}    \\
+                                               & form             & user        & \ding{51}    \\
+                                               & temperature      & user        & \ding{51}    \\
+                                               & time             & user        & \ding{51}    \\
+                                               & condition        & user        & \ding{51}    \\
+    \hline        
+    \multirow{3}{*}{Acknowledgement  }         & type 1           & user        & \ding{51}    \\
+                                               & type 2           & user        & \ding{51}    \\
+                                               & type 3           & user        & \ding{55}    \\
+    \hline        
+    Early steps                                &                  & user        & \ding{55}    \\
+    \hline        
+    \multirow{3}{*}{Substitutions  }           & without proposal & user        & \ding{51}    \\
+                                               & with proposal    & user        & \ding{51}    \\
+                                               & with memory      & system      & \ding{55}    \\
+    \hline        
+    Ask for specific action                    &                  & user        & \ding{55}    \\
+    \hline        
+    Jokes                                      &                  & user/system & \ding{55}    \\
+    \hline        
+    Giving information step by step            &                  & system      & \ding{55}    \\
+    \hline        
+    Waiting for user to request step           &                  & system      & \ding{55}    \\
+    \hline        
+    Adapting to user language                  &                  & system      & \ding{55}
+    \end{tabular}
+    \caption{Implemented features of analysis}
+    \label{tab:implemented_features}
+\end{table}
+
+Additionally, dialogues with machines profit from more variation of the systems utterances. This could be for example a random selection of predefined utterances. Unfortunately, this didn't work so far in my project.
+
+\section*{Problems \& feature requests}
+In the following, I list some problems I had during the implementation. These may also be considered to add in future versions of TDM.
+
+\begin{description}
+    \item [default values for predicates] When I used boolean predicates to indicate if an ingredient was already read to the user, it would have been helpful to set the default value. In the end, I utilized the \emph{top} goal fot that.
+    \item [comparing predicates] At the moment, I didn't find a way to compare the values of two predicates. This would have been useful for example to ground a mentioned ingredient. Here, I would have liked to compare a predicate that stored what the system said, with a predicate that stored what the user said. This would also apply to comparing number or string predicates with actual values. For my project, I implemented this in python.
+    \item [optional acknowledgement by the user] In my project, I needed to implement a quite complex structure for this (see above), to not freeze the system after a switch to another goal and then returning back. 
+    \item [multiple propositions in \emph{assume\_shared} elements] At the moment, I am using up to three \\ \mintinline{xml}{<assume_shared/>} elements for each step. Being able to add all propositions to one \mintinline{xml}{<assume_shared/>} elements would increase the readability of the code.
+    \item [variablity] At the moment, the system is repeating a step instruction always in the same way. It would be nice to add some variablity to this and change, how the system repeats the instructions. This also applies to the situation, when the system returns to a goal (e.g. "chop the onions", "how many?", "three", " ", "chop the onions"). In theses cases, the system may even omit the repetition completely.
+    \item [proposition with parameters] For each step in the recipe, I shared, which ingredient was currently used, to react to questions by the user appropriately. I also would have liked to share the attributes \emph{amount} and \emph{form} for this specific ingredient. Unfortunately, I didn't find an easy way to do that. Filling a predicate \emph{amount} would give a wrong answer if the user referred to another ingredient (e.g. from a previous step) in his question. In this situation, it would be helpful, to declare something like this:
+    \begin{minted}[autogobble]{xml}
+        <proposition predicate="which_amount" parameter="onion" value="two"/>
+    \end{minted}
+    The parameter onion must then also be somehow connected to another \emph{predicate}, maybe like this in the ontology:
+    \begin{minted}[autogobble]{xml}
+        <predicate name="which_ingredient" sort="ingredient"/>
+        <predicate name="which_amount" parameter="which_ingredient" sort="amount"/>
+    \end{minted}
+
+    In my project, I utilized the service query and python for this problem.
+\end{description}
+
 \end{document}
